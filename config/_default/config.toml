@@ -16,7 +16,7 @@ buildDrafts = false
 buildFuture = false
 
 publishDir = "docs"
-# googleAnalytics = "G-XXXXXXXXX"
+googleAnalytics = "G-DKJ6RVGV19"
 
 [imaging]
   anchor = 'Center'
