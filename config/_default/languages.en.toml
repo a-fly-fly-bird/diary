@@ -21,7 +21,7 @@ title = "浮生日记"
   bio = "热爱生活，追求智慧。"
   links = [
     { github = "https://github.com/a-fly-fly-bird" },
-    { medium = "https://medium.com/username" },
-    { telegram = "https://t.me/username" },
+    # { medium = "https://medium.com/username" },
+    # { telegram = "https://t.me/username" },
     { email = "mailto:fuling19.me@gmail.com" },
   ]

@@ -5,6 +5,7 @@ draft = false
 categories = ['折腾']
 tags = ['博客', 'Hugo']
 series = ['博客搭建到发布全流程']
+series_order = 1
 +++
 
 ## 前言
