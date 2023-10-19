@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shadow-diary.fun/sitemap.xml
