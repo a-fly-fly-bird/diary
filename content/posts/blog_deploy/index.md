@@ -3,7 +3,7 @@ title = 'Hugo博客部署'
 date = 2023-10-19T21:05:31+08:00
 draft = false
 categories = ['折腾']
-tags = ['博客', '部署', 'Github']
+tags = ['博客', '部署', 'Hugo', 'Github']
 series = ['博客搭建到发布全流程']
 series_order = 2
 +++

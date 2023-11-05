@@ -5,10 +5,38 @@
     
       <url>
             <loc>https://shadow-diary.fun/posts/</loc>
-            <lastmod>2023-10-19T21:05:31+08:00</lastmod>
+            <lastmod>2023-11-06T00:01:36+08:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://shadow-diary.fun/posts/npx_vs_npm/</loc>
+            <lastmod>2023-11-06T00:01:36+08:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://shadow-diary.fun/posts/frontend-tool/</loc>
+            <lastmod>2023-11-05T22:15:11+08:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
     
   
     
@@ -35,16 +63,12 @@
     
   
     
-  
-    
       <url>
             <loc>https://shadow-diary.fun/</loc>
             <lastmod>2023-10-17T23:30:43+08:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
-    
-  
     
   
     
