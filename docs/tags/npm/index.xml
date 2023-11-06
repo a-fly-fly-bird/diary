@@ -9,21 +9,21 @@
     <copyright>Copy, _right?_ :thinking_face:</copyright>
     <lastBuildDate>Mon, 06 Nov 2023 00:01:36 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>npx_vs_npm</title>
-      <link>https://shadow-diary.fun/posts/npx_vs_npm/</link>
+      <title>npm，npx和packages.json</title>
+      <link>https://shadow-diary.fun/posts/2023/npx_vs_npm/</link>
       <pubDate>Mon, 06 Nov 2023 00:01:36 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/npx_vs_npm/</guid>
-      <description>hello</description>
+      <guid>https://shadow-diary.fun/posts/2023/npx_vs_npm/</guid>
+      <description>参考文档 # 什么是 npm —— 写给初学者的编程教程 npm docs npm 和 npx 的区别是什么 package.</description>
       
     </item>
     
     <item>
       <title>Commit Better Code with Husky, Prettier, commitlint and Lint-Staged</title>
-      <link>https://shadow-diary.fun/posts/frontend-tool/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend-tool/</link>
       <pubDate>Sun, 05 Nov 2023 22:15:11 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/frontend-tool/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend-tool/</guid>
       <description>前言 # 如果你逛Github的话，就会发现很多项目根目录除了.</description>
       
     </item>

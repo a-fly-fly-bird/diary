@@ -10,10 +10,10 @@
     <lastBuildDate>Thu, 19 Oct 2023 21:05:31 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo博客部署</title>
-      <link>https://shadow-diary.fun/posts/blog_deploy/</link>
+      <link>https://shadow-diary.fun/posts/2023/blog_deploy/</link>
       <pubDate>Thu, 19 Oct 2023 21:05:31 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/blog_deploy/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/blog_deploy/</guid>
       <description>仅仅是在Github Pages部署博客就有好几种方式，分别为：</description>
       
     </item>
