@@ -1,118 +1,71 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-    
-      <url>
-            <loc>https://shadow-diary.fun/posts/</loc>
-            <lastmod>2023-11-06T00:01:36+08:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>https://shadow-diary.fun/posts/2023/npx_vs_npm/</loc>
-            <lastmod>2023-11-06T00:01:36+08:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>https://shadow-diary.fun/posts/2023/frontend-tool/</loc>
-            <lastmod>2023-11-05T22:15:11+08:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>https://shadow-diary.fun/posts/2023/blog_deploy/</loc>
-            <lastmod>2023-10-19T21:05:31+08:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>https://shadow-diary.fun/</loc>
-            <lastmod>2023-10-17T23:30:43+08:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://shadow-diary.fun/posts/2023/hugo_blog_build_up/</loc>
-            <lastmod>2023-10-14T17:30:08+08:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://shadow-diary.fun/diary/</loc>
-            <lastmod>2023-10-14T11:56:21+08:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>https://shadow-diary.fun/diary/2023/2023-10-14-first-diary/</loc>
-            <lastmod>2023-10-14T11:56:21+08:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://shadow-diary.fun/about/</loc>
-            <lastmod>2023-10-07T21:26:50+08:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-  
+
+  <url>
+    <loc>https://shadow-diary.fun/diary/</loc>
+    <lastmod>2023-11-06T23:43:44+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/diary/2023/2023-11-1-friends/</loc>
+    <lastmod>2023-11-06T23:43:44+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/</loc>
+    <lastmod>2023-11-06T22:07:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/frontend_performance_monotor/</loc>
+    <lastmod>2023-11-06T22:07:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/npx_vs_npm/</loc>
+    <lastmod>2023-11-06T00:01:36+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/frontend-tool/</loc>
+    <lastmod>2023-11-05T22:15:11+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/blog_deploy/</loc>
+    <lastmod>2023-10-19T21:05:31+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/</loc>
+    <lastmod>2023-10-17T23:30:43+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/hugo_blog_build_up/</loc>
+    <lastmod>2023-10-14T17:30:08+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/diary/2023/2023-10-14-first-diary/</loc>
+    <lastmod>2023-10-14T11:56:21+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/about/</loc>
+    <lastmod>2023-10-07T21:26:50+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
