@@ -4,7 +4,13 @@
 
   <url>
     <loc>https://shadow-diary.fun/posts/</loc>
-    <lastmod>2023-11-07T19:25:26+08:00</lastmod>
+    <lastmod>2023-11-08T22:22:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-ii/</loc>
+    <lastmod>2023-11-08T22:22:01+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

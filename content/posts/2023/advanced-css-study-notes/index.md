@@ -1,14 +1,14 @@
 +++
-title = 'Advanced CSS Study Notes'
+title = 'Advanced CSS Study Notes Section I'
 date = 2023-11-07T19:25:26+08:00
 draft = false
 categories = ['前端']
-tags = ['CSS', 'Sass']
+tags = ['CSS', 'Sass', '笔记', '学习']
 series = ['前端基础从入门到入土']
 series_order = 1
 +++
 
-我的[Udemy排名第一的高级CSS课程 Advanced CSS and Sass - 高级 CSS 和 Sass：Flexbox、网格、动画（中英文字幕）](ttps://www.bilibili.com/video/BV1n94y1o7yS/?p=6&share_source=copy_web&vd_source=3bfb0ec751c895fd26607d3661a4598c)笔记。
+我的[Udemy排名第一的高级CSS课程 Advanced CSS and Sass - 高级 CSS 和 Sass：Flexbox、网格、动画（中英文字幕）](https://www.bilibili.com/video/BV1n94y1o7yS/?p=6&share_source=copy_web&vd_source=3bfb0ec751c895fd26607d3661a4598c)笔记。
 
 想要系统学习CSS，[mdn web docs](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)会是不错的文档。
 
@@ -146,4 +146,126 @@ Stack Overflow 上有人提出了类似的问题：[whats-the-different-between-
 }
 ```
 是将父元素的左上角固定在距视图`top: 50%; left: 50%;`的位置，是父元素的左上角居中。使用`translate(-50%, -50%)`平移子元素后，子元素的中心居中。
+
+# @keyframes
+
+才知道有[@keyframes](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes)这么强大的功能！
+
+> 关键帧 @keyframes at-rule 规则通过在动画序列中定义关键帧（或 waypoints）的样式来控制 CSS 动画序列中的中间步骤。和 转换 transition 相比，关键帧 keyframes 可以控制动画序列的中间步骤。
+
+
+首先在css中定义关键帧，
+```css
+@keyframes moveInLeft{
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) rotate(0deg);
+  }
+
+  60%{
+    transform: rotate(60deg);
+  }
+
+  80%{
+    transform: translateX(10px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+```
+然后使用关键帧，类似这样：
+```css
+.heading-primary-main{
+  display: block;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 35px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+```
+或者缩写为:
+```css
+animation: moveInRight 1s ease-out;
+```
+这里是关于[animation-timing-function](https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-timing-function)的介绍，简而言之就是决定是平滑过渡还是怎么过渡。
+
+# 伪类(Pseudo-classes)
+> CSS 伪类是添加到选择器的关键字，用于指定所选元素的特殊状态。例如，伪类 :hover 可以用于选择一个按钮，当用户的指针悬停在按钮上时，设置此按钮的样式。
+
+比如指针悬浮效果：
+```css
+button:hover {
+  color: blue;
+}
+```
+
+又非常多的伪类，非常有用。
+
+# display: inline-block
+
+尽管刚熟悉了`inline`和`block`，但是看到这里还是有点迷惑。重点学习一下。
+
+> 与 display: inline 相比，主要区别在于 display: inline-block 允许在元素上设置宽度和高度。
+> 
+> 同样，如果设置了 display: inline-block，将保留上下外边距/内边距，而 display: inline 则不会。
+> 
+> 与 display: block 相比，主要区别在于 display：inline-block 在元素之后不添加换行符，因此该元素可以位于其他元素旁边。
+
+# text-align
+除了之前的`transform`让元素居中外，还有什么更简单的方法吗？**text-align CSS 属性设置块元素或者单元格框的行内内容的水平对齐。**
+
+> text-align属性是用来描述一个行内元素是如何在身为父元素的块级元素中对齐。
+> 
+> 通过定义可以看出text-align属性并不能控制块级元素的对齐方式，它只对块级元素内的行内元素生效。
+
+所以
+```html
+ <div class="text-box">
+    <h1 class="heading-primary">
+        <span class="heading-primary-main">Outdoors</span>
+        <span class="heading-primary-sub">is where life happens</span>
+    </h1>
+
+    <a href="#" class="btn btn-white">Discover Our Tours</a>
+</div>
+```
+中，要想`<a href="#" class="btn btn-white">Discover Our Tours</a>`水平居中很简单，只要在它或者它的父元素上声明`text-align: center`即可。
+
+# box-shadow
+> CSS box-shadow 属性用于在元素的框架上添加阴影效果。你可以在同一个元素上设置多个阴影效果，并用逗号将他们分隔开。该属性可设置的值包括阴影的 X 轴偏移量、Y 轴偏移量、模糊半径、扩散半径和颜色。
+
+这个相对好理解。
+
+# 伪元素(Pseudo-elements)
+
+注意区分 `伪类` 和 `伪元素`！一个是一个冒号，一个是两个冒号。
+
+[伪元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements)是一个附加至选择器末的关键词，允许你对被选择元素的特定部分修改样式。
+
+比如伪类中的`:hover`是指当前元素在鼠标悬浮时的状态，而伪元素是选中被选择元素的特定部分。
+
+## ::after (:after)
+CSS伪元素[::after](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::after)用来创建一个伪元素，作为已选中元素的最后一个子元素。通常会配合content属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。
+
+不太好理解，还是需要结合教程中的代码理解。
+
+# z-index
+> CSS z-index 属性设置定位元素及其后代元素或 flex 项目的 Z 轴顺序。z-index 较大的重叠元素会覆盖较小的元素。
+
+这个MDN的示例非常清晰，就是控制图层的覆盖的。当Z-index的值设置为一个整数时,该整数是当前堆叠上下文中生成的div的堆栈级别。数字越小，越靠前。
+
+## 注意
+只有position的值为relative/absolute/fixed中的一个,Z-index才会生效。
+
+# animation-fill-mode
+
+> CSS 属性 animation-fill-mode 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。
+
+[animation-fill-mode](https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-fill-mode)也是一个非常有用的属性，也就是确定动画播放前和播放后的状态。
 
