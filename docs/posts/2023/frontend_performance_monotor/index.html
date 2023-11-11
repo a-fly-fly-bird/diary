@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>前端性能监控工具之APM Server &middot; 浮生日记</title>
-  <meta name="title" content="前端性能监控工具之APM Server &middot; 浮生日记" />
+  <title>Docker安装APM Server &middot; 浮生日记</title>
+  <meta name="title" content="Docker安装APM Server &middot; 浮生日记" />
   
   <meta name="description" content="我的树洞" />
   <meta name="keywords" content="性能监控, ELK, Elastic Search, " />
@@ -61,8 +61,8 @@
   
   
   
-  <meta property="og:title" content="前端性能监控工具之APM Server" />
-<meta property="og:description" content="官方文档 # elastic organization github homepage APM Agents Legacy APM Server Elasticsearch Kibana APM Real User Monitoring JavaScript Agent(Angular integration) Run APM Server on Docker 传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。" />
+  <meta property="og:title" content="Docker安装APM Server" />
+<meta property="og:description" content="官方文档 # elastic organization github homepage APM Agents Legacy APM Server Elasticsearch Kibana APM Real User Monitoring JavaScript Agent(Angular integration) Run APM Server on Docker docker-elk 模板 传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://shadow-diary.fun/posts/2023/frontend_performance_monotor/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-11-06T22:07:01+08:00" />
@@ -71,8 +71,8 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="前端性能监控工具之APM Server"/>
-<meta name="twitter:description" content="官方文档 # elastic organization github homepage APM Agents Legacy APM Server Elasticsearch Kibana APM Real User Monitoring JavaScript Agent(Angular integration) Run APM Server on Docker 传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。"/>
+<meta name="twitter:title" content="Docker安装APM Server"/>
+<meta name="twitter:description" content="官方文档 # elastic organization github homepage APM Agents Legacy APM Server Elasticsearch Kibana APM Real User Monitoring JavaScript Agent(Angular integration) Run APM Server on Docker docker-elk 模板 传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。"/>
 
   
   <script type="application/ld+json">
@@ -80,10 +80,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "",
-    "name": "前端性能监控工具之APM Server",
-    "headline": "前端性能监控工具之APM Server",
+    "name": "Docker安装APM Server",
+    "headline": "Docker安装APM Server",
     
-    "abstract": "官方文档 # elastic organization github homepage APM Agents Legacy APM Server Elasticsearch Kibana APM Real User Monitoring JavaScript Agent(Angular integration) Run APM Server on Docker 传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。",
+    "abstract": "官方文档 # elastic organization github homepage APM Agents Legacy APM Server Elasticsearch Kibana APM Real User Monitoring JavaScript Agent(Angular integration) Run APM Server on Docker docker-elk 模板 传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。",
     "inLanguage": "en",
     "url" : "https:\/\/shadow-diary.fun\/posts\/2023\/frontend_performance_monotor\/",
     "author" : {
@@ -99,7 +99,7 @@
     "keywords": ["性能监控","ELK","Elastic Search"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "178"
+    "wordCount": "934"
   }]
   </script>
 
@@ -467,7 +467,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      前端性能监控工具之APM Server
+      Docker安装APM Server
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -510,7 +510,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-11-06 22:07:01 &#43;0800 CST">6 November 2023</time><span class="px-2 text-primary-500">&middot;</span><span>178 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2023-11-06 22:07:01 &#43;0800 CST">6 November 2023</time><span class="px-2 text-primary-500">&middot;</span><span>934 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
   
 
   
@@ -631,8 +631,32 @@
     <li>
       <ul>
         <li><a href="#官方文档">官方文档</a></li>
-        <li><a href="#q-what-is-apm">Q: What is APM?</a></li>
-        <li><a href="#apm-server">APM Server</a></li>
+        <li><a href="#介绍">介绍</a>
+          <ul>
+            <li><a href="#q-what-is-apm">Q: What is APM?</a></li>
+            <li><a href="#apm-server">APM Server</a></li>
+          </ul>
+        </li>
+        <li><a href="#install-prerequisite">install Prerequisite</a>
+          <ul>
+            <li><a href="#built-user">built-user</a></li>
+            <li><a href="#鉴权注意">鉴权注意</a>
+              <ul>
+                <li><a href="#一">一</a></li>
+                <li><a href="#二">二</a></li>
+                <li><a href="#修改密码">修改密码</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#tldr">TL;DR;</a>
+          <ul>
+            <li><a href="#env">.env</a></li>
+            <li><a href="#docker-composeyml">docker-compose.yml</a></li>
+          </ul>
+        </li>
+        <li><a href="#安装apm插件">安装APM插件</a></li>
+        <li><a href="#source-map">Source Map</a></li>
       </ul>
     </li>
   </ul>
@@ -651,8 +675,32 @@
     <li>
       <ul>
         <li><a href="#官方文档">官方文档</a></li>
-        <li><a href="#q-what-is-apm">Q: What is APM?</a></li>
-        <li><a href="#apm-server">APM Server</a></li>
+        <li><a href="#介绍">介绍</a>
+          <ul>
+            <li><a href="#q-what-is-apm">Q: What is APM?</a></li>
+            <li><a href="#apm-server">APM Server</a></li>
+          </ul>
+        </li>
+        <li><a href="#install-prerequisite">install Prerequisite</a>
+          <ul>
+            <li><a href="#built-user">built-user</a></li>
+            <li><a href="#鉴权注意">鉴权注意</a>
+              <ul>
+                <li><a href="#一">一</a></li>
+                <li><a href="#二">二</a></li>
+                <li><a href="#修改密码">修改密码</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#tldr">TL;DR;</a>
+          <ul>
+            <li><a href="#env">.env</a></li>
+            <li><a href="#docker-composeyml">docker-compose.yml</a></li>
+          </ul>
+        </li>
+        <li><a href="#安装apm插件">安装APM插件</a></li>
+        <li><a href="#source-map">Source Map</a></li>
       </ul>
     </li>
   </ul>
@@ -752,16 +800,26 @@
     APM Real User Monitoring JavaScript Agent(Angular integration)</a></li>
 <li><a href="https://www.elastic.co/guide/en/apm/server/7.15/running-on-docker.html#running-on-docker"   target="_blank">
     Run APM Server on Docker</a></li>
+<li><a href="https://github.com/deviantony/docker-elk"   target="_blank">
+    docker-elk 模板</a></li>
 </ul>
 <p>传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。</p>
+<div id="介绍" class="anchor"></div>
+<h2 class="relative group">介绍 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e4%bb%8b%e7%bb%8d" aria-label="Anchor">#</a></span>        
+    
+</h2>
 <div id="q-what-is-apm" class="anchor"></div>
-<h2 class="relative group">Q: What is APM? 
+<h3 class="relative group">Q: What is APM? 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#q-what-is-apm" aria-label="Anchor">#</a></span>        
     
-</h2>
+</h3>
 <p>A: Free and open application performance monitoring</p>
 <blockquote>
 <p>Elastic APM is an application performance monitoring system built on the Elastic Stack. It allows you to monitor software services and applications in real-time, by collecting detailed performance information on response time for incoming requests, database queries, calls to caches, external HTTP requests, and more. This makes it easy to pinpoint and fix performance problems quickly.
@@ -769,13 +827,13 @@ Elastic APM also automatically collects unhandled errors and exceptions. Errors 
 Metrics are another vital source of information when debugging production systems. Elastic APM agents automatically pick up basic host-level metrics and agent-specific metrics, like JVM metrics in the Java Agent, and Go runtime metrics in the Go Agent.</p>
 </blockquote>
 <div id="apm-server" class="anchor"></div>
-<h2 class="relative group">APM Server 
+<h3 class="relative group">APM Server 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#apm-server" aria-label="Anchor">#</a></span>        
     
-</h2>
+</h3>
 <p>APM Server是elastic家推出的前端性能监控方案的组成部分。它接收从Elastic APM agents发送来的信息并转发到Elasticsearch documents中存储，最后在Kibana中进行性能指标的可视化。</p>
 <p>
 
@@ -805,6 +863,526 @@ Metrics are another vital source of information when debugging production system
   
 
 </p>
+<div id="install-prerequisite" class="anchor"></div>
+<h2 class="relative group">install Prerequisite 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#install-prerequisite" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>apm-server 依赖 elk, 所以在安装apm-server之前至少要安装 elastic search 和 kibana。elastic官方提供了elk镜像，我们可以非常快捷地通过docker进行安装。docker-compose.yml的主要结构如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">elasticsearch</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">elasticsearch:${ELK_VERSION}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;9200:9200&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;9300:9300&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elk</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">kibana</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">kibana:${ELK_VERSION}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;5601:5601&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elasticsearch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elk</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">apm-server</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">elastic/apm-server:${ELK_VERSION}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;8200:8200&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elasticsearch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elk</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">elk</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span></span></span></code></pre></div><p>其中变量声明在了<code>.env</code>文件中,版本可以自己指定,但不能是latest，必须指定:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="l">ELK_VERSION=8.11.0</span><span class="w">
+</span></span></span></code></pre></div><p><strong>除此之外很重要的一部分就是进行ELK的配置。</strong> On the other hand, 如果就按上面的配置，然后<code>docker-compose up</code>启动然后访问<code>localhost:5601</code>已经可以访问到如下界面：
+
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="CleanShot%202023-11-11%20at%2014.04.45.png" alt="Alt text" />
+      
+    </figure>
+  
+
+</p>
+<p>点击<code>Where do I find this?</code>，可以看到：</p>
+<blockquote>
+<p>The enrollment token is automatically generated when you start Elasticsearch for the first time. You might need to scroll back a bit in the terminal to view it.</p>
+<p>To generate a new enrollment token, run the following command from the Elasticsearch installation directory:</p>
+<p><code>bin/elasticsearch-create-enrollment-token --scope kibana</code></p>
+</blockquote>
+<p>所以进入<code>Elasticsearch</code>容器的<code>/usr/share/elasticsearch</code>目录，执行上述命令即可。然后复制生成的token，输入后进入下一步，<code>Verification required</code>:
+
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="CleanShot%202023-11-11%20at%2014.09.56.png" alt="Alt text" />
+      
+    </figure>
+  
+
+</p>
+<blockquote>
+<p>Copy the code from the Kibana server or run  <code>bin/kibana-verification-code</code> to retrieve it.</p>
+</blockquote>
+<p>所以按照指示，进入<code>kibana</code>容器的<code>/usr/share/kibana</code>目录，执行上述命令，填入生成的验证码即可。若上述步骤没有问题，接下来就会来到登录界面：</p>
+<p>
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="CleanShot%202023-11-11%20at%2014.11.54.png" alt="Alt text" />
+      
+    </figure>
+  
+
+</p>
+<div id="built-user" class="anchor"></div>
+<h3 class="relative group">built-user 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#built-user" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>官网有介绍内建用户的文章：<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/built-in-users.html"   target="_blank">
+    Built-in users</a></p>
+<ul>
+<li>
+<p><code>elastic</code></p>
+<p>A built-in <strong>superuser</strong>.</p>
+</li>
+<li>
+<p><code>kibana_system</code></p>
+<p>The user Kibana uses to connect and communicate with Elasticsearch.</p>
+</li>
+<li>
+<p><code>logstash_system</code></p>
+<p>The user Logstash uses when storing monitoring information in Elasticsearch.</p>
+</li>
+<li>
+<p><code>beats_system</code></p>
+<p>The user the Beats use when storing monitoring information in Elasticsearch.</p>
+</li>
+<li>
+<p><code>apm_system</code></p>
+<p>The user the APM server uses when storing monitoring information in Elasticsearch.</p>
+</li>
+<li>
+<p><code>remote_monitoring_user</code></p>
+</li>
+</ul>
+<div id="鉴权注意" class="anchor"></div>
+<h3 class="relative group">鉴权注意 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e9%89%b4%e6%9d%83%e6%b3%a8%e6%84%8f" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<div id="一" class="anchor"></div>
+<h4 class="relative group">一 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e4%b8%80" aria-label="Anchor">#</a></span>        
+    
+</h4>
+<blockquote>
+<p>Starting with Elastic v8.0.0, it is no longer possible to run Kibana using the bootstraped privileged elastic user.</p>
+</blockquote>
+<p>也就是说。自从v8开始，不能使用使用默认密码的超级用户<code>elastic</code>登录kibana了，要想用<code>elastic</code>用户登录需要先修改<code>elastic</code>用户的密码。</p>
+<p>
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="CleanShot%202023-11-11%20at%2014.39.51.png" alt="Alt text" />
+      
+    </figure>
+  
+
+</p>
+<div id="二" class="anchor"></div>
+<h4 class="relative group">二 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e4%ba%8c" aria-label="Anchor">#</a></span>        
+    
+</h4>
+<p>Elasticsearch 从 6.8 开始， 允许免费用户使用 X-Pack 的安全功能，且默认开启。如果不开启，许多功能无法使用，比如如果不开启，kibana 现在是没办法连接到 elastic search的，老用户不要觉得下面的设置麻烦而直接<code>xpack.security.enabled=false</code>关闭安全特性。可以说，这是必须开启的。</p>
+<div id="warn-log" class="anchor"></div>
+<h5 class="relative group">WARN LOG 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#warn-log" aria-label="Anchor">#</a></span>        
+    
+</h5>
+<p>可能会遇到<a href="https://stackoverflow.com/questions/71492404/elasticsearch-showing-received-plaintext-http-traffic-on-an-https-channel-in-con"   target="_blank">
+    Elasticsearch showing received plaintext http traffic on an https channel in console</a>问题。</p>
+<div id="修改密码" class="anchor"></div>
+<h4 class="relative group">修改密码 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e4%bf%ae%e6%94%b9%e5%af%86%e7%a0%81" aria-label="Anchor">#</a></span>        
+    
+</h4>
+<p>有三种修改密码的方式。</p>
+<div id="方法一启动前修改配置文件" class="anchor"></div>
+<h5 class="relative group">方法一、启动前修改配置文件 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%96%b9%e6%b3%95%e4%b8%80%e5%90%af%e5%8a%a8%e5%89%8d%e4%bf%ae%e6%94%b9%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" aria-label="Anchor">#</a></span>        
+    
+</h5>
+<p>在<code>.env</code>文件里添加变量：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="l">ELASTIC_PASSWORD=your_password_here</span><span class="w">
+</span></span></span></code></pre></div><p>然后<code>docker-compose.yml</code>里配置环境变量映射到elastic search的配置文件里：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">elasticsearch</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">elasticsearch:${ELK_VERSION}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;9200:9200&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;9300:9300&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># &#34;:-&#34; 表示使用默认值。具体来说，这个语法表示如果ELASTIC_PASSWORD已经定义了，那么使用它的值；如果没有定义，那么就使用默认值，这里的默认值是空。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">ELASTIC_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l">${ELASTIC_PASSWORD:-}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elk</span><span class="w">
+</span></span></span></code></pre></div><p>然后<code>docker-compose up</code>重新启动即可，输入<code>elastic</code>和<code>修改后的密码</code>即可登录成功。</p>
+<div id="方法二命令行修改" class="anchor"></div>
+<h5 class="relative group">方法二、命令行修改 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%96%b9%e6%b3%95%e4%ba%8c%e5%91%bd%e4%bb%a4%e8%a1%8c%e4%bf%ae%e6%94%b9" aria-label="Anchor">#</a></span>        
+    
+</h5>
+<p>elastic search 安装目录的 <code>/bin</code> 文件夹里有很多工具，其中就包括设置以及修改密码的工具。</p>
+<div id="设置密码" class="anchor"></div>
+<h6 class="relative group">设置密码 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81" aria-label="Anchor">#</a></span>        
+    
+</h6>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sh-5.0$ bin/elasticsearch-setup-passwords interactive
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">******************************************************************************
+</span></span><span class="line"><span class="cl">Note: The <span class="s1">&#39;elasticsearch-setup-passwords&#39;</span> tool has been deprecated. This       <span class="nb">command</span> will be removed in a future release.
+</span></span><span class="line"><span class="cl">******************************************************************************
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Initiating the setup of passwords <span class="k">for</span> reserved users elastic,apm_system,kibana,kibana_system,logstash_system,beats_system,remote_monitoring_user.
+</span></span><span class="line"><span class="cl">You will be prompted to enter passwords as the process progresses.
+</span></span><span class="line"><span class="cl">Please confirm that you would like to <span class="k">continue</span> <span class="o">[</span>y/N<span class="o">]</span>
+</span></span></code></pre></div><div id="修改密码-1" class="anchor"></div>
+<h6 class="relative group">修改密码 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e4%bf%ae%e6%94%b9%e5%af%86%e7%a0%81-1" aria-label="Anchor">#</a></span>        
+    
+</h6>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sh-5.0$ bin/elasticsearch-reset-password --interactive -u elastic
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">This tool will reset the password of the <span class="o">[</span>elastic<span class="o">]</span> user.
+</span></span><span class="line"><span class="cl">You will be prompted to enter the password.
+</span></span><span class="line"><span class="cl">Please confirm that you would like to <span class="k">continue</span> <span class="o">[</span>y/N<span class="o">]</span>y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Enter password <span class="k">for</span> <span class="o">[</span>elastic<span class="o">]</span>: 
+</span></span><span class="line"><span class="cl">Re-enter password <span class="k">for</span> <span class="o">[</span>elastic<span class="o">]</span>: 
+</span></span><span class="line"><span class="cl">Password <span class="k">for</span> the <span class="o">[</span>elastic<span class="o">]</span> user successfully reset.
+</span></span></code></pre></div><div id="新增用户" class="anchor"></div>
+<h6 class="relative group">新增用户 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%96%b0%e5%a2%9e%e7%94%a8%e6%88%b7" aria-label="Anchor">#</a></span>        
+    
+</h6>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sh-5.0$ elasticsearch-users -h
+</span></span><span class="line"><span class="cl">Manages elasticsearch file users
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Commands
+</span></span><span class="line"><span class="cl">--------
+</span></span><span class="line"><span class="cl">useradd - Adds a file user
+</span></span><span class="line"><span class="cl">userdel - Deletes a file based user
+</span></span><span class="line"><span class="cl">passwd - Changes the password of an existing file based user
+</span></span><span class="line"><span class="cl">roles - Edit roles of an existing user
+</span></span><span class="line"><span class="cl">list - List existing file based users and their corresponding roles
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Non-option arguments:
+</span></span><span class="line"><span class="cl"><span class="nb">command</span>              
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Option             Description        
+</span></span><span class="line"><span class="cl">------             -----------        
+</span></span><span class="line"><span class="cl">-E &lt;KeyValuePair&gt;  Configure a setting
+</span></span><span class="line"><span class="cl">-h, --help         Show <span class="nb">help</span>          
+</span></span><span class="line"><span class="cl">-s, --silent       Show minimal output
+</span></span><span class="line"><span class="cl">-v, --verbose      Show verbose output
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sh-5.0$ elasticsearch-users useradd esadmin
+</span></span><span class="line"><span class="cl">Enter new password: 
+</span></span><span class="line"><span class="cl">Retype new password:
+</span></span></code></pre></div><div id="权限控制" class="anchor"></div>
+<h6 class="relative group">权限控制 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%9d%83%e9%99%90%e6%8e%a7%e5%88%b6" aria-label="Anchor">#</a></span>        
+    
+</h6>
+<p>查看上面的输出，可以看到该命令还能删除用户，编辑权限等：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sh-5.0$ elasticsearch-users roles -h     
+</span></span><span class="line"><span class="cl">Edit roles of an existing user
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The roles <span class="nb">command</span> allows editing roles <span class="k">for</span> file based users.
+</span></span><span class="line"><span class="cl">You can also list a user<span class="err">&#39;</span>s roles by omitting the -a and -r
+</span></span><span class="line"><span class="cl">parameters.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Non-option arguments:
+</span></span><span class="line"><span class="cl">username             
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Option             Description                                              
+</span></span><span class="line"><span class="cl">------             -----------                                              
+</span></span><span class="line"><span class="cl">-E &lt;KeyValuePair&gt;  Configure a setting                                      
+</span></span><span class="line"><span class="cl">-a, --add          Adds supplied roles to the specified user <span class="o">(</span>default: <span class="o">)</span>    
+</span></span><span class="line"><span class="cl">-h, --help         Show <span class="nb">help</span>                                                
+</span></span><span class="line"><span class="cl">-r, --remove       Remove supplied roles from the specified user <span class="o">(</span>default: <span class="o">)</span>
+</span></span><span class="line"><span class="cl">-s, --silent       Show minimal output                                      
+</span></span><span class="line"><span class="cl">-v, --verbose      Show verbose output 
+</span></span></code></pre></div><p>比如我刚创建的<code>esadmin</code>用户现在还不能登录kibana：
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="CleanShot%202023-11-11%20at%2015.18.46.png" alt="Alt text" />
+      
+    </figure>
+  
+
+</p>
+<p>添加下列权限后就可以成功登录了。（具体权限查看<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/built-in-roles.html"   target="_blank">
+    Built-in roles</a>）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sh-5.0$ elasticsearch-users roles -a kibana_system esadmin
+</span></span><span class="line"><span class="cl">sh-5.0$ elasticsearch-users roles -a superuser esadmin
+</span></span></code></pre></div><p>查看权限：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sh-5.0$ elasticsearch-users roles -v esadmin
+</span></span><span class="line"><span class="cl">esadmin        : kibana_system,superuser
+</span></span></code></pre></div><p>这一部分非常感谢这篇博客<a href="https://www.cnblogs.com/feifei6779/p/16524927.html"   target="_blank">
+    ELK Kibana 8.3.2登录认证</a>, 我是从这篇博客了解到该知识并顺藤摸瓜摸到官方文档的。</p>
+<div id="方法二es-api修改" class="anchor"></div>
+<h5 class="relative group">方法二、es api修改 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%96%b9%e6%b3%95%e4%ba%8ces-api%e4%bf%ae%e6%94%b9" aria-label="Anchor">#</a></span>        
+    
+</h5>
+<p>这部分也是从<a href="https://blog.csdn.net/IT_road_qxc/article/details/121858843"   target="_blank">
+    docker中设置elasticsearch、kibana用户名密码、修改密码</a>受到的启发。</p>
+<div id="在kibana的dev-tools-console修改" class="anchor"></div>
+<h6 class="relative group">在kibana的Dev Tools Console修改 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%9c%a8kibana%e7%9a%84dev-tools-console%e4%bf%ae%e6%94%b9" aria-label="Anchor">#</a></span>        
+    
+</h6>
+<p>要想使用该方法，需要先了解<code>curl(client url)</code>的简单用法，参考：<a href="https://www.ruanyifeng.com/blog/2019/09/curl-reference.html"   target="_blank">
+    阮一峰老师的博客</a>。</p>
+<p>修改密码的API参考：<a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-api-change-password.html"   target="_blank">
+    Change passwords API</a></p>
+<p>比如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">POST /_security/user/elastic/_password
+</span></span><span class="line"><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;password&#34;</span> : <span class="s2">&#34;helloworld&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>或者还可以在终端通过<code>curl</code>直接修改。</p>
+<div id="终端curl修改" class="anchor"></div>
+<h6 class="relative group">终端<code>curl</code>修改 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%bb%88%e7%ab%afcurl%e4%bf%ae%e6%94%b9" aria-label="Anchor">#</a></span>        
+    
+</h6>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">curl -XPOST -D- <span class="s1">&#39;http://localhost:9200/_security/user/esadmin/_password&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -u elastic:helloworld <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -d <span class="s1">&#39;{&#34;password&#34; : &#34;helloworldagain&#34;}&#39;</span>
+</span></span></code></pre></div><p>看起来是没问题的，但好像是安全问题，返回:<code>curl: (52) Empty reply from server</code>。暂时不研究了，如果有人知道是为什么可以告诉我。</p>
+<div id="tldr" class="anchor"></div>
+<h2 class="relative group">TL;DR; 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#tldr" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>最终的最简单的配置：</p>
+<div id="env" class="anchor"></div>
+<h3 class="relative group">.env 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#env" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="l">ELK_VERSION=8.11.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">ELASTIC_PASSWORD=&#39;changeme&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">KIBANA_SYSTEM_PASSWORD=&#39;changeme&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">APM_SYSTEM_PASSWORD=&#39;changeme&#39;</span><span class="w">
+</span></span></span></code></pre></div><div id="docker-composeyml" class="anchor"></div>
+<h3 class="relative group">docker-compose.yml 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#docker-composeyml" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">elasticsearch</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">elasticsearch:${ELK_VERSION}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;9200:9200&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;9300:9300&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># &#34;:-&#34; 表示使用默认值。具体来说，这个语法表示如果ELASTIC_PASSWORD已经定义了，那么使用它的值；如果没有定义，那么就使用默认值，这里的默认值是空。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">ELASTIC_PASSWORD:${ELASTIC_PASSWORD:-}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elk</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">kibana</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">kibana:${ELK_VERSION}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;5601:5601&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">KIBANA_SYSTEM_PASSWORD:${KIBANA_SYSTEM_PASSWORD:-}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">I18N_LOCALE:zh-CN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elasticsearch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elk</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">apm-server</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">elastic/apm-server:${ELK_VERSION}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;8200:8200&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">APM_SYSTEM_PASSWORD:${APM_SYSTEM_PASSWORD:-}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elasticsearch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">elk</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">elk</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span></span></span></code></pre></div><div id="安装apm插件" class="anchor"></div>
+<h2 class="relative group">安装APM插件 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%ae%89%e8%a3%85apm%e6%8f%92%e4%bb%b6" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p><a href="https://www.elastic.co/guide/en/apm/guide/current/configuration-rum.html"   target="_blank">
+    https://www.elastic.co/guide/en/apm/guide/current/configuration-rum.html</a></p>
+<p><a href="https://www.elastic.co/guide/en/apm/agent/rum-js/current/angular-integration.html"   target="_blank">
+    https://www.elastic.co/guide/en/apm/agent/rum-js/current/angular-integration.html</a></p>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/8.1/service-accounts.html"   target="_blank">
+    https://www.elastic.co/guide/en/elasticsearch/reference/8.1/service-accounts.html</a></p>
+<p>
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1%E5%AF%BC%E5%87%BA-20231111-145715.jpg" alt="Alt text" />
+      
+    </figure>
+  
+
+</p>
+<p>最后的<code>apm-server.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">apm-server</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l">apm-server:8200</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">frontend.enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">frontend.allow_origins</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;*&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">rum</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">allow_origins</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">allow_headers</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;header1&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;header2&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">library_pattern</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;node_modules|bower_components|~&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">exclude_from_grouping</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;^/webpack&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">auth</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">anonymous</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">rate_limit.event_limit</span><span class="p">:</span><span class="w"> </span><span class="m">300</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">rate_limit.ip_limit</span><span class="p">:</span><span class="w"> </span><span class="m">1000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">allow_service</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;my-service-name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;hello-world&#39;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">output.elasticsearch</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;elasticsearch:9200&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;logadmin&#34;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;123456&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">setup.kibana</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;kibana&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;logadmin&#34;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;123456&#34;</span><span class="w">
+</span></span></span></code></pre></div><div id="source-map" class="anchor"></div>
+<h2 class="relative group">Source Map 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#source-map" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p><a href="https://www.elastic.co/guide/en/apm/guide/current/source-map-how-to.html"   target="_blank">
+    https://www.elastic.co/guide/en/apm/guide/current/source-map-how-to.html</a></p>
+<p><a href="https://angular.cn/guide/workspace-config#complex-configuration-values"   target="_blank">
+    https://angular.cn/guide/workspace-config#complex-configuration-values</a></p>
 
         </div>
                 
