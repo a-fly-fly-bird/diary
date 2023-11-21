@@ -62,7 +62,7 @@
   
   
   <meta property="og:title" content="VS Code工具 使用记录" />
-<meta property="og:description" content="开个新坑，因为看到个很符合我需求的东西：" />
+<meta property="og:description" content="开个新坑，为了减少Hugo上传到仓库的图片大小，在插件市场看到个很符合我需求的东西： Learn Image 插件压缩图片，顺便来了兴趣系统地学习了解一下VS Code的整个配置和个性化。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://shadow-diary.fun/posts/2023/vscode-usage/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-11-12T00:29:25+08:00" />
@@ -71,7 +71,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="VS Code工具 使用记录"/>
-<meta name="twitter:description" content="开个新坑，因为看到个很符合我需求的东西："/>
+<meta name="twitter:description" content="开个新坑，为了减少Hugo上传到仓库的图片大小，在插件市场看到个很符合我需求的东西： Learn Image 插件压缩图片，顺便来了兴趣系统地学习了解一下VS Code的整个配置和个性化。"/>
 
   
   <script type="application/ld+json">
@@ -82,7 +82,7 @@
     "name": "VS Code工具 使用记录",
     "headline": "VS Code工具 使用记录",
     
-    "abstract": "开个新坑，因为看到个很符合我需求的东西：",
+    "abstract": "开个新坑，为了减少Hugo上传到仓库的图片大小，在插件市场看到个很符合我需求的东西： Learn Image 插件压缩图片，顺便来了兴趣系统地学习了解一下VS Code的整个配置和个性化。",
     "inLanguage": "en",
     "url" : "https:\/\/shadow-diary.fun\/posts\/2023\/vscode-usage\/",
     "author" : {
@@ -98,7 +98,7 @@
     "keywords": ["IDE","博客"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "4"
+    "wordCount": "127"
   }]
   </script>
 
@@ -509,7 +509,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-11-12 00:29:25 &#43;0800 CST">12 November 2023</time><span class="px-2 text-primary-500">&middot;</span><span>4 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2023-11-12 00:29:25 &#43;0800 CST">12 November 2023</time><span class="px-2 text-primary-500">&middot;</span><span>127 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
   
 
   
@@ -614,7 +614,87 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#visual-studio-code-教程">Visual Studio Code 教程</a></li>
+    <li><a href="#vs-code-vim">VS Code Vim</a></li>
+    <li><a href="#代码提示快捷键">代码提示快捷键</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#visual-studio-code-教程">Visual Studio Code 教程</a></li>
+    <li><a href="#vs-code-vim">VS Code Vim</a></li>
+    <li><a href="#代码提示快捷键">代码提示快捷键</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+ 
+<script>
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = e.attr('id');
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+           
+            $(e).removeClass('active').siblings('ul').hide();
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+         
+          $toc.find('a').parent('li').find('ul').hide();
+        
+        onScroll();
+      });
+    }
+  })();
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -622,9 +702,49 @@
 
 
         <div class="max-w-prose mb-20">
-          <p>开个新坑，因为看到个很符合我需求的东西：</p>
-<p><a href="https://learn.microsoft.com/en-us/contribute/content/docs-authoring/image-compression"   target="_blank">
-    Learn Image 插件压缩图片</a></p>
+          <p>开个新坑，为了减少Hugo上传到仓库的图片大小，在插件市场看到个很符合我需求的东西：
+<a href="https://learn.microsoft.com/en-us/contribute/content/docs-authoring/image-compression"   target="_blank">
+    Learn Image 插件压缩图片</a>，顺便来了兴趣系统地学习了解一下VS Code的整个配置和个性化。</p>
+<div id="visual-studio-code-教程" class="anchor"></div>
+<h1 class="relative group">Visual Studio Code 教程 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#visual-studio-code-%e6%95%99%e7%a8%8b" aria-label="Anchor">#</a></span>        
+    
+</h1>
+<p>VS Code是一个非常还用的编辑器，可以进行非常强大的自定义，具体参考：<a href="https://code.visualstudio.com/docs/editor/codebasics"   target="_blank">
+    Visual Studio Code 官网教程</a></p>
+<div id="vs-code-vim" class="anchor"></div>
+<h1 class="relative group">VS Code Vim 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#vs-code-vim" aria-label="Anchor">#</a></span>        
+    
+</h1>
+<p>我一直对Vim编辑器有着一种独特的青睐，但苦于其学习成本和使用成本，投入了大量时间精力却没有得到什么回报。而<a href="https://github.com/VSCodeVim/Vim"   target="_blank">
+    Vim for Visual Studio Code</a>的出现，提供了一个很好的平衡。</p>
+<p>VS Code 的 Learn VIM 插件总结的很好：</p>
+<blockquote>
+<p>Visual Studio Code is superb. It offers an unparalleled user experience with great support for many languages and development ecosystem. It comes with great defaults and is super easy to use and get started with.</p>
+<p>Vim is awesome. It modal nature and text editing features make it unique amongst other editors. Vim offers a complete different level of text editing proficiency, speed and accuracy from anything else out there.</p>
+<p>The combination of both couldn&rsquo;t be anything less than amazingly superbsome.</p>
+</blockquote>
+<div id="代码提示快捷键" class="anchor"></div>
+<h1 class="relative group">代码提示快捷键 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e4%bb%a3%e7%a0%81%e6%8f%90%e7%a4%ba%e5%bf%ab%e6%8d%b7%e9%94%ae" aria-label="Anchor">#</a></span>        
+    
+</h1>
+<p>默认的Trigger代码提示快捷键：</p>
+<ul>
+<li><code>mac</code>: <code>cmd+space</code></li>
+<li><code>win</code>: <code>ctrl+space</code></li>
+</ul>
+<p>都是非常容易和系统快捷键冲突的。所以需要修改。去VS Code修改快捷键的界面，输入<code>Trigger Suggest</code>可以找到当前的触发代码提示的快捷键。可以看到默认有几个，如果你觉得一个都不好用，就修改自定义。如果你习惯了<code>cmd + i</code> 或者<code>ctrl + i</code>等已有方案，就可以不用修改了。修改也很简单，点击前面的笔图标，直接在键盘输入你要设置的快捷键方式，然后按enter即可。</p>
 
         </div>
                 
@@ -680,6 +800,28 @@
           
         </span>
         <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/2023/jenkins-ci/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Jenkins 进阶学习笔记</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-11-18 13:26:37 &#43;0800 CST">18 November 2023</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>

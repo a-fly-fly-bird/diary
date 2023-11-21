@@ -4,7 +4,19 @@
 
   <url>
     <loc>https://shadow-diary.fun/posts/</loc>
-    <lastmod>2023-11-12T00:29:25+08:00</lastmod>
+    <lastmod>2023-11-18T13:34:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/k8s-cd/</loc>
+    <lastmod>2023-11-18T13:34:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/jenkins-ci/</loc>
+    <lastmod>2023-11-18T13:26:37+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -21,7 +33,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/advanced-css-study-notes/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-i/</loc>
     <lastmod>2023-11-07T19:25:26+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

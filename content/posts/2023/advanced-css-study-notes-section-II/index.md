@@ -34,7 +34,7 @@ series_order = 2
 
 ## 网页渲染过程
 
-![Alt text](<css_render.png>)
+![hello world text](<css_render.png>)
 
 这部分也是很大的内容，我之前正好做过相关的笔记，哪天有空也放上来。下面是我学习时从各种博客上抄来的图片汇总：
 
@@ -131,3 +131,6 @@ CSS可以通过
 。。。翻译半天，感觉还不如直接看原文。
 
 ![Alt text](<CleanShot 2023-11-12 at 00.12.40.png>)
+
+hello world: 310
+hello world: 239
