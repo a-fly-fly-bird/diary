@@ -9,6 +9,26 @@
     <copyright>Copy, _right?_ :thinking_face:</copyright>
     <lastBuildDate>Tue, 17 Oct 2023 23:30:43 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Angular Insight Lifecycle</title>
+      <link>https://shadow-diary.fun/posts/2023/angular/angular-insight-lifecycle/</link>
+      <pubDate>Fri, 15 Dec 2023 23:38:41 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/angular/angular-insight-lifecycle/</guid>
+      <description>https://limeii.</description>
+      
+    </item>
+    
+    <item>
+      <title>Git Handbook</title>
+      <link>https://shadow-diary.fun/posts/2023/git-handbook/</link>
+      <pubDate>Fri, 15 Dec 2023 22:49:08 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/git-handbook/</guid>
+      <description>现在使用Git的频率变高了很多，使用场景也复杂了很多，根据需求总结一些常用的命令。虽然很多图形化工具已经非常还用了，但是命令行还是有类似Write once, execute anywhere.</description>
+      
+    </item>
+    
+    <item>
       <title>K8s与CD</title>
       <link>https://shadow-diary.fun/posts/2023/k8s-cd/</link>
       <pubDate>Sat, 18 Nov 2023 13:34:55 +0800</pubDate>
