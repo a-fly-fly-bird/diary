@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>摄影 on 浮生日记</title>
+    <link>https://shadow-diary.fun/tags/%E6%91%84%E5%BD%B1/</link>
+    <description>Recent content in 摄影 on 浮生日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sun, 17 Dec 2023 00:11:00 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/%E6%91%84%E5%BD%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>动态模糊和高刷新率</title>
+      <link>https://shadow-diary.fun/posts/2023/common/eye/</link>
+      <pubDate>Sun, 17 Dec 2023 00:11:00 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/common/eye/</guid>
+      <description>参考： 人眼只能分辨24帧？我们来聊聊高刷新率的意义</description>
+      
+    </item>
+    
+  </channel>
+</rss>

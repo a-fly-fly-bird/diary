@@ -4,7 +4,31 @@
 
   <url>
     <loc>https://shadow-diary.fun/posts/</loc>
-    <lastmod>2023-12-17T00:00:50+08:00</lastmod>
+    <lastmod>2023-12-17T00:11:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/common/eye/</loc>
+    <lastmod>2023-12-17T00:11:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/programming-tips/</loc>
+    <lastmod>2023-12-17T00:09:12+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/ml/map/</loc>
+    <lastmod>2023-12-17T00:05:50+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/common/ros-ubuntu/</loc>
+    <lastmod>2023-12-17T00:03:59+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

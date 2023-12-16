@@ -9,6 +9,46 @@
     <copyright>Copy, _right?_ :thinking_face:</copyright>
     <lastBuildDate>Tue, 17 Oct 2023 23:30:43 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>动态模糊和高刷新率</title>
+      <link>https://shadow-diary.fun/posts/2023/common/eye/</link>
+      <pubDate>Sun, 17 Dec 2023 00:11:00 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/common/eye/</guid>
+      <description>参考： 人眼只能分辨24帧？我们来聊聊高刷新率的意义</description>
+      
+    </item>
+    
+    <item>
+      <title>编程技巧</title>
+      <link>https://shadow-diary.fun/posts/2023/frontend/programming-tips/</link>
+      <pubDate>Sun, 17 Dec 2023 00:09:12 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/frontend/programming-tips/</guid>
+      <description>代数数据类型ADT # type Props = { name: string } &amp;amp; ( { gender: &amp;#39;male&amp;#39;; salary: number } | { gender: &amp;#39;female&amp;#39;, weight: number } ) 这样可以动态地根据gender来决定下一个需要的属性是salary还是weight。</description>
+      
+    </item>
+    
+    <item>
+      <title>目标检测模型的评估指标mAP详解</title>
+      <link>https://shadow-diary.fun/posts/2023/ml/map/</link>
+      <pubDate>Sun, 17 Dec 2023 00:05:50 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/ml/map/</guid>
+      <description>mAP，即_Mean Average Precision，是目标检测领域最常用的评估指标。_</description>
+      
+    </item>
+    
+    <item>
+      <title>什么是ROS(ROS和Ubuntu的区别)</title>
+      <link>https://shadow-diary.fun/posts/2023/common/ros-ubuntu/</link>
+      <pubDate>Sun, 17 Dec 2023 00:03:59 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/common/ros-ubuntu/</guid>
+      <description>官网 # The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications.</description>
+      
+    </item>
+    
+    <item>
       <title>显示器领域的各种单位</title>
       <link>https://shadow-diary.fun/posts/2023/common/display-unit/</link>
       <pubDate>Sun, 17 Dec 2023 00:00:50 +0800</pubDate>
