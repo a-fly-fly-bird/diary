@@ -10,11 +10,11 @@
     <lastBuildDate>Fri, 15 Dec 2023 23:38:41 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angular Insight Lifecycle</title>
-      <link>https://shadow-diary.fun/posts/2023/angular/angular-insight-lifecycle/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/angular/angular-insight-lifecycle/</link>
       <pubDate>Fri, 15 Dec 2023 23:38:41 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/angular/angular-insight-lifecycle/</guid>
-      <description>https://limeii.</description>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/angular/angular-insight-lifecycle/</guid>
+      <description>Angular新手可能经常会有和我一样的疑问，我明明已经设置了值呀，为什么还是报读到undefined错误呢？有两种常见的原因，异步或者生命周期。今天就先来深入了解一下Angular的生命周期（适用于组件，指令等，因为本质上来说，组件也是指令）。</description>
       
     </item>
     
@@ -30,20 +30,20 @@
     
     <item>
       <title>K8s与CD</title>
-      <link>https://shadow-diary.fun/posts/2023/k8s-cd/</link>
+      <link>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</link>
       <pubDate>Sat, 18 Nov 2023 13:34:55 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/k8s-cd/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</guid>
       <description>公司使用的OpenShift管理集群。入职以来，这部分一直被我当成一个黑盒，不清楚是怎么自定义的部署规则。记录一下我的学习笔记。</description>
       
     </item>
     
     <item>
       <title>Jenkins 进阶学习笔记</title>
-      <link>https://shadow-diary.fun/posts/2023/jenkins-ci/</link>
+      <link>https://shadow-diary.fun/posts/2023/ci-cd/jenkins-ci/</link>
       <pubDate>Sat, 18 Nov 2023 13:26:37 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/jenkins-ci/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/ci-cd/jenkins-ci/</guid>
       <description>入职之后，一直对公司的CI/CD流程实现细节一知半解，最近正好需要打包部署一个应用，借此机会一口气把所有黑盒给打开。</description>
       
     </item>
@@ -60,70 +60,70 @@
     
     <item>
       <title>Advanced Css Study Notes Section II</title>
-      <link>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-ii/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-ii/</link>
       <pubDate>Wed, 08 Nov 2023 22:22:01 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-ii/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-ii/</guid>
       <description>Three Pillars to Write Good HTML and CSS&amp;hellip; And Build Good Websites # Responsive Design Fluid layouts Media queries Responsive images Correct units Desktop-first v.</description>
       
     </item>
     
     <item>
       <title>Advanced CSS Study Notes Section I</title>
-      <link>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-i/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-i/</link>
       <pubDate>Tue, 07 Nov 2023 19:25:26 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-i/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-i/</guid>
       <description>我的 Udemy排名第一的高级CSS课程 Advanced CSS and Sass - 高级 CSS 和 Sass：Flexbox、网格、动画（中英文字幕）笔记。</description>
       
     </item>
     
     <item>
       <title>Docker安装APM Server</title>
-      <link>https://shadow-diary.fun/posts/2023/frontend_performance_monotor/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/frontend_performance_monotor/</link>
       <pubDate>Mon, 06 Nov 2023 22:07:01 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/frontend_performance_monotor/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/frontend_performance_monotor/</guid>
       <description>官方文档 # elastic organization github homepage APM Agents Legacy APM Server Elasticsearch Kibana APM Real User Monitoring JavaScript Agent(Angular integration) Run APM Server on Docker docker-elk 模板 传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。</description>
       
     </item>
     
     <item>
       <title>npm，npx和packages.json</title>
-      <link>https://shadow-diary.fun/posts/2023/npx_vs_npm/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/npx_vs_npm/</link>
       <pubDate>Mon, 06 Nov 2023 00:01:36 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/npx_vs_npm/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/npx_vs_npm/</guid>
       <description>参考文档 # 什么是 npm —— 写给初学者的编程教程 npm docs npm 和 npx 的区别是什么 package.</description>
       
     </item>
     
     <item>
       <title>Commit Better Code with Husky, Prettier, commitlint and Lint-Staged</title>
-      <link>https://shadow-diary.fun/posts/2023/frontend-tool/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/frontend-tool/</link>
       <pubDate>Sun, 05 Nov 2023 22:15:11 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/frontend-tool/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/frontend-tool/</guid>
       <description>前言 # 如果你逛Github的话，就会发现很多项目根目录除了.</description>
       
     </item>
     
     <item>
       <title>Hugo博客部署</title>
-      <link>https://shadow-diary.fun/posts/2023/blog_deploy/</link>
+      <link>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</link>
       <pubDate>Thu, 19 Oct 2023 21:05:31 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/blog_deploy/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</guid>
       <description>仅仅是在Github Pages部署博客就有好几种方式，分别为：</description>
       
     </item>
     
     <item>
       <title>Hugo博客搭建</title>
-      <link>https://shadow-diary.fun/posts/2023/hugo_blog_build_up/</link>
+      <link>https://shadow-diary.fun/posts/2023/blog/hugo_blog_build_up/</link>
       <pubDate>Sat, 14 Oct 2023 17:30:08 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/hugo_blog_build_up/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/blog/hugo_blog_build_up/</guid>
       <description>前言 # 还记得第一次搭建博客是在大二，当时一个人带着电脑到教室学习算法，但是遇到苦难习惯性地开始不务正业，去折腾一些更简单的东西来寻求心理安慰。兜兜转转几年过去了，前前后后折腾了不少东西，但是技术也没有精进多少。现在想来，没有去挑战困难是大学最后悔的一件事。另外一件遗憾的事是很少记录生活，一些当初很感动的事情，现在也越来越模糊了。</description>
       
     </item>

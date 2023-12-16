@@ -2,7 +2,7 @@
 title = 'Git Handbook'
 date = 2023-12-15T22:49:08+08:00
 draft = false
-categories = ['后段']
+categories = ['后端']
 tags = ['Git']
 +++
 
@@ -56,6 +56,7 @@ git push
 详情参考：[revert-a-faulty-merge.txt](https://github.com/git/git/blob/master/Documentation/howto/revert-a-faulty-merge.txt)
 
 ### -m parent-number 配置项
+
 配置参考自：[git cherry-pick 教程](https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html)
 
 > 如果原始提交是一个合并节点，来自于两个分支的合并，那么 Cherry pick 默认将失败，因为它不知道应该采用哪个分支的代码变动。
@@ -65,12 +66,14 @@ git push
 > 一般来说，1号父分支是接受变动的分支（the branch being merged into），2号父分支是作为变动来源的分支（the branch being merged from）。
 
 # 查看分支非最新的版本
+
 注意，是仅查看，不要修改。
 ```sh
 git checkout <commit>
 ```
 
 # 回到上一个分支
+
 我们经常会切到其他分支，简单操作又切回dev分支。最简单的方法是：
 
 ```sh
@@ -80,6 +83,7 @@ git checkout -
 # 但是推荐使用switch做分支的切换。
 ```
 # merge remote的代码到当前分支
+
 git pull 其实就是 git fetch 和 git merge FETCH_HEAD 的简写。
 ```sh
 git pull origin [remote-branch-name]
@@ -87,7 +91,16 @@ git pull origin [remote-branch-name]
 比如
 ```sh
 git pull origin master
-```
+```·
 将远程主机 origin 的 master 分支拉取过来，与本地的当前所在分支合并。
 
+# git 合并本地多个提交为一个提交并推送到远程
 
+假设你需要merge前三个commit为一个单一的commit，运行如下命令：
+```sh
+git rebase -i HEAD~3
+```
+然后会进入一个界面，将除了第一个提交之外的`pick`改成`squash`，保存，然后修改提交信息即可。细节可以参考：[Combining Multiple Commits Into One Prior To Push](https://stackoverflow.com/a/5721879)
+
+# git 本地分支管理
+git 远程从主分支新建一个feature/fix分支后，本地克隆下来，然后最好不要直接就在这个分支上开始开发，把这个分支想象成自己的主分支，再新建分支进行开发，有时候会省很多事。

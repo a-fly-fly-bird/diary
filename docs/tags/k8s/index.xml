@@ -10,10 +10,10 @@
     <lastBuildDate>Sat, 18 Nov 2023 13:34:55 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>K8s与CD</title>
-      <link>https://shadow-diary.fun/posts/2023/k8s-cd/</link>
+      <link>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</link>
       <pubDate>Sat, 18 Nov 2023 13:34:55 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/k8s-cd/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</guid>
       <description>公司使用的OpenShift管理集群。入职以来，这部分一直被我当成一个黑盒，不清楚是怎么自定义的部署规则。记录一下我的学习笔记。</description>
       
     </item>

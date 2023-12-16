@@ -10,20 +10,20 @@
     <atom:link href="https://shadow-diary.fun/series/ci/cd-insight/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>K8s与CD</title>
-      <link>https://shadow-diary.fun/posts/2023/k8s-cd/</link>
+      <link>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</link>
       <pubDate>Sat, 18 Nov 2023 13:34:55 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/k8s-cd/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</guid>
       <description>公司使用的OpenShift管理集群。入职以来，这部分一直被我当成一个黑盒，不清楚是怎么自定义的部署规则。记录一下我的学习笔记。</description>
       
     </item>
     
     <item>
       <title>Jenkins 进阶学习笔记</title>
-      <link>https://shadow-diary.fun/posts/2023/jenkins-ci/</link>
+      <link>https://shadow-diary.fun/posts/2023/ci-cd/jenkins-ci/</link>
       <pubDate>Sat, 18 Nov 2023 13:26:37 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/jenkins-ci/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/ci-cd/jenkins-ci/</guid>
       <description>入职之后，一直对公司的CI/CD流程实现细节一知半解，最近正好需要打包部署一个应用，借此机会一口气把所有黑盒给打开。</description>
       
     </item>

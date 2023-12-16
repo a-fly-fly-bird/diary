@@ -9,7 +9,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/angular/angular-insight-lifecycle/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/angular/angular-insight-lifecycle/</loc>
     <lastmod>2023-12-15T23:38:41+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -21,13 +21,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/k8s-cd/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</loc>
     <lastmod>2023-11-18T13:34:55+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/jenkins-ci/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/ci-cd/jenkins-ci/</loc>
     <lastmod>2023-11-18T13:26:37+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -39,13 +39,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-ii/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-ii/</loc>
     <lastmod>2023-11-08T22:22:01+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-i/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-i/</loc>
     <lastmod>2023-11-07T19:25:26+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -63,25 +63,25 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/frontend_performance_monotor/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/frontend_performance_monotor/</loc>
     <lastmod>2023-11-06T22:07:01+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/npx_vs_npm/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/npx_vs_npm/</loc>
     <lastmod>2023-11-06T00:01:36+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/frontend-tool/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/frontend-tool/</loc>
     <lastmod>2023-11-05T22:15:11+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/blog_deploy/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</loc>
     <lastmod>2023-10-19T21:05:31+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -93,7 +93,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shadow-diary.fun/posts/2023/hugo_blog_build_up/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/blog/hugo_blog_build_up/</loc>
     <lastmod>2023-10-14T17:30:08+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

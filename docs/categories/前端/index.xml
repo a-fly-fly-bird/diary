@@ -10,60 +10,60 @@
     <lastBuildDate>Fri, 15 Dec 2023 23:38:41 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angular Insight Lifecycle</title>
-      <link>https://shadow-diary.fun/posts/2023/angular/angular-insight-lifecycle/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/angular/angular-insight-lifecycle/</link>
       <pubDate>Fri, 15 Dec 2023 23:38:41 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/angular/angular-insight-lifecycle/</guid>
-      <description>https://limeii.</description>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/angular/angular-insight-lifecycle/</guid>
+      <description>Angular新手可能经常会有和我一样的疑问，我明明已经设置了值呀，为什么还是报读到undefined错误呢？有两种常见的原因，异步或者生命周期。今天就先来深入了解一下Angular的生命周期（适用于组件，指令等，因为本质上来说，组件也是指令）。</description>
       
     </item>
     
     <item>
       <title>Advanced Css Study Notes Section II</title>
-      <link>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-ii/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-ii/</link>
       <pubDate>Wed, 08 Nov 2023 22:22:01 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-ii/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-ii/</guid>
       <description>Three Pillars to Write Good HTML and CSS&amp;hellip; And Build Good Websites # Responsive Design Fluid layouts Media queries Responsive images Correct units Desktop-first v.</description>
       
     </item>
     
     <item>
       <title>Advanced CSS Study Notes Section I</title>
-      <link>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-i/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-i/</link>
       <pubDate>Tue, 07 Nov 2023 19:25:26 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/advanced-css-study-notes-section-i/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-i/</guid>
       <description>我的 Udemy排名第一的高级CSS课程 Advanced CSS and Sass - 高级 CSS 和 Sass：Flexbox、网格、动画（中英文字幕）笔记。</description>
       
     </item>
     
     <item>
       <title>Docker安装APM Server</title>
-      <link>https://shadow-diary.fun/posts/2023/frontend_performance_monotor/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/frontend_performance_monotor/</link>
       <pubDate>Mon, 06 Nov 2023 22:07:01 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/frontend_performance_monotor/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/frontend_performance_monotor/</guid>
       <description>官方文档 # elastic organization github homepage APM Agents Legacy APM Server Elasticsearch Kibana APM Real User Monitoring JavaScript Agent(Angular integration) Run APM Server on Docker docker-elk 模板 传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。</description>
       
     </item>
     
     <item>
       <title>npm，npx和packages.json</title>
-      <link>https://shadow-diary.fun/posts/2023/npx_vs_npm/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/npx_vs_npm/</link>
       <pubDate>Mon, 06 Nov 2023 00:01:36 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/npx_vs_npm/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/npx_vs_npm/</guid>
       <description>参考文档 # 什么是 npm —— 写给初学者的编程教程 npm docs npm 和 npx 的区别是什么 package.</description>
       
     </item>
     
     <item>
       <title>Commit Better Code with Husky, Prettier, commitlint and Lint-Staged</title>
-      <link>https://shadow-diary.fun/posts/2023/frontend-tool/</link>
+      <link>https://shadow-diary.fun/posts/2023/frontend/frontend-tool/</link>
       <pubDate>Sun, 05 Nov 2023 22:15:11 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2023/frontend-tool/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/frontend/frontend-tool/</guid>
       <description>前言 # 如果你逛Github的话，就会发现很多项目根目录除了.</description>
       
     </item>
