@@ -4,7 +4,37 @@
 
   <url>
     <loc>https://shadow-diary.fun/posts/</loc>
-    <lastmod>2023-12-15T23:38:41+08:00</lastmod>
+    <lastmod>2023-12-17T00:00:50+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/common/display-unit/</loc>
+    <lastmod>2023-12-17T00:00:50+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/ml/cuda-more/</loc>
+    <lastmod>2023-12-16T23:59:11+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/common/time-zone/</loc>
+    <lastmod>2023-12-16T23:55:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/common/paper-catalog/</loc>
+    <lastmod>2023-12-16T23:54:35+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2023/common/character-encoding/</loc>
+    <lastmod>2023-12-16T23:49:32+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

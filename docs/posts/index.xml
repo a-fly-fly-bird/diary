@@ -7,7 +7,57 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Fri, 15 Dec 2023 23:38:41 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 00:00:50 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>显示器领域的各种单位</title>
+      <link>https://shadow-diary.fun/posts/2023/common/display-unit/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:50 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/common/display-unit/</guid>
+      <description>买显示器时经常会被扑面而来眼花缭乱的各种单位困惑。我发现这种经常会碰到的领域就需要抽空专门把它弄清楚。 类似一个判断语句：</description>
+      
+    </item>
+    
+    <item>
+      <title>英伟达官网 CUDA、CUDA toolkit 和 Conda PyTorch 里 CUDA、CUDA toolkit的关系</title>
+      <link>https://shadow-diary.fun/posts/2023/ml/cuda-more/</link>
+      <pubDate>Sat, 16 Dec 2023 23:59:11 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/ml/cuda-more/</guid>
+      <description>参考：</description>
+      
+    </item>
+    
+    <item>
+      <title>时间相关概念（GMT, UTC, 时间，时区，naive，time zone-aware，Locale等概念）</title>
+      <link>https://shadow-diary.fun/posts/2023/common/time-zone/</link>
+      <pubDate>Sat, 16 Dec 2023 23:55:55 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/common/time-zone/</guid>
+      <description>单纯型(naive)本地化和时区意识型(time zone-aware) # 当使用datetime.</description>
+      
+    </item>
+    
+    <item>
+      <title>学术期刊的级别、种类、等级</title>
+      <link>https://shadow-diary.fun/posts/2023/common/paper-catalog/</link>
+      <pubDate>Sat, 16 Dec 2023 23:54:35 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/common/paper-catalog/</guid>
+      <description>期刊分类 # 学术期刊的级别、种类、等级，这篇文章全讲清楚了</description>
+      
+    </item>
+    
+    <item>
+      <title>字符编码（ASCII、GBK、UTF-8、Unicode等）和字体</title>
+      <link>https://shadow-diary.fun/posts/2023/common/character-encoding/</link>
+      <pubDate>Sat, 16 Dec 2023 23:49:32 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/common/character-encoding/</guid>
+      <description>参考：</description>
+      
+    </item>
+    
     <item>
       <title>Angular Insight Lifecycle</title>
       <link>https://shadow-diary.fun/posts/2023/frontend/angular/angular-insight-lifecycle/</link>
