@@ -6,57 +6,42 @@
     <description>Recent content in 常识 on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Sun, 17 Dec 2023 00:11:00 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/categories/%E5%B8%B8%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 00:11:00 +0800</lastBuildDate>
+    <atom:link href="https://shadow-diary.fun/categories/%E5%B8%B8%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>动态模糊和高刷新率</title>
       <link>https://shadow-diary.fun/posts/2023/common/eye/</link>
       <pubDate>Sun, 17 Dec 2023 00:11:00 +0800</pubDate>
-      
       <guid>https://shadow-diary.fun/posts/2023/common/eye/</guid>
-      <description>参考： 人眼只能分辨24帧？我们来聊聊高刷新率的意义</description>
-      
+      <description>参考：人眼只能分辨24帧？我们来聊聊高刷新率的意义</description>
     </item>
-    
     <item>
       <title>显示器领域的各种单位</title>
       <link>https://shadow-diary.fun/posts/2023/common/display-unit/</link>
       <pubDate>Sun, 17 Dec 2023 00:00:50 +0800</pubDate>
-      
       <guid>https://shadow-diary.fun/posts/2023/common/display-unit/</guid>
       <description>买显示器时经常会被扑面而来眼花缭乱的各种单位困惑。我发现这种经常会碰到的领域就需要抽空专门把它弄清楚。 类似一个判断语句：</description>
-      
     </item>
-    
     <item>
       <title>时间相关概念（GMT, UTC, 时间，时区，naive，time zone-aware，Locale等概念）</title>
       <link>https://shadow-diary.fun/posts/2023/common/time-zone/</link>
       <pubDate>Sat, 16 Dec 2023 23:55:55 +0800</pubDate>
-      
       <guid>https://shadow-diary.fun/posts/2023/common/time-zone/</guid>
-      <description>单纯型(naive)本地化和时区意识型(time zone-aware) # 当使用datetime.</description>
-      
+      <description>单纯型(naive)本地化和时区意识型(time zone-aware) 当使用datetime.</description>
     </item>
-    
     <item>
       <title>学术期刊的级别、种类、等级</title>
       <link>https://shadow-diary.fun/posts/2023/common/paper-catalog/</link>
       <pubDate>Sat, 16 Dec 2023 23:54:35 +0800</pubDate>
-      
       <guid>https://shadow-diary.fun/posts/2023/common/paper-catalog/</guid>
-      <description>期刊分类 # 学术期刊的级别、种类、等级，这篇文章全讲清楚了</description>
-      
+      <description>期刊分类 学术期刊的级别、种类、等级，这篇文章全讲清楚了</description>
     </item>
-    
     <item>
       <title>字符编码（ASCII、GBK、UTF-8、Unicode等）和字体</title>
       <link>https://shadow-diary.fun/posts/2023/common/character-encoding/</link>
       <pubDate>Sat, 16 Dec 2023 23:49:32 +0800</pubDate>
-      
       <guid>https://shadow-diary.fun/posts/2023/common/character-encoding/</guid>
       <description>参考：</description>
-      
     </item>
-    
   </channel>
 </rss>

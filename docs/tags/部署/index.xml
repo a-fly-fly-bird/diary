@@ -6,17 +6,14 @@
     <description>Recent content in 部署 on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Thu, 19 Oct 2023 21:05:31 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Oct 2023 21:05:31 +0800</lastBuildDate>
+    <atom:link href="https://shadow-diary.fun/tags/%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo博客部署</title>
       <link>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</link>
       <pubDate>Thu, 19 Oct 2023 21:05:31 +0800</pubDate>
-      
       <guid>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</guid>
       <description>仅仅是在Github Pages部署博客就有好几种方式，分别为：</description>
-      
     </item>
-    
   </channel>
 </rss>

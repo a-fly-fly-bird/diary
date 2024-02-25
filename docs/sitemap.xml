@@ -1,166 +1,388 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
   <url>
     <loc>https://shadow-diary.fun/posts/</loc>
     <lastmod>2023-12-17T00:11:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/categories/</loc>
+    <lastmod>2023-12-17T00:11:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/</loc>
+    <lastmod>2023-12-17T00:11:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/common/eye/</loc>
     <lastmod>2023-12-17T00:11:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/categories/%E5%B8%B8%E8%AF%86/</loc>
+    <lastmod>2023-12-17T00:11:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E6%91%84%E5%BD%B1/</loc>
+    <lastmod>2023-12-17T00:11:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E8%A7%86%E8%A7%89/</loc>
+    <lastmod>2023-12-17T00:11:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2023-12-17T00:09:12+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2023-12-17T00:09:12+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/frontend/programming-tips/</loc>
     <lastmod>2023-12-17T00:09:12+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/deep-learning/</loc>
+    <lastmod>2023-12-17T00:05:50+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/categories/ml/dl/</loc>
+    <lastmod>2023-12-17T00:05:50+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/ml/map/</loc>
     <lastmod>2023-12-17T00:05:50+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/ros/</loc>
+    <lastmod>2023-12-17T00:03:59+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/ubuntu/</loc>
+    <lastmod>2023-12-17T00:03:59+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/common/ros-ubuntu/</loc>
     <lastmod>2023-12-17T00:03:59+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/categories/%E6%8A%98%E8%85%BE/</loc>
+    <lastmod>2023-12-17T00:03:59+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E6%98%BE%E7%A4%BA%E5%99%A8/</loc>
+    <lastmod>2023-12-17T00:00:50+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/common/display-unit/</loc>
     <lastmod>2023-12-17T00:00:50+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/cuda/</loc>
+    <lastmod>2023-12-16T23:59:11+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/pytorch/</loc>
+    <lastmod>2023-12-16T23:59:11+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/ml/cuda-more/</loc>
     <lastmod>2023-12-16T23:59:11+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/common/time-zone/</loc>
     <lastmod>2023-12-16T23:55:55+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/common/paper-catalog/</loc>
     <lastmod>2023-12-16T23:54:35+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E7%A7%91%E7%A0%94/</loc>
+    <lastmod>2023-12-16T23:54:35+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E8%AE%BA%E6%96%87/</loc>
+    <lastmod>2023-12-16T23:54:35+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/unicode/</loc>
+    <lastmod>2023-12-16T23:49:32+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</loc>
+    <lastmod>2023-12-16T23:49:32+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/common/character-encoding/</loc>
     <lastmod>2023-12-16T23:49:32+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/angular/</loc>
+    <lastmod>2023-12-15T23:38:41+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/frontend/angular/angular-insight-lifecycle/</loc>
     <lastmod>2023-12-15T23:38:41+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/git/</loc>
+    <lastmod>2023-12-15T22:49:08+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/git-handbook/</loc>
     <lastmod>2023-12-15T22:49:08+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/categories/%E5%90%8E%E7%AB%AF/</loc>
+    <lastmod>2023-12-15T22:49:08+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/categories/ci/cd/</loc>
+    <lastmod>2023-11-18T13:34:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/series/ci/cd-insight/</loc>
+    <lastmod>2023-11-18T13:34:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/k8s/</loc>
+    <lastmod>2023-11-18T13:34:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</loc>
     <lastmod>2023-11-18T13:34:55+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/openshift/</loc>
+    <lastmod>2023-11-18T13:34:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/series/</loc>
+    <lastmod>2023-11-18T13:34:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/jenkins/</loc>
+    <lastmod>2023-11-18T13:26:37+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/ci-cd/jenkins-ci/</loc>
     <lastmod>2023-11-18T13:26:37+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/jenkinsfile/</loc>
+    <lastmod>2023-11-18T13:26:37+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/ide/</loc>
+    <lastmod>2023-11-12T00:29:25+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/vscode-usage/</loc>
     <lastmod>2023-11-12T00:29:25+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2023-11-12T00:29:25+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-ii/</loc>
     <lastmod>2023-11-08T22:22:01+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/css/</loc>
+    <lastmod>2023-11-08T22:22:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/sass/</loc>
+    <lastmod>2023-11-08T22:22:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/series/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/</loc>
+    <lastmod>2023-11-08T22:22:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2023-11-08T22:22:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2023-11-08T22:22:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-i/</loc>
     <lastmod>2023-11-07T19:25:26+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
     <loc>https://shadow-diary.fun/diary/</loc>
     <lastmod>2023-11-06T23:43:44+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
     <loc>https://shadow-diary.fun/diary/2023/2023-11-1-friends/</loc>
     <lastmod>2023-11-06T23:43:44+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E6%97%A5%E8%AE%B0/</loc>
+    <lastmod>2023-11-06T23:43:44+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/</loc>
+    <lastmod>2023-11-06T23:43:44+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/frontend/frontend_performance_monotor/</loc>
     <lastmod>2023-11-06T22:07:01+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/elastic-search/</loc>
+    <lastmod>2023-11-06T22:07:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/elk/</loc>
+    <lastmod>2023-11-06T22:07:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/series/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7/</loc>
+    <lastmod>2023-11-06T22:07:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7/</loc>
+    <lastmod>2023-11-06T22:07:01+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/npm/</loc>
+    <lastmod>2023-11-06T00:01:36+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/frontend/npx_vs_npm/</loc>
     <lastmod>2023-11-06T00:01:36+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/npx/</loc>
+    <lastmod>2023-11-06T00:01:36+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/frontend/frontend-tool/</loc>
     <lastmod>2023-11-05T22:15:11+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E4%BB%A3%E7%A0%81%E7%BE%8E%E5%8C%96/</loc>
+    <lastmod>2023-11-05T22:15:11+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/github/</loc>
+    <lastmod>2023-10-19T21:05:31+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/hugo/</loc>
+    <lastmod>2023-10-19T21:05:31+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</loc>
     <lastmod>2023-10-19T21:05:31+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
+    <loc>https://shadow-diary.fun/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%88%B0%E5%8F%91%E5%B8%83%E5%85%A8%E6%B5%81%E7%A8%8B/</loc>
+    <lastmod>2023-10-19T21:05:31+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/tags/%E9%83%A8%E7%BD%B2/</loc>
+    <lastmod>2023-10-19T21:05:31+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://shadow-diary.fun/</loc>
     <lastmod>2023-10-17T23:30:43+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
     <loc>https://shadow-diary.fun/posts/2023/blog/hugo_blog_build_up/</loc>
     <lastmod>2023-10-14T17:30:08+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
     <loc>https://shadow-diary.fun/diary/2023/2023-10-14-first-diary/</loc>
     <lastmod>2023-10-14T11:56:21+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
+  </url><url>
     <loc>https://shadow-diary.fun/about/</loc>
     <lastmod>2023-10-07T21:26:50+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://shadow-diary.fun/authors/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

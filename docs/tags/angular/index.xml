@@ -6,17 +6,14 @@
     <description>Recent content in Angular on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Fri, 15 Dec 2023 23:38:41 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Dec 2023 23:38:41 +0800</lastBuildDate>
+    <atom:link href="https://shadow-diary.fun/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angular Insight Lifecycle</title>
       <link>https://shadow-diary.fun/posts/2023/frontend/angular/angular-insight-lifecycle/</link>
       <pubDate>Fri, 15 Dec 2023 23:38:41 +0800</pubDate>
-      
       <guid>https://shadow-diary.fun/posts/2023/frontend/angular/angular-insight-lifecycle/</guid>
       <description>Angular新手可能经常会有和我一样的疑问，我明明已经设置了值呀，为什么还是报读到undefined错误呢？有两种常见的原因，异步或者生命周期。今天就先来深入了解一下Angular的生命周期（适用于组件，指令等，因为本质上来说，组件也是指令）。</description>
-      
     </item>
-    
   </channel>
 </rss>

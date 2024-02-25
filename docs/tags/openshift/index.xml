@@ -6,17 +6,14 @@
     <description>Recent content in OpenShift on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Sat, 18 Nov 2023 13:34:55 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/openshift/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Nov 2023 13:34:55 +0800</lastBuildDate>
+    <atom:link href="https://shadow-diary.fun/tags/openshift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>K8s与CD</title>
       <link>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</link>
       <pubDate>Sat, 18 Nov 2023 13:34:55 +0800</pubDate>
-      
       <guid>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</guid>
       <description>公司使用的OpenShift管理集群。入职以来，这部分一直被我当成一个黑盒，不清楚是怎么自定义的部署规则。记录一下我的学习笔记。</description>
-      
     </item>
-    
   </channel>
 </rss>
