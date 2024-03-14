@@ -6,8 +6,15 @@
     <description>Recent content in 后端 on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Dec 2023 22:49:08 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 17:49:53 +0800</lastBuildDate>
     <atom:link href="https://shadow-diary.fun/categories/%E5%90%8E%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jpa insight</title>
+      <link>https://shadow-diary.fun/posts/2023/springboot/</link>
+      <pubDate>Tue, 12 Mar 2024 17:49:53 +0800</pubDate>
+      <guid>https://shadow-diary.fun/posts/2023/springboot/</guid>
+      <description>Official Dosc: spring-boot</description>
+    </item>
     <item>
       <title>Git Handbook</title>
       <link>https://shadow-diary.fun/posts/2023/git-handbook/</link>

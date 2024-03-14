@@ -6,8 +6,15 @@
     <description>Recent content in 你好，世界 on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 Dec 2023 00:11:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 17:49:53 +0800</lastBuildDate>
     <atom:link href="https://shadow-diary.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jpa insight</title>
+      <link>https://shadow-diary.fun/posts/2023/springboot/</link>
+      <pubDate>Tue, 12 Mar 2024 17:49:53 +0800</pubDate>
+      <guid>https://shadow-diary.fun/posts/2023/springboot/</guid>
+      <description>Official Dosc: spring-boot</description>
+    </item>
     <item>
       <title>动态模糊和高刷新率</title>
       <link>https://shadow-diary.fun/posts/2023/common/eye/</link>
