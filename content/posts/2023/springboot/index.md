@@ -604,6 +604,19 @@ public @interface Entity {
 
 除了 `@Id` 注解外，JPA 还提供了许多其他注解，例如 `@GeneratedValue`、`@SequenceGenerator`、`@TableGenerator` 等，用于控制主键生成策略和生成器的配置。
 
+```java
+@Entity
+@Table(name = "teacher_table")
+public class Teacher {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID, generator = "")
+    private UUID id;
+
+    @Column(name = "first__name", nullable = false, updatable = false)
+    private String firstName;
+}
+```
+
 ## `@Column`
 
 用来标识实体类中属性与数据表中字段的对应关系。可以点击查看源码，里面有很多属性可以设置（DDL里设置在字段上的控制参数之类的）。其中有一些是前台控制，也就是说是Java 持久层API提供的特性而不是数据库原生的特性。
@@ -640,4 +653,82 @@ public class Teacher {
 - 逆向工程：存在数据库的表，自动生成实体
 
 JPA 支持 正向工程。
+
+## Sequences
+[序列](https://www.ibm.com/docs/en/db2/11.5?topic=objects-sequences)是一个数据库对象，它允许自动生成值，例如校验号。序列非常适合于生成唯一键值的任务。应用程序可以使用序列来避免用于跟踪数字的列值可能导致的并发性和性能问题。序列相对于在数据库外创建的数字的优势在于，数据库服务器可以跟踪生成的数字。崩溃和重新启动不会导致生成重复的数字。
+
+这个东西我也是今天才知道。没见用过。
+
+## Repository
+
+### Interface Hierarchy
+![alt text](_media/9c4e4c00c7a64047b819874635b4f7f9~tplv-k3u1fbpfcp-zoom-1.image.png)
+
+
+### 使用
+```java
+@Repository
+public interface PaymentRepository extends JpaRepository<Teacher, UUID> {
+
+}
+```
+我们只需要声明这么一个接口，JPA会自动帮我们创建一个实现了这些接口的对象实例，并注入到Spring容器中。
+
+使用的时候，使用依赖注入，拿到对象实例使用即可(封装，继承，多态)。
+```java
+@RestController
+@RequestMapping("teacher")
+public class TeacherController {
+    private PaymentRepository paymentRepository;
+
+    public TeacherController(PaymentRepository paymentRepository) {
+        this.paymentRepository = paymentRepository;
+    }
+
+    @SuppressWarnings("null")
+    @PostMapping("man")
+    public String postMethodName(@RequestBody Teacher teacher) {
+        // 调用jpa接口提供的方法
+        this.paymentRepository.save(teacher);
+        return teacher.toString();
+    }
+
+}
+```
+
+
+## 插播：HikariCP连接池
+
+HikariCP是快速、简单、可靠且可用于生产的JDBC连接池。
+
+### 依赖
+在Spring Boot 2.0及以后的版本，不需要在pom.xml或build.gradle中加入HikariCP依赖，因为`spring-boot-starter-jdbc`和`spring-boot-starter-data-jpa`会依赖它并且是**默认开启**的。
+
+我们可以通过在`application.yml`中的`spring.datasource.hikari`中自定义`HikariCP`连接池的参数。
+
+```yml
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/helloworld
+    username: root
+    password: 20010610
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 下面就是hikari的配置。
+    hikari:
+      # 在连接池中维护的最小空闲连接数
+      minimum-idle: 10
+      # 允许一个连接在连接池中闲置的最大时间
+      idle-timeout: 30000
+      # 最大连接池数大小
+      maximum-pool-size: 20
+      # 连接关闭后的最长生存时间
+      max-lifetime: 120000
+      # 客户端从连接池等待连接的最大毫秒数
+      connection-timeout: 30000
+```
+
+## 插播：Spring JDBC Template 和 Data Source 和 Spring Data JPA
+Spring JDBC Template 和 Spring Data JPA 都是上层建筑，需要配置Data Source来操作数据库，Data Source为数据库的来源（为了显示层级结构，我理解为指向JDBC或者连接池）。
 

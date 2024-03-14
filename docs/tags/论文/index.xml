@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>论文 on 浮生日记</title>
-    <link>https://shadow-diary.fun/tags/%E8%AE%BA%E6%96%87/</link>
+    <link>http://localhost:1313/tags/%E8%AE%BA%E6%96%87/</link>
     <description>Recent content in 论文 on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 16 Dec 2023 23:54:35 +0800</lastBuildDate>
-    <atom:link href="https://shadow-diary.fun/tags/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学术期刊的级别、种类、等级</title>
-      <link>https://shadow-diary.fun/posts/2023/common/paper-catalog/</link>
+      <link>http://localhost:1313/posts/2023/common/paper-catalog/</link>
       <pubDate>Sat, 16 Dec 2023 23:54:35 +0800</pubDate>
-      <guid>https://shadow-diary.fun/posts/2023/common/paper-catalog/</guid>
+      <guid>http://localhost:1313/posts/2023/common/paper-catalog/</guid>
       <description>期刊分类 学术期刊的级别、种类、等级，这篇文章全讲清楚了</description>
     </item>
   </channel>
