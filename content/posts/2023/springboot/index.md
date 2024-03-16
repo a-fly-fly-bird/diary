@@ -732,3 +732,18 @@ spring:
 ## 插播：Spring JDBC Template 和 Data Source 和 Spring Data JPA
 Spring JDBC Template 和 Spring Data JPA 都是上层建筑，需要配置Data Source来操作数据库，Data Source为数据库的来源（为了显示层级结构，我理解为指向JDBC或者连接池）。
 
+# DTO
+DTO stands for data transfer object.
+
+![alt text](<_media/CleanShot 2024-03-16 at 15.27.26.png>)
+
+`@Entity`中声明的实体类对应的是数据库中的表结构，但是想象一下：
+
+1. 数据库表结构中字段太多，全部返回给前端效率低下
+2. 数据库中有敏感信息（比如地址等），不希望返回给前端
+
+这就是DTO的使用场景。
+
+
+
+
