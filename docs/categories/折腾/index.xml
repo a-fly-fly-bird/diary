@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Sun, 17 Dec 2023 00:03:59 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Mar 2024 21:20:58 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gradle_catalog</title>
+      <link>http://localhost:1313/posts/2024/gradle_catalog/</link>
+      <pubDate>Tue, 19 Mar 2024 21:20:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2024/gradle_catalog/</guid>
+      <description>Reference: Gradle Version Catalog 和 Version Catalog(中央依赖声明，即：版本目录)</description>
+      
+    </item>
+    
     <item>
       <title>什么是ROS(ROS和Ubuntu的区别)</title>
       <link>http://localhost:1313/posts/2023/common/ros-ubuntu/</link>
