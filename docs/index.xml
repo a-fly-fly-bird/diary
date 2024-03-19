@@ -6,182 +6,257 @@
     <description>Recent content in 你好，世界 on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Mar 2024 17:49:53 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Tue, 17 Oct 2023 23:30:43 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jpa insight</title>
       <link>http://localhost:1313/posts/2023/springboot/</link>
       <pubDate>Tue, 12 Mar 2024 17:49:53 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/springboot/</guid>
       <description>Official Dosc: spring-boot</description>
+      
     </item>
+    
     <item>
       <title>动态模糊和高刷新率</title>
       <link>http://localhost:1313/posts/2023/common/eye/</link>
       <pubDate>Sun, 17 Dec 2023 00:11:00 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/common/eye/</guid>
-      <description>参考：人眼只能分辨24帧？我们来聊聊高刷新率的意义</description>
+      <description>参考： 人眼只能分辨24帧？我们来聊聊高刷新率的意义</description>
+      
     </item>
+    
     <item>
       <title>编程技巧</title>
       <link>http://localhost:1313/posts/2023/frontend/programming-tips/</link>
       <pubDate>Sun, 17 Dec 2023 00:09:12 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/frontend/programming-tips/</guid>
-      <description>代数数据类型ADT type Props = { name: string } &amp;amp; ( { gender: &amp;#39;male&amp;#39;; salary: number } | { gender: &amp;#39;female&amp;#39;, weight: number } ) 这样可以动态地根据gender来决定下一个需要的属性是salary还是weight。</description>
+      <description>代数数据类型ADT # type Props = { name: string } &amp;amp; ( { gender: &amp;#39;male&amp;#39;; salary: number } | { gender: &amp;#39;female&amp;#39;, weight: number } ) 这样可以动态地根据gender来决定下一个需要的属性是salary还是weight。</description>
+      
     </item>
+    
     <item>
       <title>目标检测模型的评估指标mAP详解</title>
       <link>http://localhost:1313/posts/2023/ml/map/</link>
       <pubDate>Sun, 17 Dec 2023 00:05:50 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/ml/map/</guid>
       <description>mAP，即_Mean Average Precision，是目标检测领域最常用的评估指标。_</description>
+      
     </item>
+    
     <item>
       <title>什么是ROS(ROS和Ubuntu的区别)</title>
       <link>http://localhost:1313/posts/2023/common/ros-ubuntu/</link>
       <pubDate>Sun, 17 Dec 2023 00:03:59 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/common/ros-ubuntu/</guid>
-      <description>官网 The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications.</description>
+      <description>官网 # The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications.</description>
+      
     </item>
+    
     <item>
       <title>显示器领域的各种单位</title>
       <link>http://localhost:1313/posts/2023/common/display-unit/</link>
       <pubDate>Sun, 17 Dec 2023 00:00:50 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/common/display-unit/</guid>
       <description>买显示器时经常会被扑面而来眼花缭乱的各种单位困惑。我发现这种经常会碰到的领域就需要抽空专门把它弄清楚。 类似一个判断语句：</description>
+      
     </item>
+    
     <item>
       <title>英伟达官网 CUDA、CUDA toolkit 和 Conda PyTorch 里 CUDA、CUDA toolkit的关系</title>
       <link>http://localhost:1313/posts/2023/ml/cuda-more/</link>
       <pubDate>Sat, 16 Dec 2023 23:59:11 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/ml/cuda-more/</guid>
       <description>参考：</description>
+      
     </item>
+    
     <item>
       <title>时间相关概念（GMT, UTC, 时间，时区，naive，time zone-aware，Locale等概念）</title>
       <link>http://localhost:1313/posts/2023/common/time-zone/</link>
       <pubDate>Sat, 16 Dec 2023 23:55:55 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/common/time-zone/</guid>
-      <description>单纯型(naive)本地化和时区意识型(time zone-aware) 当使用datetime.</description>
+      <description>单纯型(naive)本地化和时区意识型(time zone-aware) # 当使用datetime.</description>
+      
     </item>
+    
     <item>
       <title>学术期刊的级别、种类、等级</title>
       <link>http://localhost:1313/posts/2023/common/paper-catalog/</link>
       <pubDate>Sat, 16 Dec 2023 23:54:35 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/common/paper-catalog/</guid>
-      <description>期刊分类 学术期刊的级别、种类、等级，这篇文章全讲清楚了</description>
+      <description>期刊分类 # 学术期刊的级别、种类、等级，这篇文章全讲清楚了</description>
+      
     </item>
+    
     <item>
       <title>字符编码（ASCII、GBK、UTF-8、Unicode等）和字体</title>
       <link>http://localhost:1313/posts/2023/common/character-encoding/</link>
       <pubDate>Sat, 16 Dec 2023 23:49:32 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/common/character-encoding/</guid>
       <description>参考：</description>
+      
     </item>
+    
     <item>
       <title>Angular Insight Lifecycle</title>
       <link>http://localhost:1313/posts/2023/frontend/angular/angular-insight-lifecycle/</link>
       <pubDate>Fri, 15 Dec 2023 23:38:41 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/frontend/angular/angular-insight-lifecycle/</guid>
       <description>Angular新手可能经常会有和我一样的疑问，我明明已经设置了值呀，为什么还是报读到undefined错误呢？有两种常见的原因，异步或者生命周期。今天就先来深入了解一下Angular的生命周期（适用于组件，指令等，因为本质上来说，组件也是指令）。</description>
+      
     </item>
+    
     <item>
       <title>Git Handbook</title>
       <link>http://localhost:1313/posts/2023/git-handbook/</link>
       <pubDate>Fri, 15 Dec 2023 22:49:08 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/git-handbook/</guid>
       <description>现在使用Git的频率变高了很多，使用场景也复杂了很多，根据需求总结一些常用的命令。虽然很多图形化工具已经非常还用了，但是命令行还是有类似Write once, execute anywhere.</description>
+      
     </item>
+    
     <item>
       <title>K8s与CD</title>
       <link>http://localhost:1313/posts/2023/ci-cd/k8s-cd/</link>
       <pubDate>Sat, 18 Nov 2023 13:34:55 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/ci-cd/k8s-cd/</guid>
       <description>公司使用的OpenShift管理集群。入职以来，这部分一直被我当成一个黑盒，不清楚是怎么自定义的部署规则。记录一下我的学习笔记。</description>
+      
     </item>
+    
     <item>
       <title>Jenkins 进阶学习笔记</title>
       <link>http://localhost:1313/posts/2023/ci-cd/jenkins-ci/</link>
       <pubDate>Sat, 18 Nov 2023 13:26:37 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/ci-cd/jenkins-ci/</guid>
       <description>入职之后，一直对公司的CI/CD流程实现细节一知半解，最近正好需要打包部署一个应用，借此机会一口气把所有黑盒给打开。</description>
+      
     </item>
+    
     <item>
       <title>VS Code工具 使用记录</title>
       <link>http://localhost:1313/posts/2023/vscode-usage/</link>
       <pubDate>Sun, 12 Nov 2023 00:29:25 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/vscode-usage/</guid>
       <description>开个新坑，为了减少Hugo上传到仓库的图片大小，在插件市场看到个很符合我需求的东西： Learn Image 插件压缩图片，顺便来了兴趣系统地学习了解一下VS Code的整个配置和个性化。</description>
+      
     </item>
+    
     <item>
       <title>Advanced Css Study Notes Section II</title>
       <link>http://localhost:1313/posts/2023/frontend/advanced-css-study-notes/section-ii/</link>
       <pubDate>Wed, 08 Nov 2023 22:22:01 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/frontend/advanced-css-study-notes/section-ii/</guid>
-      <description>Three Pillars to Write Good HTML and CSS&amp;hellip; And Build Good Websites Responsive Design Fluid layouts Media queries Responsive images Correct units Desktop-first v.</description>
+      <description>Three Pillars to Write Good HTML and CSS&amp;hellip; And Build Good Websites # Responsive Design Fluid layouts Media queries Responsive images Correct units Desktop-first v.</description>
+      
     </item>
+    
     <item>
       <title>Advanced CSS Study Notes Section I</title>
       <link>http://localhost:1313/posts/2023/frontend/advanced-css-study-notes/section-i/</link>
       <pubDate>Tue, 07 Nov 2023 19:25:26 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/frontend/advanced-css-study-notes/section-i/</guid>
-      <description>我的Udemy排名第一的高级CSS课程 Advanced CSS and Sass - 高级 CSS 和 Sass：Flexbox、网格、动画（中英文字幕）笔记。</description>
+      <description>我的 Udemy排名第一的高级CSS课程 Advanced CSS and Sass - 高级 CSS 和 Sass：Flexbox、网格、动画（中英文字幕）笔记。</description>
+      
     </item>
+    
     <item>
       <title>午后旷野</title>
       <link>http://localhost:1313/diary/2023/2023-11-1-friends/</link>
       <pubDate>Mon, 06 Nov 2023 23:43:44 +0800</pubDate>
+      
       <guid>http://localhost:1313/diary/2023/2023-11-1-friends/</guid>
       <description>人生列车缓慢地行驶在阳光明媚的午后旷野。若有人向我招手，我便邀请他们坐上一段，听他们分享关于面包，远方和在夜晚流浪的一切，最后微笑着告别。</description>
+      
     </item>
+    
     <item>
       <title>Docker安装APM Server</title>
       <link>http://localhost:1313/posts/2023/frontend/frontend_performance_monotor/</link>
       <pubDate>Mon, 06 Nov 2023 22:07:01 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/frontend/frontend_performance_monotor/</guid>
-      <description>官方文档 elastic organization github homepage APM Agents Legacy APM Server Elasticsearch Kibana APM Real User Monitoring JavaScript Agent(Angular integration) Run APM Server on Docker docker-elk 模板 传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。</description>
+      <description>官方文档 # elastic organization github homepage APM Agents Legacy APM Server Elasticsearch Kibana APM Real User Monitoring JavaScript Agent(Angular integration) Run APM Server on Docker docker-elk 模板 传统的安装部分可以跳过，因为现在一般都是安装在docker上，我们可以直接使用官方或者第三方已经写好的dockerfile等文件替代传统的安装方式。</description>
+      
     </item>
+    
     <item>
       <title>npm，npx和packages.json</title>
       <link>http://localhost:1313/posts/2023/frontend/npx_vs_npm/</link>
       <pubDate>Mon, 06 Nov 2023 00:01:36 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/frontend/npx_vs_npm/</guid>
-      <description>参考文档 什么是 npm —— 写给初学者的编程教程 npm docs npm 和 npx 的区别是什么 package.</description>
+      <description>参考文档 # 什么是 npm —— 写给初学者的编程教程 npm docs npm 和 npx 的区别是什么 package.</description>
+      
     </item>
+    
     <item>
       <title>Commit Better Code with Husky, Prettier, commitlint and Lint-Staged</title>
       <link>http://localhost:1313/posts/2023/frontend/frontend-tool/</link>
       <pubDate>Sun, 05 Nov 2023 22:15:11 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/frontend/frontend-tool/</guid>
-      <description>前言 如果你逛Github的话，就会发现很多项目根目录除了.</description>
+      <description>前言 # 如果你逛Github的话，就会发现很多项目根目录除了.</description>
+      
     </item>
+    
     <item>
       <title>Hugo博客部署</title>
       <link>http://localhost:1313/posts/2023/blog/blog_deploy/</link>
       <pubDate>Thu, 19 Oct 2023 21:05:31 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/blog/blog_deploy/</guid>
       <description>仅仅是在Github Pages部署博客就有好几种方式，分别为：</description>
+      
     </item>
+    
     <item>
       <title>Hugo博客搭建</title>
       <link>http://localhost:1313/posts/2023/blog/hugo_blog_build_up/</link>
       <pubDate>Sat, 14 Oct 2023 17:30:08 +0800</pubDate>
+      
       <guid>http://localhost:1313/posts/2023/blog/hugo_blog_build_up/</guid>
-      <description>前言 还记得第一次搭建博客是在大二，当时一个人带着电脑到教室学习算法，但是遇到苦难习惯性地开始不务正业，去折腾一些更简单的东西来寻求心理安慰。兜兜转转几年过去了，前前后后折腾了不少东西，但是技术也没有精进多少。现在想来，没有去挑战困难是大学最后悔的一件事。另外一件遗憾的事是很少记录生活，一些当初很感动的事情，现在也越来越模糊了。</description>
+      <description>前言 # 还记得第一次搭建博客是在大二，当时一个人带着电脑到教室学习算法，但是遇到苦难习惯性地开始不务正业，去折腾一些更简单的东西来寻求心理安慰。兜兜转转几年过去了，前前后后折腾了不少东西，但是技术也没有精进多少。现在想来，没有去挑战困难是大学最后悔的一件事。另外一件遗憾的事是很少记录生活，一些当初很感动的事情，现在也越来越模糊了。</description>
+      
     </item>
+    
     <item>
       <title>需要写点什么东西的冲动</title>
       <link>http://localhost:1313/diary/2023/2023-10-14-first-diary/</link>
       <pubDate>Sat, 14 Oct 2023 11:56:21 +0800</pubDate>
+      
       <guid>http://localhost:1313/diary/2023/2023-10-14-first-diary/</guid>
       <description>羡慕那些能表达出文字的力量的人，寥寥数语，就能让我感受到内心的宁静，或者唤醒沉睡的另一个自己。</description>
+      
     </item>
+    
     <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Sat, 07 Oct 2023 21:26:50 +0800</pubDate>
+      
       <guid>http://localhost:1313/about/</guid>
-      <description>My favorite book.</description>
+      <description>Hi there,</description>
+      
     </item>
+    
   </channel>
 </rss>
