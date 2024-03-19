@@ -696,7 +696,6 @@ public class TeacherController {
 }
 ```
 
-
 ## 插播：HikariCP连接池
 
 HikariCP是快速、简单、可靠且可用于生产的JDBC连接池。
@@ -732,6 +731,78 @@ spring:
 ## 插播：Spring JDBC Template 和 Data Source 和 Spring Data JPA
 Spring JDBC Template 和 Spring Data JPA 都是上层建筑，需要配置Data Source来操作数据库，Data Source为数据库的来源（为了显示层级结构，我理解为指向JDBC或者连接池）。
 
+# `@OneToOne`, `@OneToMany`, `@ManyToOne`, `@JoinColumn`
+
+这部分没接触过，花了很久我才理解到。
+
+参考：[Difference Between @JoinColumn and mappedBy](https://www.baeldung.com/jpa-joincolumn-vs-mappedby) 和 [@JoinColumn 详解](https://blog.csdn.net/u010588262/article/details/76667283)
+
+## 一对一
+主表：
+```java
+@Entity
+@Data
+public class StudentProfile {
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Integer id;
+
+  @Column
+  private String bio;
+
+  // mappedBy 表示放弃维护关系，是关系的被维护方
+  @OneToOne(mappedBy = "studentProfile")
+  private Student student;
+}
+
+```
+副表：
+```java
+@Entity
+@Data
+@Table(name = "student")
+public class Student {
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Integer id;
+
+  @Column(nullable = false, length = 50)
+  @JsonProperty("firstName")
+  private String firstName;
+
+  @Column(nullable = false, length = 50)
+  @JsonProperty("lastName")
+  private String lastName;
+
+  @Column(unique = true, length = 50)
+  @JsonProperty("email")
+  private String email;
+
+  @Column(nullable = true)
+  @JsonProperty("age")
+  private Integer age;
+
+  // 在维护关系的一方，进行级联操作的声明
+  @OneToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "student_profile_id", referencedColumnName = "id", nullable = true)
+  private StudentProfile studentProfile;
+
+  @ManyToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "school_id", referencedColumnName = "id", nullable = true)
+  private School school;
+}
+```
+## `@JoinColumn`
+`@JoinColumn`写在控制关联关系的主控，会在该表中加一个外键。
+
+## `@OneToOne`
+一对一关系。
+
+## 级联操作
+当有了外键约束的时候，必须先修改或删除副表（有外键的表）中的所有关联数据，才能修改或删除主表（外键引用的表）。
+
+级联操作可以实现在修改主表的时候，对副表执行相对应的操作（比如删除主主表数据就同时删除对应的所有副表数据）。
+
 # DTO
 DTO stands for data transfer object.
 
@@ -744,6 +815,59 @@ DTO stands for data transfer object.
 
 这就是DTO的使用场景。
 
+# SpringDoc(Spring Fox的下一代)
 
+Spring Fox 已经很久没更新了，Spring Boot3就推荐使用SpringDoc作为文档和接口管理工具。
 
+## 引入
+```gradle
+dependencies {
+  implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.4.0'
+}
+
+```
+
+## 配置
+
+```yaml
+# 不再使用SpringFox，而是SpringDoc
+springdoc:
+  api-docs:
+    # http://localhost:8080/api-docs
+    path: /api-docs
+    enabled: true
+  swagger-ui:
+    # 可以通过 http://localhost:8080/swagger-ui/index.html 和 http://localhost:8080/swagger-ui-custom.html 两个地址访问
+    path: /swagger-ui-custom.html
+    enabled: true
+```
+
+## 使用
+```java
+@RestController
+@Tag(name = "StudentController", description = "学生管理")
+@RequestMapping("/v1")
+public class StudentController {
+  @SuppressWarnings("unused")
+  private StudentService studentService;
+
+  StudentController(StudentService studentService) {
+    this.studentService = studentService;
+  }
+
+  @GetMapping("/student")
+  @Operation(summary = "获取学生列表")
+  public List<Student> getAllStudents() {
+    return this.studentService.getAllStudent();
+  }
+
+  @PostMapping("/student")
+  public String addStudent(@RequestBody Student student) {
+    this.studentService.addStudent(student);
+    return "done";
+  }
+}
+```
+
+对应的注解需要使用时再查询即可。
 
