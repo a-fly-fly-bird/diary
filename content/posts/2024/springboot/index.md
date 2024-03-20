@@ -815,6 +815,8 @@ DTO stands for data transfer object.
 
 这就是DTO的使用场景。
 
+
+
 # SpringDoc(Spring Fox的下一代)
 
 Spring Fox 已经很久没更新了，Spring Boot3就推荐使用SpringDoc作为文档和接口管理工具。
