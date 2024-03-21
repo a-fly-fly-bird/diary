@@ -836,18 +836,72 @@ Service层可以负责实现业务逻辑，是数据获取层和表现层的中�
 
 # Spring Data Validation
 
+好处：
 
+- Data Integrity
+- Preventing Attacks
+- Error Prevention
+- User Experience (UX)
+- Performance
+- Business Logic Compliance
 
+## 引入依赖
 
+```groovy
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+}
+```
 
+## 使用
+参考： [Spring Validation参数效验各种使用姿势](https://juejin.cn/post/7087100869363122189)
 
+### `@Valid` 和 `@NotEmpty（以这个注解为例）`
 
+只是以`@NotEmpty`这个注解为例，实际上有非常多的校验注解。
 
+使用对象接收参数，在需要校验对象的参数加上 `@NotBlank`注解，然后在需要校验的对象前面的`@RequestBody`注解的位置再加上`@Validated`或者`@Valid`注解。
 
+### `ExceptionHandler`
 
+Spring 提供统一处理方法抛出的异常的注解。当异常发生时，Spring会选择最接近抛出异常的处理方法。
 
+参考： [Spring的@ExceptionHandler注解使用方法](https://blog.csdn.net/lkforce/article/details/98494922)
 
+```java
+  @ExceptionHandler(MethodArgumentNotValidException.class)
+  public ResponseEntity<?> handleMethodArgumentNotValidException(
+      MethodArgumentNotValidException methodArgumentNotValidException) {
+    var errors = new HashMap<String, String>();
+    methodArgumentNotValidException.getBindingResult().getAllErrors().forEach(error -> {
+      var fieldName = ((FieldError) error).getField();
+      var erroeMsg = error.getDefaultMessage();
+      errors.put(fieldName, erroeMsg);
+    });
+    return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+  }
+```
 
+# Testing Overview
+
+## 好处
+- Quality Assurance：测试确保函数如期望一样工作，及早找到bug，在到达生产环境前
+- Regression Testing：确保代码更改后存在的函数还是继续保持正确
+- Documentation：提供函数该如何使用的样例
+- Code Maintainability：好的代码实践的一环
+- Refactoring Confidence：使你自信地重构代码，哪里出错了会马上知道
+- Collaboration：确保不会影响其他人的数据和代码
+- Continuous Integration/Continuous Deployment (CI/CD): 在CI/CD时自动执行测试
+- Reduced Debugging Time：面向测试编程
+- Scalability：代码越写越多，越来越复杂，测试会让你更加自信不会更改代码触发其它bug
+- Security：排除潜在的安全漏洞
+
+## 分类
+- 单元测试
+- 集成测试
+- 端到端测试
+
+# Spring Test In Action
 
 
 
