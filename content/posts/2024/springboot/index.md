@@ -803,6 +803,11 @@ public class Student {
 
 级联操作可以实现在修改主表的时候，对副表执行相对应的操作（比如删除主主表数据就同时删除对应的所有副表数据）。
 
+## `@JsonBackReference` 和 `@JsonManagedReference`
+因为JPA的Entity声明中存在双向引用，所以当打印实体的时候，很容易一直循环调用。这时候就需要`@JsonBackReference` 和 `@JsonManagedReference`来避免循环。
+
+`@JsonManagedReference`声明在`@OneToMany`的一方，`@JsonBackReference`声明在`@ManyToOne`的一方。
+
 # DTO
 DTO stands for data transfer object.
 
@@ -813,7 +818,40 @@ DTO stands for data transfer object.
 1. 数据库表结构中字段太多，全部返回给前端效率低下
 2. 数据库中有敏感信息（比如地址等），不希望返回给前端
 
-这就是DTO的使用场景。
+这就是DTO的使用场景。可以设置从前端接受到的数据的DTO和要返回给前端的属性的DTO。
+
+# Service Layer
+
+- Presentation Layer: Controler
+- Logic Layer: Service
+- Data Access Layer: Repository
+
+Service层可以负责实现业务逻辑，是数据获取层和表现层的中间层，进行复杂的运算，读取数据，验证，转换（transformation）。
+
+分层。测试的时候还可以专注测试服务层的逻辑方法。可复用，健壮性，好处多多。
+
+## 文件夹结构
+
+除了按照`Controller`,`Service`,`Repository`等层来分类，还可以按照`Entity`来分类(每个Entity里对应这个Entity的表现层，服务层，持久化层等等)。
+
+# Spring Data Validation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
