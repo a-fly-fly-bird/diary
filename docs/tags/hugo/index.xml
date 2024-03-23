@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 浮生日记</title>
-    <link>http://localhost:1313/tags/hugo/</link>
+    <link>https://shadow-diary.fun/tags/hugo/</link>
     <description>Recent content in Hugo on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Thu, 19 Oct 2023 21:05:31 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Oct 2023 21:05:31 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo博客部署</title>
-      <link>http://localhost:1313/posts/2023/blog/blog_deploy/</link>
+      <link>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</link>
       <pubDate>Thu, 19 Oct 2023 21:05:31 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/2023/blog/blog_deploy/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</guid>
       <description>仅仅是在Github Pages部署博客就有好几种方式，分别为：</description>
       
     </item>
     
     <item>
       <title>Hugo博客搭建</title>
-      <link>http://localhost:1313/posts/2023/blog/hugo_blog_build_up/</link>
+      <link>https://shadow-diary.fun/posts/2023/blog/hugo_blog_build_up/</link>
       <pubDate>Sat, 14 Oct 2023 17:30:08 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/2023/blog/hugo_blog_build_up/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/blog/hugo_blog_build_up/</guid>
       <description>前言 # 还记得第一次搭建博客是在大二，当时一个人带着电脑到教室学习算法，但是遇到苦难习惯性地开始不务正业，去折腾一些更简单的东西来寻求心理安慰。兜兜转转几年过去了，前前后后折腾了不少东西，但是技术也没有精进多少。现在想来，没有去挑战困难是大学最后悔的一件事。另外一件遗憾的事是很少记录生活，一些当初很感动的事情，现在也越来越模糊了。</description>
       
     </item>

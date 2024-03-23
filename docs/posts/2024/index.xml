@@ -2,28 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>浮生日记</title>
-    <link>http://localhost:1313/posts/2024/</link>
+    <link>https://shadow-diary.fun/posts/2024/</link>
     <description>Recent content on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Tue, 19 Mar 2024 21:20:58 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/2024/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Mar 2024 22:49:10 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/posts/2024/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Gradle_catalog</title>
-      <link>http://localhost:1313/posts/2024/gradle_catalog/</link>
+      <title>Read Angular Real World Project Code</title>
+      <link>https://shadow-diary.fun/posts/2024/read-angular-real-world-project-code/</link>
+      <pubDate>Sat, 23 Mar 2024 13:19:44 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2024/read-angular-real-world-project-code/</guid>
+      <description>//TODO 有空学一下GitLens，我发现功能非常强大，并且基本涵盖了Git History和Git Graph的功能。</description>
+      
+    </item>
+    
+    <item>
+      <title>Oauth 了解和实践</title>
+      <link>https://shadow-diary.fun/posts/2024/oauth/</link>
+      <pubDate>Tue, 19 Mar 2024 21:49:41 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2024/oauth/</guid>
+      <description>参考；</description>
+      
+    </item>
+    
+    <item>
+      <title>Gradle Catalog</title>
+      <link>https://shadow-diary.fun/posts/2024/gradle_catalog/</link>
       <pubDate>Tue, 19 Mar 2024 21:20:58 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/2024/gradle_catalog/</guid>
+      <guid>https://shadow-diary.fun/posts/2024/gradle_catalog/</guid>
       <description>Reference: Gradle Version Catalog 和 Version Catalog(中央依赖声明，即：版本目录)</description>
       
     </item>
     
     <item>
       <title>Jpa insight</title>
-      <link>http://localhost:1313/posts/2024/springboot/</link>
+      <link>https://shadow-diary.fun/posts/2024/springboot/</link>
       <pubDate>Tue, 12 Mar 2024 17:49:53 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/2024/springboot/</guid>
+      <guid>https://shadow-diary.fun/posts/2024/springboot/</guid>
       <description>Official Dosc: spring-boot</description>
       
     </item>

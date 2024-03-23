@@ -2,28 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>玲珑雕心 on 浮生日记</title>
-    <link>http://localhost:1313/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/</link>
+    <link>https://shadow-diary.fun/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/</link>
     <description>Recent content in 玲珑雕心 on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Mon, 06 Nov 2023 23:43:44 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Mar 2024 16:11:55 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习有感</title>
+      <link>https://shadow-diary.fun/diary/2024/2024-03-23-read-docs-notes/</link>
+      <pubDate>Sat, 23 Mar 2024 16:11:55 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/diary/2024/2024-03-23-read-docs-notes/</guid>
+      <description>现在经常看技术性的文档和概念，如果是比较常见的，都会首先在搜索框里加上阮一峰这个关键词。</description>
+      
+    </item>
+    
     <item>
       <title>午后旷野</title>
-      <link>http://localhost:1313/diary/2023/2023-11-1-friends/</link>
+      <link>https://shadow-diary.fun/diary/2023/2023-11-1-friends/</link>
       <pubDate>Mon, 06 Nov 2023 23:43:44 +0800</pubDate>
       
-      <guid>http://localhost:1313/diary/2023/2023-11-1-friends/</guid>
+      <guid>https://shadow-diary.fun/diary/2023/2023-11-1-friends/</guid>
       <description>人生列车缓慢地行驶在阳光明媚的午后旷野。若有人向我招手，我便邀请他们坐上一段，听他们分享关于面包，远方和在夜晚流浪的一切，最后微笑着告别。</description>
       
     </item>
     
     <item>
       <title>需要写点什么东西的冲动</title>
-      <link>http://localhost:1313/diary/2023/2023-10-14-first-diary/</link>
+      <link>https://shadow-diary.fun/diary/2023/2023-10-14-first-diary/</link>
       <pubDate>Sat, 14 Oct 2023 11:56:21 +0800</pubDate>
       
-      <guid>http://localhost:1313/diary/2023/2023-10-14-first-diary/</guid>
+      <guid>https://shadow-diary.fun/diary/2023/2023-10-14-first-diary/</guid>
       <description>羡慕那些能表达出文字的力量的人，寥寥数语，就能让我感受到内心的宁静，或者唤醒沉睡的另一个自己。</description>
       
     </item>

@@ -3,193 +3,211 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/posts/2024/</loc>
+    <loc>https://shadow-diary.fun/posts/2024/</loc>
+    <lastmod>2024-03-23T22:49:10+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/</loc>
+    <lastmod>2024-03-23T22:49:10+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/diary/</loc>
+    <lastmod>2024-03-23T16:11:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/diary/2024/2024-03-23-read-docs-notes/</loc>
+    <lastmod>2024-03-23T16:11:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2024/read-angular-real-world-project-code/</loc>
+    <lastmod>2024-03-23T13:19:44+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2024/oauth/</loc>
+    <lastmod>2024-03-19T21:49:41+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/posts/2024/gradle_catalog/</loc>
     <lastmod>2024-03-19T21:20:58+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-03-19T21:20:58+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/2024/gradle_catalog/</loc>
-    <lastmod>2024-03-19T21:20:58+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/2024/springboot/</loc>
+    <loc>https://shadow-diary.fun/posts/2024/springboot/</loc>
     <lastmod>2024-03-12T17:49:53+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/</loc>
     <lastmod>2023-12-17T00:11:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/common/eye/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/common/eye/</loc>
     <lastmod>2023-12-17T00:11:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/frontend/programming-tips/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/programming-tips/</loc>
     <lastmod>2023-12-17T00:09:12+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/ml/map/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/ml/map/</loc>
     <lastmod>2023-12-17T00:05:50+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/common/ros-ubuntu/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/common/ros-ubuntu/</loc>
     <lastmod>2023-12-17T00:03:59+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/common/display-unit/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/common/display-unit/</loc>
     <lastmod>2023-12-17T00:00:50+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/ml/cuda-more/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/ml/cuda-more/</loc>
     <lastmod>2023-12-16T23:59:11+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/common/time-zone/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/common/time-zone/</loc>
     <lastmod>2023-12-16T23:55:55+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/common/paper-catalog/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/common/paper-catalog/</loc>
     <lastmod>2023-12-16T23:54:35+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/common/character-encoding/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/common/character-encoding/</loc>
     <lastmod>2023-12-16T23:49:32+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/frontend/angular/angular-insight-lifecycle/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/angular/angular-insight-lifecycle/</loc>
     <lastmod>2023-12-15T23:38:41+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/git-handbook/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/git-handbook/</loc>
     <lastmod>2023-12-15T22:49:08+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/ci-cd/k8s-cd/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</loc>
     <lastmod>2023-11-18T13:34:55+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/ci-cd/jenkins-ci/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/ci-cd/jenkins-ci/</loc>
     <lastmod>2023-11-18T13:26:37+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/vscode-usage/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/vscode-usage/</loc>
     <lastmod>2023-11-12T00:29:25+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/frontend/advanced-css-study-notes/section-ii/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-ii/</loc>
     <lastmod>2023-11-08T22:22:01+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/frontend/advanced-css-study-notes/section-i/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/advanced-css-study-notes/section-i/</loc>
     <lastmod>2023-11-07T19:25:26+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/diary/</loc>
+    <loc>https://shadow-diary.fun/diary/2023/2023-11-1-friends/</loc>
     <lastmod>2023-11-06T23:43:44+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/diary/2023/2023-11-1-friends/</loc>
-    <lastmod>2023-11-06T23:43:44+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/2023/frontend/frontend_performance_monotor/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/frontend_performance_monotor/</loc>
     <lastmod>2023-11-06T22:07:01+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/frontend/npx_vs_npm/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/npx_vs_npm/</loc>
     <lastmod>2023-11-06T00:01:36+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/frontend/frontend-tool/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/frontend/frontend-tool/</loc>
     <lastmod>2023-11-05T22:15:11+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/blog/blog_deploy/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</loc>
     <lastmod>2023-10-19T21:05:31+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://shadow-diary.fun/</loc>
     <lastmod>2023-10-17T23:30:43+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/2023/blog/hugo_blog_build_up/</loc>
+    <loc>https://shadow-diary.fun/posts/2023/blog/hugo_blog_build_up/</loc>
     <lastmod>2023-10-14T17:30:08+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/diary/2023/2023-10-14-first-diary/</loc>
+    <loc>https://shadow-diary.fun/diary/2023/2023-10-14-first-diary/</loc>
     <lastmod>2023-10-14T11:56:21+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://shadow-diary.fun/about/</loc>
     <lastmod>2023-10-07T21:26:50+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/docsify/</loc>
+    <loc>https://shadow-diary.fun/posts/docsify/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>后端 on 浮生日记</title>
-    <link>http://localhost:1313/categories/%E5%90%8E%E7%AB%AF/</link>
+    <link>https://shadow-diary.fun/categories/%E5%90%8E%E7%AB%AF/</link>
     <description>Recent content in 后端 on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Tue, 12 Mar 2024 17:49:53 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%90%8E%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Mar 2024 17:49:53 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/categories/%E5%90%8E%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jpa insight</title>
-      <link>http://localhost:1313/posts/2024/springboot/</link>
+      <link>https://shadow-diary.fun/posts/2024/springboot/</link>
       <pubDate>Tue, 12 Mar 2024 17:49:53 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/2024/springboot/</guid>
+      <guid>https://shadow-diary.fun/posts/2024/springboot/</guid>
       <description>Official Dosc: spring-boot</description>
       
     </item>
     
     <item>
       <title>Git Handbook</title>
-      <link>http://localhost:1313/posts/2023/git-handbook/</link>
+      <link>https://shadow-diary.fun/posts/2023/git-handbook/</link>
       <pubDate>Fri, 15 Dec 2023 22:49:08 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/2023/git-handbook/</guid>
+      <guid>https://shadow-diary.fun/posts/2023/git-handbook/</guid>
       <description>现在使用Git的频率变高了很多，使用场景也复杂了很多，根据需求总结一些常用的命令。虽然很多图形化工具已经非常还用了，但是命令行还是有类似Write once, execute anywhere.</description>
       
     </item>
