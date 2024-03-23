@@ -901,13 +901,78 @@ Spring 提供统一处理方法抛出的异常的注解。当异常发生时，S
 - 集成测试
 - 端到端测试
 
-# Spring Test In Action
+## Spring Test In Action
+```gradle
+dependencies {
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+```
 
+`spring-boot-starter-test`依赖了其他的很多库，提供了非常强大的测试能力。
 
+### `@SpringBootTest`
 
+SpringBoot程序提供的可以说就是一个`ApplicationContext`，如果要在测试程序中使用`SpringBoot`的特性，就需要使用`@SpringBootTest`注解，它会创建一个与在生产环境中启动的应用程序上下文非常相似的应用程序上下文。
 
+### 使用
 
+主要的注解和使用方法都可以阅读代码习得。
 
+```java
+@SpringBootTest
+public class StudentServiceTest {
+
+  @Autowired
+  private StudentService studentService;
+
+  @BeforeAll
+  static void beforeAll() {
+    System.out.println("beforeAll");
+  }
+
+  @AfterAll
+  static void afterAll() {
+    System.out.println("afterAll");
+  }
+
+  @BeforeEach
+  void setUp() {
+    System.out.println("Inside the before each method");
+  }
+
+  @AfterEach
+  void tearDown() {
+    System.out.println("Inside the after each method");
+  }
+
+  @Test
+  void testAddStudent() {
+    StudentDto studentDto = new StudentDto("Helo", "world", "213@qq.com", 1);
+    Student student = this.studentService.toStudent(studentDto);
+    Assertions.assertEquals(studentDto.firstName(), student.getFirstName());
+    Assertions.assertNotNull(student.getEmail());
+  }
+
+  @Test
+  void shouldMapStudentToDtoWhenNull() {
+    Student student = this.studentService.toStudent(null);
+    Assertions.assertEquals("", student.getFirstName());
+  }
+
+  @Test
+  void shouldMapStudentToDtoWhenNullCustom() {
+    Assertions.assertThrows(NullPointerException.class, () -> this.studentService.toStudent(null));
+  }
+}
+```
+
+## Mockito 模拟测试
+
+有时候不想在实际的数据库测试，或者框架还没完全搭好，就需要自己模拟数据。
+
+具体参考：[Java测试框架系列：Mockito使用手册](https://juejin.cn/post/6975525979418525709).
+
+暂时跳过笔记。
 
 # SpringDoc(Spring Fox的下一代)
 
@@ -918,7 +983,6 @@ Spring Fox 已经很久没更新了，Spring Boot3就推荐使用SpringDoc作为
 dependencies {
   implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.4.0'
 }
-
 ```
 
 ## 配置
@@ -964,4 +1028,9 @@ public class StudentController {
 ```
 
 对应的注解需要使用时再查询即可。
+
+# End
+视频从7:34开始就是另外一个案例，看了一下，视频可以关闭了。
+
+![alt text](<_media/CleanShot 2024-03-23 at 12.22.00.png>)
 
