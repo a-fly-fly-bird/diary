@@ -3,6 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://shadow-diary.fun/diary/</loc>
+    <lastmod>2024-03-25T22:49:18+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/diary/2024/2024-03-23-keep-going/</loc>
+    <lastmod>2024-03-25T22:49:18+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://shadow-diary.fun/posts/2024/</loc>
     <lastmod>2024-03-23T22:49:10+08:00</lastmod>
     <changefreq>daily</changefreq>
@@ -11,12 +23,6 @@
   <url>
     <loc>https://shadow-diary.fun/posts/</loc>
     <lastmod>2024-03-23T22:49:10+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://shadow-diary.fun/diary/</loc>
-    <lastmod>2024-03-23T16:11:55+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
