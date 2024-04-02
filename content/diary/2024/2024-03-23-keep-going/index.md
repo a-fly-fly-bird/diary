@@ -12,3 +12,4 @@ tags = ['日记']
 
 又一次尝到了内酚酞的甜。
 
+> Not everything that counts can be counted, and not everything that can be counted counts
