@@ -64,7 +64,7 @@
   
   
   <meta property="og:title" content="Spring Security Jwt" />
-<meta property="og:description" content="参考视频： Spring Boot 3 &#43; Spring Security 6 - JWT Authentication and Authorisation [NEW] [2023]" />
+<meta property="og:description" content="参考文档和视频：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/2024/spring-security-jwt/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-03-23T22:49:10+08:00" />
@@ -73,7 +73,7 @@
 
 
   <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Spring Security Jwt"/>
-<meta name="twitter:description" content="参考视频： Spring Boot 3 &#43; Spring Security 6 - JWT Authentication and Authorisation [NEW] [2023]"/>
+<meta name="twitter:description" content="参考文档和视频："/>
 
   
   <script type="application/ld+json">
@@ -84,7 +84,7 @@
     "name": "Spring Security Jwt",
     "headline": "Spring Security Jwt",
     
-    "abstract": "参考视频： Spring Boot 3 \u002b Spring Security 6 - JWT Authentication and Authorisation [NEW] [2023]",
+    "abstract": "参考文档和视频：",
     "inLanguage": "en",
     "url" : "http:\/\/localhost:1313\/posts\/2024\/spring-security-jwt\/",
     "author" : {
@@ -100,7 +100,7 @@
     "keywords": ["Spring Boot","security"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "18"
+    "wordCount": "222"
   }]
   </script>
 
@@ -515,7 +515,7 @@
 <div style="cursor: default;" class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-03-23 22:49:10 &#43;0800 CST">23 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span>18 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2024-03-23 22:49:10 &#43;0800 CST">23 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span>222 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
   
 
   
@@ -642,7 +642,139 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#基础的概念解析">基础的概念解析</a>
+      <ul>
+        <li><a href="#认证和授权authentication-vs-authorization">认证和授权(Authentication v.s. Authorization)</a></li>
+        <li><a href="#jwt-oauth2-sso">JWT, OAuth2, SSO</a>
+          <ul>
+            <li><a href="#应用场景">应用场景</a></li>
+            <li><a href="#sso">SSO</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#引入">引入</a>
+      <ul>
+        <li><a href="#默认行为">默认行为</a></li>
+        <li><a href="#servlet-和-springmvc">Servlet 和 SpringMVC</a></li>
+      </ul>
+    </li>
+    <li><a href="#架构">架构</a>
+      <ul>
+        <li><a href="#securitycontextholder">SecurityContextHolder</a></li>
+        <li><a href="#authenticationmanager">AuthenticationManager</a></li>
+        <li><a href="#userdetialsservice">UserDetialsService</a></li>
+        <li><a href="#userdetails">UserDetails</a></li>
+        <li><a href="#passwordencoder组件">PasswordEncoder组件</a></li>
+        <li><a href="#authenticationentrypoint组件">AuthenticationEntryPoint组件</a></li>
+        <li><a href="#jwt组件">JWT组件</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置">配置</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#基础的概念解析">基础的概念解析</a>
+      <ul>
+        <li><a href="#认证和授权authentication-vs-authorization">认证和授权(Authentication v.s. Authorization)</a></li>
+        <li><a href="#jwt-oauth2-sso">JWT, OAuth2, SSO</a>
+          <ul>
+            <li><a href="#应用场景">应用场景</a></li>
+            <li><a href="#sso">SSO</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#引入">引入</a>
+      <ul>
+        <li><a href="#默认行为">默认行为</a></li>
+        <li><a href="#servlet-和-springmvc">Servlet 和 SpringMVC</a></li>
+      </ul>
+    </li>
+    <li><a href="#架构">架构</a>
+      <ul>
+        <li><a href="#securitycontextholder">SecurityContextHolder</a></li>
+        <li><a href="#authenticationmanager">AuthenticationManager</a></li>
+        <li><a href="#userdetialsservice">UserDetialsService</a></li>
+        <li><a href="#userdetails">UserDetails</a></li>
+        <li><a href="#passwordencoder组件">PasswordEncoder组件</a></li>
+        <li><a href="#authenticationentrypoint组件">AuthenticationEntryPoint组件</a></li>
+        <li><a href="#jwt组件">JWT组件</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置">配置</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+ 
+<script>
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = e.attr('id');
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+           
+            $(e).removeClass('active').siblings('ul').hide();
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+         
+          $toc.find('a').parent('li').find('ul').hide();
+        
+        onScroll();
+      });
+    }
+  })();
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -650,14 +782,295 @@
 
 
         <div class="max-w-prose mb-20">
-          <p>参考视频：<a href="https://youtu.be/KxqlJblhzfI?si=wzzJWlUpDnVNcQ5E"   target="_blank">
-    Spring Boot 3 + Spring Security 6 - JWT Authentication and Authorisation [NEW] [2023]</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/342755411"   target="_blank">
-    https://zhuanlan.zhihu.com/p/342755411</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/625403750"   target="_blank">
-    https://zhuanlan.zhihu.com/p/625403750</a></p>
-<p><a href="https://www.lddgo.net/encrypt/jwt-generate"   target="_blank">
-    https://www.lddgo.net/encrypt/jwt-generate</a></p>
+          <p>参考文档和视频：</p>
+<ul>
+<li><a href="https://springdoc.cn/spring-security/servlet/architecture.html"   target="_blank">
+    Spring Security 官方中文文档</a></li>
+<li><a href="https://youtu.be/KxqlJblhzfI?si=wzzJWlUpDnVNcQ5E"   target="_blank">
+    Spring Boot 3 + Spring Security 6 - JWT Authentication and Authorisation [NEW] [2023]</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/342755411"   target="_blank">
+    【项目实践】一文带你搞定Spring Security + JWT实现前后端分离下的认证授权</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/625403750"   target="_blank">
+    秒懂SpringBoot之易懂的Spring Security教程</a></li>
+</ul>
+<p>Spring 提供了官方的示例代码： <a href="https://github.com/spring-projects/spring-security-samples/tree/main"   target="_blank">
+    spring-security-samples</a></p>
+<h1 class="relative group">基础的概念解析 
+    <div id="基础的概念解析" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%9f%ba%e7%a1%80%e7%9a%84%e6%a6%82%e5%bf%b5%e8%a7%a3%e6%9e%90" aria-label="Anchor">#</a>
+    </span>        
+    
+</h1>
+<h2 class="relative group">认证和授权(Authentication v.s. Authorization) 
+    <div id="认证和授权authentication-vs-authorization" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e8%ae%a4%e8%af%81%e5%92%8c%e6%8e%88%e6%9d%83authentication-vs-authorization" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>认证意味着确认你自己的身份，而授权意味着授予对系统的访问权限(权限控制)。简单来说，认证是验证你的身份的过程，而授权是验证你有权访问的过程。</p>
+<h2 class="relative group">JWT, OAuth2, SSO 
+    <div id="jwt-oauth2-sso" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#jwt-oauth2-sso" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>是一种安全的授权框架，提供了一套详细的授权机制。用户或应用可以通过公开的或私有的设置，授权第三方应用访问特定资源。它详细描述了系统中不同角色、用户、服务前端应用（比如API），以及客户端（比如网站或移动App）之间怎么实现相互认证。</p>
+<p>JWT提供了一种用于发布接入令牌（Access Token),并对发布的签名接入令牌进行验证的方法。 令牌（Token）本身包含了一系列声明，应用程序可以根据这些声明限制用户对资源的访问。</p>
+<h3 class="relative group">应用场景 
+    <div id="应用场景" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>JWT适用于无状态的分布式API</li>
+<li>Oauth2适用外包认证服务器（第三方验证）</li>
+<li>Oauth2可以和JWT结合使用</li>
+</ul>
+<h3 class="relative group">SSO 
+    <div id="sso" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#sso" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>SSO是单点登录系统。可以利用JWT或者OAuth2等来实现。</p>
+<h1 class="relative group">引入 
+    <div id="引入" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%bc%95%e5%85%a5" aria-label="Anchor">#</a>
+    </span>        
+    
+</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">compile</span> <span class="s2">&#34;org.springframework.boot:spring-boot-starter-security&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h2 class="relative group">默认行为 
+    <div id="默认行为" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e9%bb%98%e8%ae%a4%e8%a1%8c%e4%b8%ba" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>只要引入依赖后，<a href="https://springdoc.cn/spring-security/servlet/getting-started.html#servlet-hello-auto-configuration"   target="_blank">
+    SpringBoot和Spring Security就会默认提供一些行为</a>：</p>
+<ul>
+<li>任何端点（包括 Boot 的 /error 端点）都需要一个认证的用户。</li>
+<li>在启动时用生成的密码 注册一个默认用户（密码被记录到控制台；在前面的例子中，密码是 8e557245-73e2-4286-969a-ff57fe326336）。</li>
+<li>用 BCrypt 以及其他方式保护密码存储。</li>
+<li>提供基于表单的 登录 和 注销 流程。</li>
+<li>对 基于表单 的登录以及 HTTP Basic 进行认证。</li>
+<li>提供内容协商；对于web请求，重定向到登录页面；对于服务请求，返回 401 Unauthorized。</li>
+<li>减缓 CSRF 攻击。</li>
+<li>减缓 Session Fixation 攻击。</li>
+<li>写入 Strict-Transport-Security，以 确保HTTPS。</li>
+<li>写入 X-Content-Type-Options 以减缓 嗅探攻击。</li>
+<li>写入保护认证资源的 Cache Control header。</li>
+<li>写入 X-Frame-Options，以缓解 点击劫持 的情况。</li>
+<li>与 HttpServletRequest 的认证方法 整合。</li>
+<li>发布 认证成功和失败的事件。</li>
+</ul>
+<h2 class="relative group">Servlet 和 SpringMVC 
+    <div id="servlet-和-springmvc" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#servlet-%e5%92%8c-springmvc" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>一个Java的类就是一个Servlet。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LoginController</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">IUserService</span><span class="w"> </span><span class="n">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UserService</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doPost</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>SpringMVC是对Servlet的封装，核心的DispatcherServlet最终继承自HttpServlet。DispatcherServlet又叫前端控制器，能过滤处理所有的请求方法。</p>
+<blockquote>
+<p>这两者的关系，就如同MyBatis和JDBC，一个性能好，一个开发效率高，是对另一个的封装。</p>
+</blockquote>
+<h1 class="relative group">架构 
+    <div id="架构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%9e%b6%e6%9e%84" aria-label="Anchor">#</a>
+    </span>        
+    
+</h1>
+<p>参考<a href="https://zhuanlan.zhihu.com/p/342755411"   target="_blank">
+    【项目实践】一文带你搞定Spring Security + JWT实现前后端分离下的认证授权</a>和<a href="https://springdoc.cn/spring-security/servlet/architecture.html"   target="_blank">
+    官方文档：Spring Security/Servlet 应用/架构</a>以及<a href="https://springdoc.cn/spring-security/servlet/authentication/architecture.html"   target="_blank">
+    Servlet 认证架构</a>理解就没有问题了。</p>
+<p>Web中登录认证的核心就是<strong>凭证机制</strong>。用户登录成功后返回用户一个凭证，后续用户访问接口需携带凭证来表示自己的身份（Session， JWT&hellip;）。</p>
+<p>后端会对需要进行认证的接口进行安全判断，若凭证没问题则代表已登录就放行接口，若凭证有问题则直接拒绝请求。<strong>这个安全判断都是放在过滤器里统一处理的。</strong></p>
+<p><strong>Spring Security对Web系统的支持就是基于这一个个过滤器组成的过滤器链。</strong></p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/2024/spring-security-jwt/_media/multi-securityfilterchain_hu4b84afff608f26e9e3c4acb62e56f983_72263_330x0_resize_box_3.png 330w,
+        /posts/2024/spring-security-jwt/_media/multi-securityfilterchain_hu4b84afff608f26e9e3c4acb62e56f983_72263_660x0_resize_box_3.png 660w,
+        /posts/2024/spring-security-jwt/_media/multi-securityfilterchain_hu4b84afff608f26e9e3c4acb62e56f983_72263_1024x0_resize_box_3.png 1024w,
+        /posts/2024/spring-security-jwt/_media/multi-securityfilterchain_hu4b84afff608f26e9e3c4acb62e56f983_72263_1320x0_resize_box_3.png 2x"
+        src="/posts/2024/spring-security-jwt/_media/multi-securityfilterchain_hu4b84afff608f26e9e3c4acb62e56f983_72263_660x0_resize_box_3.png"
+        alt="alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<blockquote>
+<p>Spring Security的核心逻辑全在这一套过滤器中，过滤器（比如认证过滤器，授权过滤器等等）里会调用各种组件（密码Encoder, SecurityContext等等）完成功能，掌握了这些过滤器和组件你就掌握了Spring Security。</p>
+</blockquote>
+<h2 class="relative group">SecurityContextHolder 
+    <div id="securitycontextholder" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#securitycontextholder" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>每个用户都会有它的上下文（SecurityContext），存储在一个SecurityContextHolder中。</p>
+<p>所以我理解的是会在Filter中校验是否通过认证，通过了就会往SecurityContext中存入Authentication（代表当前登录用户），这样就能通过<code>UsernamePasswordAuthenticationFilter</code>。</p>
+<p>如果是login接口，就不太一样，需要自己调用<code>authenticationManager</code>提供的<code>authenticate()</code>方法。</p>
+<h2 class="relative group">AuthenticationManager 
+    <div id="authenticationmanager" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#authenticationmanager" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>AuthenticationManager 就是Spring Security用于执行身份验证的<strong>组件</strong>，只需要调用它的authenticate方法即可完成认证。</p>
+<p>Spring Security默认的认证方式就是<strong>在UsernamePasswordAuthenticationFilter这个过滤器中调用这个组件</strong>，该过滤器负责认证逻辑。</p>
+<p>AuthenticationManager会<strong>根据用户名查询出用户对象</strong>，与传递过来的密码匹配。</p>
+<p>户对象数据可以存在内存中、文件中、数据库中，你得确定好怎么查才行。这部分就交给UserDetialsService来实现。</p>
+<h2 class="relative group">UserDetialsService 
+    <div id="userdetialsservice" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#userdetialsservice" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>该接口只有一个方法loadUserByUsername(String username)，通过用户名查询用户对象，默认实现是在内存中查询。</p>
+<h2 class="relative group">UserDetails 
+    <div id="userdetails" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#userdetails" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>每个系统中的用户对象数据都不尽相同，咱们需要确认我们的用户数据是啥样的才行。Spring Security中的用户数据则是由 UserDetails来体现，该接口中提供了账号、密码等通用属性。</p>
+<h2 class="relative group">PasswordEncoder组件 
+    <div id="passwordencoder组件" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#passwordencoder%e7%bb%84%e4%bb%b6" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>这个组件负责密码加密与校验。Spring Security提供了很多加密器实现。</p>
+<h2 class="relative group">AuthenticationEntryPoint组件 
+    <div id="authenticationentrypoint组件" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#authenticationentrypoint%e7%bb%84%e4%bb%b6" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>定义自己的错误处理逻辑。</p>
+<h2 class="relative group">JWT组件 
+    <div id="jwt组件" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#jwt%e7%bb%84%e4%bb%b6" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>JWT是很小的一部分，有很多库的实现。</p>
+<ul>
+<li>jjwt</li>
+<li>java-jwt</li>
+<li>jose4j</li>
+<li>&hellip;</li>
+</ul>
+<p>自己引用在Spring Security的Filter等等部分使用。Spring Security是一个安全框架，更high level。</p>
+<h1 class="relative group">配置 
+    <div id="配置" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e9%85%8d%e7%bd%ae" aria-label="Anchor">#</a>
+    </span>        
+    
+</h1>
 
         </div>
                 
@@ -713,6 +1126,28 @@
           
         </span>
         <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/2024/typescript-in-depth/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Typescript in Depth</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-04-02 21:09:17 &#43;0800 CST">2 April 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>
