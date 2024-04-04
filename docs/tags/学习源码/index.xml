@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>学习源码 on 浮生日记</title>
-    <link>https://shadow-diary.fun/tags/%E5%AD%A6%E4%B9%A0%E6%BA%90%E7%A0%81/</link>
+    <link>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0%E6%BA%90%E7%A0%81/</link>
     <description>Recent content in 学习源码 on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Sat, 23 Mar 2024 13:19:44 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/%E5%AD%A6%E4%B9%A0%E6%BA%90%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Mar 2024 13:19:44 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0%E6%BA%90%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read Angular Real World Project Code</title>
-      <link>https://shadow-diary.fun/posts/2024/read-angular-real-world-project-code/</link>
+      <link>http://localhost:1313/posts/2024/read-angular-real-world-project-code/</link>
       <pubDate>Sat, 23 Mar 2024 13:19:44 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2024/read-angular-real-world-project-code/</guid>
+      <guid>http://localhost:1313/posts/2024/read-angular-real-world-project-code/</guid>
       <description>//TODO 有空学一下GitLens，我发现功能非常强大，并且基本涵盖了Git History和Git Graph的功能。</description>
       
     </item>

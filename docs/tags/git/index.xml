@@ -14,7 +14,7 @@
       <pubDate>Fri, 15 Dec 2023 22:49:08 +0800</pubDate>
       
       <guid>https://shadow-diary.fun/posts/2023/git-handbook/</guid>
-      <description>现在使用Git的频率变高了很多，使用场景也复杂了很多，根据需求总结一些常用的命令。虽然很多图形化工具已经非常还用了，但是命令行还是有类似Write once, execute anywhere.</description>
+      <description>起步 # 关于版本控制 # ​	版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</description>
       
     </item>
     

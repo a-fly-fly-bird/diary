@@ -9,32 +9,42 @@
     <copyright>Copy, _right?_ :thinking_face:</copyright>
     <lastBuildDate>Tue, 17 Oct 2023 23:30:43 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Almost_there</title>
-      <link>https://shadow-diary.fun/diary/2024/almost_there/</link>
+      <title>练习编程</title>
+      <link>https://shadow-diary.fun/diary/2024/2024-04-03-almost_there/</link>
       <pubDate>Wed, 03 Apr 2024 22:08:09 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/diary/2024/almost_there/</guid>
+      <guid>https://shadow-diary.fun/diary/2024/2024-04-03-almost_there/</guid>
       <description>准备往~/.zshrc里添加source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.</description>
       
     </item>
     
     <item>
-      <title>Typescript in Depth</title>
-      <link>https://shadow-diary.fun/posts/2024/typescript-in-depth/</link>
-      <pubDate>Tue, 02 Apr 2024 21:09:17 +0800</pubDate>
+      <title>Useful dev tools collection</title>
+      <link>https://shadow-diary.fun/posts/2024/devtools/</link>
+      <pubDate>Tue, 02 Apr 2024 21:31:35 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/posts/2024/typescript-in-depth/</guid>
-      <description> 细数 TS 中那些奇怪的符号 前端渣渣唠嗑一下前端中的设计模式（真实场景例子） B端设计｜一文读懂设计布局、栅格、断点 </description>
+      <guid>https://shadow-diary.fun/posts/2024/devtools/</guid>
+      <description>好用的开发工具记录。</description>
       
     </item>
     
     <item>
-      <title>Keep Going</title>
+      <title>内酚酞的甜</title>
       <link>https://shadow-diary.fun/diary/2024/2024-03-23-keep-going/</link>
       <pubDate>Mon, 25 Mar 2024 22:49:18 +0800</pubDate>
       
       <guid>https://shadow-diary.fun/diary/2024/2024-03-23-keep-going/</guid>
       <description>傍晚天空突然下起中雨，于是取消了羽毛球预约。于是在家学习Spring Securoty，花了很多都没有打通，心情就会变得焦躁，觉得自己花了特别多的沉没成本。</description>
+      
+    </item>
+    
+    <item>
+      <title>Spring Security Jwt</title>
+      <link>https://shadow-diary.fun/posts/2024/spring-security-jwt/</link>
+      <pubDate>Sat, 23 Mar 2024 22:49:10 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2024/spring-security-jwt/</guid>
+      <description>参考文档和视频：</description>
       
     </item>
     
@@ -45,16 +55,6 @@
       
       <guid>https://shadow-diary.fun/diary/2024/2024-03-23-read-docs-notes/</guid>
       <description>现在经常看技术性的文档和概念，如果是比较常见的，都会首先在搜索框里加上阮一峰这个关键词。</description>
-      
-    </item>
-    
-    <item>
-      <title>Read Angular Real World Project Code</title>
-      <link>https://shadow-diary.fun/posts/2024/read-angular-real-world-project-code/</link>
-      <pubDate>Sat, 23 Mar 2024 13:19:44 +0800</pubDate>
-      
-      <guid>https://shadow-diary.fun/posts/2024/read-angular-real-world-project-code/</guid>
-      <description>//TODO 有空学一下GitLens，我发现功能非常强大，并且基本涵盖了Git History和Git Graph的功能。</description>
       
     </item>
     
@@ -194,7 +194,7 @@
       <pubDate>Fri, 15 Dec 2023 22:49:08 +0800</pubDate>
       
       <guid>https://shadow-diary.fun/posts/2023/git-handbook/</guid>
-      <description>现在使用Git的频率变高了很多，使用场景也复杂了很多，根据需求总结一些常用的命令。虽然很多图形化工具已经非常还用了，但是命令行还是有类似Write once, execute anywhere.</description>
+      <description>起步 # 关于版本控制 # ​	版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</description>
       
     </item>
     
@@ -215,16 +215,6 @@
       
       <guid>https://shadow-diary.fun/posts/2023/ci-cd/jenkins-ci/</guid>
       <description>入职之后，一直对公司的CI/CD流程实现细节一知半解，最近正好需要打包部署一个应用，借此机会一口气把所有黑盒给打开。</description>
-      
-    </item>
-    
-    <item>
-      <title>VS Code工具 使用记录</title>
-      <link>https://shadow-diary.fun/posts/2023/vscode-usage/</link>
-      <pubDate>Sun, 12 Nov 2023 00:29:25 +0800</pubDate>
-      
-      <guid>https://shadow-diary.fun/posts/2023/vscode-usage/</guid>
-      <description>开个新坑，为了减少Hugo上传到仓库的图片大小，在插件市场看到个很符合我需求的东西： Learn Image 插件压缩图片，顺便来了兴趣系统地学习了解一下VS Code的整个配置和个性化。</description>
       
     </item>
     

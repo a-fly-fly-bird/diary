@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="en" />
@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Devtools &middot; 浮生日记</title>
-  <meta name="title" content="Devtools &middot; 浮生日记" />
+  <title>Useful dev tools collection &middot; 浮生日记</title>
+  <meta name="title" content="Useful dev tools collection &middot; 浮生日记" />
   
   <meta name="description" content="我的树洞" />
   <meta name="keywords" content="工具, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/2024/devtools/" />
+  <link rel="canonical" href="https://shadow-diary.fun/posts/2024/devtools/" />
   
   
   
@@ -63,17 +63,17 @@
   
   
   
-  <meta property="og:title" content="Devtools" />
-<meta property="og:description" content=" zsh-vi-mode " />
+  <meta property="og:title" content="Useful dev tools collection" />
+<meta property="og:description" content="好用的开发工具记录。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/2024/devtools/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://shadow-diary.fun/posts/2024/devtools/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-04-02T21:31:35+08:00" />
 <meta property="article:modified_time" content="2024-04-02T21:31:35+08:00" />
 
 
 
-  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Devtools"/>
-<meta name="twitter:description" content=" zsh-vi-mode "/>
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Useful dev tools collection"/>
+<meta name="twitter:description" content="好用的开发工具记录。"/>
 
   
   <script type="application/ld+json">
@@ -81,12 +81,12 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "",
-    "name": "Devtools",
-    "headline": "Devtools",
+    "name": "Useful dev tools collection",
+    "headline": "Useful dev tools collection",
     
-    "abstract": " zsh-vi-mode ",
+    "abstract": "好用的开发工具记录。",
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/posts\/2024\/devtools\/",
+    "url" : "https:\/\/shadow-diary.fun\/posts\/2024\/devtools\/",
     "author" : {
       "@type": "Person",
       "name": "Terry Tan"
@@ -100,7 +100,7 @@
     "keywords": ["工具"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1"
+    "wordCount": "157"
   }]
   </script>
 
@@ -472,7 +472,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Devtools
+      Useful dev tools collection
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -515,19 +515,10 @@
 <div style="cursor: default;" class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-04-02 21:31:35 &#43;0800 CST">2 April 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1 word</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2024-04-02 21:31:35 &#43;0800 CST">2 April 2024</time><span class="px-2 text-primary-500">&middot;</span><span>157 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
   
 
   
-  
-  <span class="pl-2"><span class="flex">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
-    Draft
-  </span>
-</span>
-</span>
   
 </div>
 
@@ -642,7 +633,97 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ide">IDE</a>
+      <ul>
+        <li><a href="#vs-code--vim">VS Code + Vim</a></li>
+      </ul>
+    </li>
+    <li><a href="#terminal">Terminal</a></li>
+    <li><a href="#frontend">Frontend</a></li>
+    <li><a href="#vs-code-插件">VS Code 插件</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ide">IDE</a>
+      <ul>
+        <li><a href="#vs-code--vim">VS Code + Vim</a></li>
+      </ul>
+    </li>
+    <li><a href="#terminal">Terminal</a></li>
+    <li><a href="#frontend">Frontend</a></li>
+    <li><a href="#vs-code-插件">VS Code 插件</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+ 
+<script>
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = e.attr('id');
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+           
+            $(e).removeClass('active').siblings('ul').hide();
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+         
+          $toc.find('a').parent('li').find('ul').hide();
+        
+        onScroll();
+      });
+    }
+  })();
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -650,9 +731,117 @@
 
 
         <div class="max-w-prose mb-20">
-          <ul>
+          <p>好用的开发工具记录。</p>
+<h1 class="relative group">IDE 
+    <div id="ide" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ide" aria-label="Anchor">#</a>
+    </span>        
+    
+</h1>
+<ul>
+<li><a href="https://code.visualstudio.com"   target="_blank">
+    Visual Studio Code</a>：无需多言，前端开发利器，原生支持TypeScript。安装插件可以开发Java, Python, C++, Golang等等语言。</li>
+<li><a href="https://www.jetbrains.com/idea/?var=1"   target="_blank">
+    IntelliJ IDEA Ultimate</a>：专业Java开发效率神器，CE(Community Edition)稍逊一筹。</li>
+</ul>
+<h2 class="relative group">VS Code + Vim 
+    <div id="vs-code--vim" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#vs-code--vim" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>我一直对Vim编辑器有着一种独特的青睐，但苦于其学习成本和使用成本，投入了大量时间精力却没有得到什么回报。而<a href="https://github.com/VSCodeVim/Vim"   target="_blank">
+    Vim for Visual Studio Code</a>的出现，提供了一个很好的平衡。</p>
+<p>VS Code 的 Learn VIM 插件总结的很好：</p>
+<blockquote>
+<p>Visual Studio Code is superb. It offers an unparalleled user experience with great support for many languages and development ecosystem. It comes with great defaults and is super easy to use and get started with.</p>
+<p>Vim is awesome. It modal nature and text editing features make it unique amongst other editors. Vim offers a complete different level of text editing proficiency, speed and accuracy from anything else out there.</p>
+<p>The combination of both couldn&rsquo;t be anything less than amazingly superbsome.</p>
+</blockquote>
+<h1 class="relative group">Terminal 
+    <div id="terminal" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#terminal" aria-label="Anchor">#</a>
+    </span>        
+    
+</h1>
+<p>以下终端插件等都可以使用<code>Homebre</code>安装。</p>
+<ul>
+<li><a href="https://formulae.brew.sh/formula/vim"   target="_blank">
+    vim</a>：命令行编辑器</li>
 <li><a href="https://github.com/jeffreytse/zsh-vi-mode"   target="_blank">
-    zsh-vi-mode</a></li>
+    zsh-vi-mode</a>：zsh终端使用vim mode</li>
+<li><a href="https://ohmyz.sh/#install"   target="_blank">
+    oh-my-zsh</a>：提供zsh的配置和插件
+<ul>
+<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting"   target="_blank">
+    zsh-syntax-highlighting</a>：命令高亮</li>
+<li><a href="https://github.com/zsh-users/zsh-autosuggestions"   target="_blank">
+    zsh-autosuggestion</a>：命令提示和自动补全</li>
+</ul>
+</li>
+<li><a href="https://github.com/tldr-pages/tldr"   target="_blank">
+    tldr</a>：modern help page</li>
+</ul>
+<h1 class="relative group">Frontend 
+    <div id="frontend" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#frontend" aria-label="Anchor">#</a>
+    </span>        
+    
+</h1>
+<ul>
+<li><a href="https://github.com/nvm-sh/nvm"   target="_blank">
+    nvm</a></li>
+</ul>
+<h1 class="relative group">VS Code 插件 
+    <div id="vs-code-插件" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#vs-code-%e6%8f%92%e4%bb%b6" aria-label="Anchor">#</a>
+    </span>        
+    
+</h1>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree"   target="_blank">
+    Todo Tree</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"   target="_blank">
+    Material Icon Theme</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"   target="_blank">
+    ESLint</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio"   target="_blank">
+    Draw.io Integration</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker"   target="_blank">
+    Docker</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag"   target="_blank">
+    Auto Close Tag</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag"   target="_blank">
+    Auto Complete Tag</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"   target="_blank">
+    Auto Rename Tag</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme"   target="_blank">
+    GitHub Theme</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens"   target="_blank">
+    GitLens — Git supercharged</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser"   target="_blank">
+    open in browser</a></li>
+<li>&hellip;</li>
 </ul>
 
         </div>
@@ -685,7 +874,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/2024/typescript-in-depth/">
+            <a class="flex group mr-3" href="/posts/2024/spring-security-jwt/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -697,11 +886,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Typescript in Depth</span
+                  >Spring Security Jwt</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-04-02 21:09:17 &#43;0800 CST">2 April 2024</time>
+                    <time datetime="2024-03-23 22:49:10 &#43;0800 CST">23 March 2024</time>
                   
                 </span>
               </span>
@@ -720,7 +909,13 @@
   </footer>
 </article>
 
-      
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
     </main><footer id="site-footer" class="py-10 print:hidden">
   
   
@@ -764,7 +959,7 @@
 </footer><div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:1313/"
+  data-url="https://shadow-diary.fun/"
   style="z-index:500"
 >
   <div
