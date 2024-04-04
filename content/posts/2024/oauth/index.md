@@ -2,7 +2,7 @@
 title = 'Oauth 了解和实践'
 date = 2024-03-19T21:49:41+08:00
 draft = false
-categories = ['后段']
+categories = ['后端']
 tags = ['OAuth']
 +++
 
