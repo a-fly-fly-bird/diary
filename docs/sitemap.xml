@@ -4,7 +4,13 @@
 
   <url>
     <loc>https://shadow-diary.fun/diary/</loc>
-    <lastmod>2024-04-03T22:08:09+08:00</lastmod>
+    <lastmod>2024-04-21T21:52:30+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shadow-diary.fun/diary/2024/2024-04-21-read_a_good_book/</loc>
+    <lastmod>2024-04-21T21:52:30+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
