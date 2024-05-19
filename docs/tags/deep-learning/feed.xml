@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deep Learning on 浮生日记</title>
+    <link>https://shadow-diary.fun/tags/deep-learning/</link>
+    <description>Recent content in Deep Learning on 浮生日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sun, 17 Dec 2023 00:05:50 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/deep-learning/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>目标检测模型的评估指标mAP详解</title>
+<link>https://shadow-diary.fun/posts/2023/ml/map/</link>
+<pubDate>Sun, 17 Dec 2023 00:05:50 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/ml/map/</guid>
+<description>&lt;p&gt;mAP，即_Mean Average Precision，是目标检测领域最常用的评估指标。_&lt;/p&gt;
+&lt;aside&gt; 💡 不同于常用的准确率，精度，召回率（recall），F1等评估指标。目标检测领域需要通过交并比 **IoU（Intersection of Union）来评估。**
+&lt;/aside&gt;
+&lt;p&gt;参考文章：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/37910324&#34;   target=&#34;_blank&#34;&gt;
+    目标检测模型的评估指标mAP详解(附代码）&lt;/a&gt;&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;综述 
+    &lt;div id=&#34;综述&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%bb%bc%e8%bf%b0&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;目标检测问题可以用几个关键词来概括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定位&lt;/li&gt;
+&lt;li&gt;分类&lt;/li&gt;
+&lt;li&gt;多对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;经典的图：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/ml/map/Untitled_hu539c80d9edf717c7f87a908fc5924c77_59309_330x0_resize_box_3.png 330w,
+        /posts/2023/ml/map/Untitled_hu539c80d9edf717c7f87a908fc5924c77_59309_660x0_resize_box_3.png 660w,
+        /posts/2023/ml/map/Untitled_hu539c80d9edf717c7f87a908fc5924c77_59309_1024x0_resize_box_3.png 1024w,
+        /posts/2023/ml/map/Untitled_hu539c80d9edf717c7f87a908fc5924c77_59309_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/ml/map/Untitled_hu539c80d9edf717c7f87a908fc5924c77_59309_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;&lt;strong&gt;Ground Truth&lt;/strong&gt; 
+    &lt;div id=&#34;ground-truth&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ground-truth&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于任何算法，评估指标需要知道ground truth（真实标签）数据。 我们只知道训练、验证和测试数据集的ground truth。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对于目标检测问题，ground truth包括图像中物体的类别以及该图像中每个物体的真实边界框(也就是人工标注的对象框)。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;IoU（Intersection over Union） 
+    &lt;div id=&#34;iouintersection-over-union&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#iouintersection-over-union&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;IoU是预测框与ground truth的交集和并集的比值。&lt;/p&gt;
+&lt;p&gt;对于每个类，预测框和ground truth重叠的区域是交集，而横跨的总区域就是并集。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/ml/map/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_36390_330x0_resize_box_3.png 330w,
+        /posts/2023/ml/map/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_36390_660x0_resize_box_3.png 660w,
+        /posts/2023/ml/map/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_36390_1024x0_resize_box_3.png 1024w,
+        /posts/2023/ml/map/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_36390_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/ml/map/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_36390_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;IoU的计算公式：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/ml/map/Untitled-3_hu539c80d9edf717c7f87a908fc5924c77_25817_330x0_resize_box_3.png 330w,
+        /posts/2023/ml/map/Untitled-3_hu539c80d9edf717c7f87a908fc5924c77_25817_660x0_resize_box_3.png 660w,
+        /posts/2023/ml/map/Untitled-3_hu539c80d9edf717c7f87a908fc5924c77_25817_1024x0_resize_box_3.png 1024w,
+        /posts/2023/ml/map/Untitled-3_hu539c80d9edf717c7f87a908fc5924c77_25817_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/ml/map/Untitled-3_hu539c80d9edf717c7f87a908fc5924c77_25817_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;&lt;strong&gt;计算precision和recall&lt;/strong&gt; 
+    &lt;div id=&#34;计算precision和recall&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%ae%a1%e7%ae%97precision%e5%92%8crecall&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;机器学习&lt;strong&gt;分类模型&lt;/strong&gt;评估中常见的&lt;strong&gt;性能度量指标&lt;/strong&gt; 
+    &lt;div id=&#34;机器学习分类模型评估中常见的性能度量指标&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%88%86%e7%b1%bb%e6%a8%a1%e5%9e%8b%e8%af%84%e4%bc%b0%e4%b8%ad%e5%b8%b8%e8%a7%81%e7%9a%84%e6%80%a7%e8%83%bd%e5%ba%a6%e9%87%8f%e6%8c%87%e6%a0%87&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;&lt;strong&gt;Accuracy&lt;/strong&gt; 
+    &lt;div id=&#34;accuracy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#accuracy&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/ml/map/Untitled-4_hu539c80d9edf717c7f87a908fc5924c77_42708_330x0_resize_box_3.png 330w,
+        /posts/2023/ml/map/Untitled-4_hu539c80d9edf717c7f87a908fc5924c77_42708_660x0_resize_box_3.png 660w,
+        /posts/2023/ml/map/Untitled-4_hu539c80d9edf717c7f87a908fc5924c77_42708_1024x0_resize_box_3.png 1024w,
+        /posts/2023/ml/map/Untitled-4_hu539c80d9edf717c7f87a908fc5924c77_42708_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/ml/map/Untitled-4_hu539c80d9edf717c7f87a908fc5924c77_42708_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;&lt;strong&gt;Precision and Recall&lt;/strong&gt; 
+    &lt;div id=&#34;precision-and-recall&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#precision-and-recall&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;Accuracy虽然常用，但是无法满足所有分类任务需求。&lt;/p&gt;
+&lt;p&gt;比如两个类别的数量非常悬殊（maybe 999999999999:1），我们要识别的是小的那个类别。为了提高准确率，最简单的做法是什么？把所有都预测为前者。但这个预测模型一点用都没有。为了突破accuracy的局限，我们需要计算precision和recall。&lt;/p&gt;
+&lt;p&gt;对于一个二分类任务，二分类器的预测结果可分为以下4类：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/ml/map/Untitled-5_hu539c80d9edf717c7f87a908fc5924c77_32320_330x0_resize_box_3.png 330w,
+        /posts/2023/ml/map/Untitled-5_hu539c80d9edf717c7f87a908fc5924c77_32320_660x0_resize_box_3.png 660w,
+        /posts/2023/ml/map/Untitled-5_hu539c80d9edf717c7f87a908fc5924c77_32320_1024x0_resize_box_3.png 1024w,
+        /posts/2023/ml/map/Untitled-5_hu539c80d9edf717c7f87a908fc5924c77_32320_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/ml/map/Untitled-5_hu539c80d9edf717c7f87a908fc5924c77_32320_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/ml/map/Untitled-6_hu539c80d9edf717c7f87a908fc5924c77_19771_330x0_resize_box_3.png 330w,
+        /posts/2023/ml/map/Untitled-6_hu539c80d9edf717c7f87a908fc5924c77_19771_660x0_resize_box_3.png 660w,
+        /posts/2023/ml/map/Untitled-6_hu539c80d9edf717c7f87a908fc5924c77_19771_1024x0_resize_box_3.png 1024w,
+        /posts/2023/ml/map/Untitled-6_hu539c80d9edf717c7f87a908fc5924c77_19771_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/ml/map/Untitled-6_hu539c80d9edf717c7f87a908fc5924c77_19771_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;aside&gt; 💡 **Precision从预测结果角度出发**，描述了二分类器预测出来的正例结果中有多少是真实正例，即该二分类器预测的正例有多少是准确的；
+&lt;p&gt;&lt;strong&gt;Recall从真实结果角度出发&lt;/strong&gt;，描述了测试集中的真实正例有多少被二分类器挑选了出来，即真实的正例有多少被该二分类器召回。&lt;/p&gt;
+&lt;/aside&gt;
+&lt;p&gt;Precision和Recall通常是一对矛盾的性能度量指标。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/ml/map/Untitled-7_hu539c80d9edf717c7f87a908fc5924c77_54057_330x0_resize_box_3.png 330w,
+        /posts/2023/ml/map/Untitled-7_hu539c80d9edf717c7f87a908fc5924c77_54057_660x0_resize_box_3.png 660w,
+        /posts/2023/ml/map/Untitled-7_hu539c80d9edf717c7f87a908fc5924c77_54057_1024x0_resize_box_3.png 1024w,
+        /posts/2023/ml/map/Untitled-7_hu539c80d9edf717c7f87a908fc5924c77_54057_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/ml/map/Untitled-7_hu539c80d9edf717c7f87a908fc5924c77_54057_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;目标检测问题中的 &lt;strong&gt;Precision and Recall&lt;/strong&gt; 
+    &lt;div id=&#34;目标检测问题中的precision-and-recall&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%9b%ae%e6%a0%87%e6%a3%80%e6%b5%8b%e9%97%ae%e9%a2%98%e4%b8%ad%e7%9a%84precision-and-recall&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;为了获得True Positives and False Positives，我们需要使用IoU。&lt;/p&gt;
+&lt;aside&gt; 💡 最常用的阈值是0.5，即如果IoU&gt; 0.5，则认为它是True Positive，否则认为是False Positive。
+&lt;/aside&gt;
+&lt;p&gt;为了计算Recall，我们需要Negatives的数量。由于图片中我们没有预测到物体的每个部分都被视为Negative，因此计算True Negatives比较难办。&lt;/p&gt;
+&lt;p&gt;但是我们可以只计算False Negatives，即我们模型所漏检的物体。&lt;/p&gt;
+&lt;p&gt;另外一个需要考虑的因素是模型所给出的各个检测结果的置信度。通过改变置信度阈值，我们可以改变一个预测框是Positive还是 Negative，即改变预测值的正负性(不是box的真实正负性，是预测正负性)。&lt;/p&gt;
+&lt;p&gt;然后就可以根据上面给的公式计算目标检测结果的Precision and Recall了。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;mAP 
+    &lt;div id=&#34;map&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#map&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;aside&gt; 💡 目标检测中衡量识别精度的指标是mAP（mean average precision）。
+&lt;p&gt;多个类别物体检测中，每一个类别都可以根据recall和precision绘制一条曲线，AP就是该曲线下的面积，mAP是多个类别AP的平均值。&lt;/p&gt;
+&lt;/aside&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;p&gt;目标检测中的mAP是什么含义？ - 隔壁大王的回答 - 知乎&lt;a href=&#34;https://www.zhihu.com/question/53405779/answer/139037721&#34;   target=&#34;_blank&#34;&gt;
+    https://www.zhihu.com/question/53405779/answer/139037721&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;目标检测模型的评估指标mAP详解(附代码） - 小小将的文章 - 知乎 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/37910324&#34;   target=&#34;_blank&#34;&gt;
+    https://zhuanlan.zhihu.com/p/37910324&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如前面所述，至少有两个变量会影响Precision和Recall，即IoU和置信度阈值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;IoU是一个简单的几何度量，可以很容易标准化，比如在PASCAL VOC竞赛中采用的IoU阈值为0.5，而COCO竞赛中在计算mAP较复杂，其计算了一系列IoU阈值（0.05至0.95）下的mAP。&lt;/p&gt;
+&lt;p&gt;但是置信度却在不同模型会差异较大，可能在我的模型中置信度采用0.5却等价于在其它模型中采用0.8置信度，这会导致precision-recall曲线变化。&lt;/p&gt;
+&lt;p&gt;为此，PASCAL VOC组织者想到了一种方法来解决这个问题，即要&lt;strong&gt;采用一种可以用于任何模型的评估指标&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;可以看到，为了得到precision-recall曲线，首先要对模型预测结果进行排序（ranked output，按照各个预测值置信度降序排列）。那么给定一个rank，Recall和Precision仅在高于该rank值的预测结果中计算，改变rank值会改变recall值。这里共选择11个不同的recall（[0, 0.1, &amp;hellip;, 0.9, 1.0]），可以认为是选择了11个rank，由于按照置信度排序，所以实际上等于选择了11个不同的置信度阈值。那么，AP就定义为在这11个recall下precision的平均值，其可以表征整个precision-recall曲线（曲线下面积）。&lt;/p&gt;
+&lt;p&gt;总而言之就是，有两个变量会影响Precision和Recall，即IoU和置信度阈值，置信度阈值不同，对评估结果影响很大。取平均来抵消影响。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+<title>英伟达官网 CUDA、CUDA toolkit 和 Conda PyTorch 里 CUDA、CUDA toolkit的关系</title>
+<link>https://shadow-diary.fun/posts/2023/ml/cuda-more/</link>
+<pubDate>Sat, 16 Dec 2023 23:59:11 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/ml/cuda-more/</guid>
+<description>&lt;p&gt;参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/91334380&#34;   target=&#34;_blank&#34;&gt;
+    显卡，显卡驱动,nvcc, cuda driver,cudatoolkit,cudnn到底是什么？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_41094058/article/details/116207333&#34;   target=&#34;_blank&#34;&gt;
+    一文讲清楚CUDA、CUDA toolkit、CUDNN、NVCC关系_健0000的博客-CSDN博客&lt;/a&gt;&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;CUDA 和 CUDA toolkit 
+    &lt;div id=&#34;cuda-和-cuda-toolkit&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#cuda-%e5%92%8c-cuda-toolkit&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;CUDA并不是软件，而是&lt;strong&gt;一个并行计算平台和编程模型，能够使得使用GPU进行通用计算变得简单和优雅。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们平时说的安装驱动，然后安装CUDA和cudnn，实际上指的是安装CUDA toolkit和cudnn。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;传统上，安装 NVIDIA Driver 和 CUDA Toolkit 的步骤是分开的，但实际上我们可以直接安装 CUDA Toolkit，系统将自动安装与其版本匹配的 NVIDIA Driver。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装网址：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.nvidia.com/cuda-downloads?target_os=Linux&amp;amp;target_arch=x86_64&amp;amp;Distribution=Ubuntu&amp;amp;target_version=20.04&amp;amp;target_type=deb_local&#34;   target=&#34;_blank&#34;&gt;
+    NVIDIA CUDA Toolkit 11.7 Downloads&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CUDA Toolkit由以下组件组成：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#major-components&#34;   target=&#34;_blank&#34;&gt;
+    CUDA 12.1 Release Notes&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Compiler: CUDA-C和CUDA-C++编译器NVCC位于bin/目录中。它建立在NVVM优化器之上，而NVVM优化器本身构建在LLVM编译器基础结构之上。Tools: 提供一些像profiler,debuggers等工具，这些工具可以从bin/目录中获取Libraries: 下面列出的部分科学库和实用程序库可以在lib/目录中使用，它们的接口在include/目录中可获取。CUDA Samples: 演示如何使用各种CUDA和library API的代码示例。CUDA Driver: 运行CUDA应用程序需要系统至少有一个具有CUDA功能的GPU和与CUDA工具包兼容的驱动程序。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;cudnn 
+    &lt;div id=&#34;cudnn&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#cudnn&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NVIDIA CUDA® 深度神经网络库 (cuDNN) 是一个 GPU 加速的&lt;strong&gt;深度神经网络&lt;/strong&gt;基元库，能够以高度优化的方式实现标准例程（如前向和反向卷积、池化层、归一化和激活层）。&lt;/p&gt;
+&lt;p&gt;全球的深度学习研究人员和框架开发者都依赖 cuDNN 来实现高性能 GPU 加速。借助 cuDNN，研究人员和开发者可以专注于训练神经网络及开发软件应用，而不必花时间进行低层级的 GPU 性能调整。cuDNN 可加速广泛应用的深度学习框架，包括 &lt;strong&gt;&lt;a href=&#34;https://caffe2.ai/&#34;   target=&#34;_blank&#34;&gt;
+    Caffe2&lt;/a&gt;&lt;/strong&gt;、&lt;strong&gt;&lt;a href=&#34;https://chainer.org/&#34;   target=&#34;_blank&#34;&gt;
+    Chainer&lt;/a&gt;&lt;/strong&gt;、&lt;strong&gt;&lt;a href=&#34;https://keras.io/&#34;   target=&#34;_blank&#34;&gt;
+    Keras&lt;/a&gt;&lt;/strong&gt;、&lt;strong&gt;&lt;a href=&#34;https://www.mathworks.com/solutions/deep-learning.html&#34;   target=&#34;_blank&#34;&gt;
+    MATLAB&lt;/a&gt;&lt;/strong&gt;、&lt;strong&gt;&lt;a href=&#34;https://mxnet.incubator.apache.org/&#34;   target=&#34;_blank&#34;&gt;
+    MxNet&lt;/a&gt;&lt;/strong&gt;、&lt;strong&gt;&lt;a href=&#34;https://github.com/PaddlePaddle/Paddle&#34;   target=&#34;_blank&#34;&gt;
+    PaddlePaddle&lt;/a&gt;&lt;/strong&gt;、&lt;strong&gt;&lt;a href=&#34;https://pytorch.org/&#34;   target=&#34;_blank&#34;&gt;
+    PyTorch&lt;/a&gt;&lt;/strong&gt; 和 &lt;strong&gt;&lt;a href=&#34;https://www.tensorflow.org/&#34;   target=&#34;_blank&#34;&gt;
+    TensorFlow&lt;/a&gt;&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个toolkit里面不是自带的。所以需要手动安装。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;Conda PyTorch 里 CUDA、CUDA toolkit 
+    &lt;div id=&#34;conda-pytorch-里-cudacuda-toolkit&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#conda-pytorch-%e9%87%8c-cudacuda-toolkit&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CUDA Toolkit (Nvidia)： CUDA完整的工具安装包，其中提供了 Nvidia 驱动程序、开发 CUDA 程序相关的开发工具包等可供安装的选项。包括 CUDA 程序的编译器、IDE、调试器等，CUDA 程序所对应的各式库文件以及它们的头文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    CUDA Toolkit (PyTorch)： CUDA不完整的工具安装包，其主要包含在使用 CUDA 相关的功能时所依赖的动态链接库。**不会安装驱动程序**。
+
+    对于 Pytorch 之类的深度学习框架而言，其在大多数需要使用 GPU 的情况中只需要使用 CUDA 的动态链接库支持程序的运行(**Pytorch 本身与 CUDA 相关的部分是提前编译好的)**，就像常见的可执行程序一样，不需要重新进行编译过程，只需要其所依赖的动态链接库存在即可正常运行。
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 class=&#34;relative group&#34;&gt;conda安装的cudatoolkit, cudnn与在主机上安装的cuda, cudnn有何关系 
+    &lt;div id=&#34;conda安装的cudatoolkit-cudnn与在主机上安装的cuda-cudnn有何关系&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#conda%e5%ae%89%e8%a3%85%e7%9a%84cudatoolkit-cudnn%e4%b8%8e%e5%9c%a8%e4%b8%bb%e6%9c%ba%e4%b8%8a%e5%ae%89%e8%a3%85%e7%9a%84cuda-cudnn%e6%9c%89%e4%bd%95%e5%85%b3%e7%b3%bb&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;首先明确了以下概念：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地安装的Nvidia CUDA Toolkit 是 conda 里 toolkit 的超集&lt;/li&gt;
+&lt;li&gt;运行PyTorch只需要安装驱动和conda里的toolkit即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;查找可用的cuda路径 
+    &lt;div id=&#34;查找可用的cuda路径&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%9f%a5%e6%89%be%e5%8f%af%e7%94%a8%e7%9a%84cuda%e8%b7%af%e5%be%84&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;1、环境变量CUDA_HOME 或 CUDA_PATH 2、/usr/local/cuda 3、which nvcc的上级上级目录 （which nvcc 会在环境变量PATH中找） 4、如果上述都不存在，则torch.utils.cpp_extension.CUDA_HOME为None，会使用conda安装的cudatoolkit，其路径为cudart 库文件目录的上级目录（此时可能是通过 conda 安装的 cudatoolkit，一般直接用 conda install cudatoolkit，就是在这里搜索到 cuda 库的）。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;实践 
+    &lt;div id=&#34;实践&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%ae%9e%e8%b7%b5&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;根据实践，当同时存在conda里的toolkit和本地的toolkit时，会优先调用conda里的环境。&lt;/p&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/344950161/answer/819075473&#34;   target=&#34;_blank&#34;&gt;
+    conda安装的cudatoolkit, cudnn与在主机上安装的cuda, cudnn有何关系？ - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;其他 
+    &lt;div id=&#34;其他&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%85%b6%e4%bb%96&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/yhjoker/p/10972795.html&#34;   target=&#34;_blank&#34;&gt;
+    Pytorch 使用不同版本的 cuda - yhjoker - 博客园&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

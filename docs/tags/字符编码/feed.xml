@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>字符编码 on 浮生日记</title>
+    <link>https://shadow-diary.fun/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
+    <description>Recent content in 字符编码 on 浮生日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sat, 16 Dec 2023 23:49:32 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>字符编码（ASCII、GBK、UTF-8、Unicode等）和字体</title>
+<link>https://shadow-diary.fun/posts/2023/common/character-encoding/</link>
+<pubDate>Sat, 16 Dec 2023 23:49:32 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/common/character-encoding/</guid>
+<description>&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;top level： &lt;a href=&#34;https://www.bilibili.com/video/BV1cB4y177QR/?share_source=copy_web&amp;amp;vd_source=3bfb0ec751c895fd26607d3661a4598c&#34;   target=&#34;_blank&#34;&gt;
+    锟斤拷�⊠是怎样炼成的——中文显示“⼊”门指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;lower level: &lt;a href=&#34;https://www.bilibili.com/video/BV1xD4y1y7yc/?share_source=copy_web&amp;amp;vd_source=3bfb0ec751c895fd26607d3661a4598c&#34;   target=&#34;_blank&#34;&gt;
+    一听就懂字符集、ASCII、GBK、UTF-8、Unicode、乱码、字符编码、解码问题的讲解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;top level 视频的稿子在这里：&lt;a href=&#34;https://chaiknows.feishu.cn/docx/doxcnQEbKZNVew6qrRmzFh9oiTd&#34;   target=&#34;_blank&#34;&gt;
+    锟斤拷�⊠是怎样炼成的——中文显示“⼊”门指南 文字版脚本&lt;/a&gt;&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;综述 
+    &lt;div id=&#34;综述&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%bb%bc%e8%bf%b0&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;计算机只认识0，1二进制编码。电脑显示文字，涉及到三个重要的概念：字符、字符集，和字符编码（编码方式）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;字符编码&lt;/strong&gt;，类似索引，根据字符编码显示&lt;strong&gt;字符集&lt;/strong&gt;里对应的&lt;strong&gt;字符&lt;/strong&gt;。类似下图这样：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+  
+    &lt;figure&gt;
+      &lt;img class=&#34;my-0 rounded-md&#34; src=&#34;Untitled%201.png&#34; alt=&#34;Alt text&#34; /&gt;
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;需要注意的是，码位和索引不是一个东西！由于[[字符编码（ASCII、GBK、UTF-8、Unicode等）#UTF-8码位变长原理]]这个东西的存在，也就意味着码位和索引不是线性关系！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+  
+    &lt;figure&gt;
+      &lt;img class=&#34;my-0 rounded-md&#34; src=&#34;Untitled-2%201.png&#34; alt=&#34;Alt text&#34; /&gt;
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;乱码原因 
+    &lt;div id=&#34;乱码原因&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%b9%b1%e7%a0%81%e5%8e%9f%e5%9b%a0&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/common/character-encoding/Untitled-3_hu539c80d9edf717c7f87a908fc5924c77_87416_330x0_resize_box_3.png 330w,
+        /posts/2023/common/character-encoding/Untitled-3_hu539c80d9edf717c7f87a908fc5924c77_87416_660x0_resize_box_3.png 660w,
+        /posts/2023/common/character-encoding/Untitled-3_hu539c80d9edf717c7f87a908fc5924c77_87416_1024x0_resize_box_3.png 1024w,
+        /posts/2023/common/character-encoding/Untitled-3_hu539c80d9edf717c7f87a908fc5924c77_87416_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/common/character-encoding/Untitled-3_hu539c80d9edf717c7f87a908fc5924c77_87416_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/common/character-encoding/Untitled-4_hu539c80d9edf717c7f87a908fc5924c77_93235_330x0_resize_box_3.png 330w,
+        /posts/2023/common/character-encoding/Untitled-4_hu539c80d9edf717c7f87a908fc5924c77_93235_660x0_resize_box_3.png 660w,
+        /posts/2023/common/character-encoding/Untitled-4_hu539c80d9edf717c7f87a908fc5924c77_93235_1024x0_resize_box_3.png 1024w,
+        /posts/2023/common/character-encoding/Untitled-4_hu539c80d9edf717c7f87a908fc5924c77_93235_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/common/character-encoding/Untitled-4_hu539c80d9edf717c7f87a908fc5924c77_93235_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;假设一个场景，就很好理解了。&lt;/p&gt;
+&lt;p&gt;我在电脑上保存了一份UTF-8编码的文档，内容如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;今天中午吃什么？
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;输出如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\\\\xE4\\\\xBB\\\\x8A\\\\xE5\\\\xA4\\\\xA9\\\\xE4\\\\xB8\\\\xAD\\\\xE5\\\\x8D\\\\x88\\\\xE5\\\\x90\\\\x83\\\\xE4\\\\xBB\\\\x80\\\\xE4\\\\xB9\\\\x88\\\\xEF\\\\xBC\\\\x9F
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可以看到码位为两个字节。&lt;/p&gt;
+&lt;p&gt;如果输入为英文呢？&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hello
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;输出如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\\\\x68\\\\x65\\\\x6C\\\\x6C\\\\x6F
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可以看到码位为一个字节（编码格式可以理解为同ASCII）。&lt;/p&gt;
+&lt;p&gt;如果我保存的&lt;code&gt;今天中午吃什么？&lt;/code&gt;的文档，被理解为ASCII文档，用ASCII编码来打开呢？那么输出肯定就是乱码。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;锟斤拷 
+    &lt;div id=&#34;锟斤拷&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e9%94%9f%e6%96%a4%e6%8b%b7&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当 GBK 与 Unicode 激情碰撞之后，噩梦般的上古神器——“锟（kūn）斤拷”就诞生了。 你看啊，当你写出这段文字，点击保存，此时它们就被按照 GBK 编码存储成了这串二进制数字。 然后你把这份文档发给了心爱的人，她用最常见的 UTF-8 编码打开。此时软件就懵逼了，因为它会发现这些东西根本无法正常显示。 此时，Unicode 就会用这个替换符号�，来展示所有无法正确显示的字符。 这时她也懵逼了~心想算了，保存一下发给室友让她帮忙打开吧。在她点击保存的那一瞬间，文档中所有的�字符，就被根据 UTF-8 编码，编码为了 0xEF BF BD。 而收到这份文件的大冤种室友，再次使用 GBK 编码打开了这份文档。此时根据 GBK 编码规则，如果有连续两个问号，那么 EFBF、BDEF、BFBD 这三个码位对应的，正是“锟斤拷”三个字。也就是说，连续两个问号，就对应了一个“锟斤拷”，一串问号，就对应了满屏的“锟斤拷”。 经过这套行云流水的操作，你的爱已经完全找不回来了，坍缩成了无穷无尽的“锟斤拷”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;UTF-8码位变长原理 
+    &lt;div id=&#34;utf-8码位变长原理&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#utf-8%e7%a0%81%e4%bd%8d%e5%8f%98%e9%95%bf%e5%8e%9f%e7%90%86&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;UTF-8码位字节长度不定的原理是：拿码位的前几个比特来作为标志位，比如00,01,10,11。00代表后面两个字节是一个码位，01代表后面3个字节是一个码位，10代表4个字节，11代表5个字节这样。（P.S. 现在想起来原理好简单，以前还想了好久🤣）&lt;/p&gt;
+&lt;p&gt;参考[[字符编码（ASCII、GBK、UTF-8、Unicode等）#乱码原因]]这里举的例子。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;Emoji 冷知识 
+    &lt;div id=&#34;emoji-冷知识&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#emoji-%e5%86%b7%e7%9f%a5%e8%af%86&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;由于 Unicode 只规定 emoji 的含义，不管它们具体长啥样，所以决定你看到的 emoji 长啥样的，是字体。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;字体与字符编码的关系 
+    &lt;div id=&#34;字体与字符编码的关系&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%ad%97%e4%bd%93%e4%b8%8e%e5%ad%97%e7%ac%a6%e7%bc%96%e7%a0%81%e7%9a%84%e5%85%b3%e7%b3%bb&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;字符是一个抽象的概念，在计算机上是以字符编码的形式来存储的，是字符在计算中的代号，但具体要如何在屏幕上显示，并没有做规定，如果要在屏幕上显示对应的文字，仅仅靠字符编码是不够的，还需要&lt;strong&gt;字体文件&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;字体规定了字符如何显示，在字体文件中，包含了其支持的字符的显示信息。&lt;/p&gt;
+&lt;p&gt;一个字体文件包含一个或者多个&lt;strong&gt;字符映射表&lt;/strong&gt;（Charmap），它的作用就是把一个字符从它的字符编码映射到字形索引，即该字符在字体文件中的位置。字符映射表一般使用 Unicode 作为字形的编码。&lt;/p&gt;
+&lt;p&gt;一般一个字符的渲染步骤为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;加载字体文件；&lt;/li&gt;
+&lt;li&gt;确定要输出的字体大小；&lt;/li&gt;
+&lt;li&gt;输入这个字符的编码值；&lt;/li&gt;
+&lt;li&gt;根据字体文件里面的字符映射表，把编码值转换成字形索引；&lt;/li&gt;
+&lt;li&gt;根据索引从字体中加载这个字形；&lt;/li&gt;
+&lt;li&gt;将这个字形渲染成位图，有可能进行加粗、倾斜等变换。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在选择字符映射表时，如果和输入的字符编码不一样，输出的字形要么是错的，要么就根本找不到对应的字形，屏幕上就会显示一个方块字。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

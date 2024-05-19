@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>时间相关概念（GMT, UTC, 时间，时区，naive，time zone-aware，Locale等概念） on 浮生日记</title>
+    <link>http://localhost:1313/posts/2023/common/time-zone/</link>
+    <description>Recent content in 时间相关概念（GMT, UTC, 时间，时区，naive，time zone-aware，Locale等概念） on 浮生日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sat, 16 Dec 2023 23:55:55 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/2023/common/time-zone/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

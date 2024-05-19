@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on 浮生日记</title>
+    <link>https://shadow-diary.fun/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on 浮生日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sun, 17 Dec 2023 00:03:59 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/ubuntu/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>什么是ROS(ROS和Ubuntu的区别)</title>
+<link>https://shadow-diary.fun/posts/2023/common/ros-ubuntu/</link>
+<pubDate>Sun, 17 Dec 2023 00:03:59 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/common/ros-ubuntu/</guid>
+<description>&lt;h2 class=&#34;relative group&#34;&gt;官网 
+    &lt;div id=&#34;官网&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%ae%98%e7%bd%91&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications. From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has what you need for your next robotics project. And it&amp;rsquo;s all open source.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;Wiki 
+    &lt;div id=&#34;wiki&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#wiki&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Robot_Operating_System&#34;   target=&#34;_blank&#34;&gt;
+    Robot Operating System - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Robot Operating System (ROS or ros) is an open-source robotics middleware suite. Although ROS is not an operating system (OS) but a set of software frameworks for robot software development, it provides services designed for a heterogeneous computer cluster such as hardware abstraction, low-level device control, implementation of commonly used functionality, message-passing between processes, and package management. Running sets of ROS-based processes are represented in a graph architecture where processing takes place in nodes that may receive, post, and multiplex sensor data, control, state, planning, actuator, and other messages. Despite the importance of reactivity and low latency in robot control, ROS is not a real-time operating system (RTOS). However, it is possible to integrate ROS with real-time code.The lack of support for real-time systems has been addressed in the creation of ROS 2, a major revision of the ROS API which will take advantage of modern libraries and technologies for core ROS functions and add support for real-time code and embedded system hardware.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;博客 
+    &lt;div id=&#34;博客&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%8d%9a%e5%ae%a2&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ubuntu是一个以桌面应用为主的Linux操作系统，而raspbian是针对 Raspberry Pi 专门优化、基于 Debian 的 Raspbian OS。&lt;/p&gt;
+&lt;p&gt;ROS说是叫机器人操作系统，其实并不是像Ubuntu那样完整的系统，可以理解成ROS一个中间件或者一个库，它需要跑在Ubuntu系统上，或者raspbian系统上。&lt;/p&gt;
+&lt;p&gt;树莓派是硬件，是操作系统 Ubuntu或者raspbian的载体，安装了ROS的Ubuntu系统才能使用ROS中的工具，框架等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;自定义消息 
+    &lt;div id=&#34;自定义消息&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%87%aa%e5%ae%9a%e4%b9%89%e6%b6%88%e6%81%af&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;catkin_create_pkg custom_message roscpp std_msgs geometry_msgs message_generation
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;与之前不同的是，需要在packages.xml中添加如下前两行信息（注意，不是第三行，那种写法已经消失）。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;build_depend&amp;gt;message_generation&amp;lt;/build_depend&amp;gt;
+&amp;lt;exec_depend&amp;gt;message_generation&amp;lt;/exec_depend&amp;gt;
+&amp;lt;!-- &amp;lt;exec_depend&amp;gt;message_runtime&amp;lt;/exec_depend&amp;gt; --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;CMakeLists.txt如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cmake_minimum_required(VERSION 3.0.2)
+project(custom_message)
+
+find_package(catkin REQUIRED COMPONENTS
+  geometry_msgs
+  message_generation
+  roscpp
+  std_msgs
+)
+
+# 新增
+add_message_files(
+  FILES
+  Person.msg
+)
+
+# 新增
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
+
+# 新增
+catkin_package(
+  CATKIN_DEPENDS geometry_msgs message_generation roscpp std_msgs
+)
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
+
+add_executable(talker1 src/talker1.cpp)
+target_link_libraries(talker1 ${catkin_LIBRARIES})
+
+add_executable(listener1 src/listener1.cpp)
+target_link_libraries(listener1 ${catkin_LIBRARIES})
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;talker代码（注意自定义消息头文件的引入方法是：功能包名 + 消息名，使用时都需要指出命名空间为功能包的名称）：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;sstream&amp;gt;
+#include &amp;#34;ros/ros.h&amp;#34;
+#include &amp;#34;custom_message/Person.h&amp;#34;
+int main(int argc, char **argv)
+{
+    // ROS节点初始化
+    ros::init(argc, argv, &amp;#34;talker1&amp;#34;);
+    // 创建节点句柄
+    ros::NodeHandle n(&amp;#34;hello&amp;#34;);
+    // 创建一个Publisher，发布名为chatter的topic，消息类型为custom_messages::Person
+    ros::Publisher chatter_pub = n.advertise&amp;lt;custom_message::Person&amp;gt;(&amp;#34;custom_msg&amp;#34;, 1000);
+    // 设置循环的频率
+    ros::Rate loop_rate(10);
+    int count = 0;
+    while (ros::ok())
+    {
+        // 初始化std_msgs::String类型的消息
+        custom_message::Person msg;
+        msg.name = &amp;#34;Lucas Tan&amp;#34;;
+        msg.sex = custom_message::Person::unknown;
+        // 发布消息
+        ROS_INFO(&amp;#34;%s&amp;#34;, msg.name.c_str());
+        chatter_pub.publish(msg);
+        // 循环等待回调函数
+        ros::spinOnce();
+        // 按照循环频率延时
+        loop_rate.sleep();
+        ++count;
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;listener代码：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;#34;ros/ros.h&amp;#34;
+#include &amp;#34;custom_message/Person.h&amp;#34;
+// 接收到订阅的消息后，会进入消息回调函数
+void chatterCallback(const custom_message::Person::ConstPtr&amp;amp; msg)
+{
+    // 将接收到的消息打印出来
+    ROS_INFO(&amp;#34;I heard: [%s]&amp;#34;, msg-&amp;gt;name.c_str());
+}
+int main(int argc, char **argv)
+{
+    // 初始化ROS节点
+    ros::init(argc, argv, &amp;#34;listener1&amp;#34;);
+    // 创建节点句柄
+    ros::NodeHandle n(&amp;#34;hello&amp;#34;);
+    // 创建一个Subscriber，订阅名为chatter的话题，注册回调函数chatterCallback
+    ros::Subscriber sub = n.subscribe(&amp;#34;custom_msg&amp;#34;, 1000, chatterCallback);
+    // 循环等待回调函数
+    ros::spin();
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;最终效果：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/common/ros-ubuntu/Untitled_hu539c80d9edf717c7f87a908fc5924c77_38008_330x0_resize_box_3.png 330w,
+        /posts/2023/common/ros-ubuntu/Untitled_hu539c80d9edf717c7f87a908fc5924c77_38008_660x0_resize_box_3.png 660w,
+        /posts/2023/common/ros-ubuntu/Untitled_hu539c80d9edf717c7f87a908fc5924c77_38008_1024x0_resize_box_3.png 1024w,
+        /posts/2023/common/ros-ubuntu/Untitled_hu539c80d9edf717c7f87a908fc5924c77_38008_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/common/ros-ubuntu/Untitled_hu539c80d9edf717c7f87a908fc5924c77_38008_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;std_msgs 
+    &lt;div id=&#34;std_msgs&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#std_msgs&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;通过rosmsg命令可以方便地查看有哪些msg功能包以及msg的结构。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;root@f90027cc500f:~# rosmsg -h
+rosmsg is a command-line tool for displaying information about ROS Message types.
+
+Commands:
+	rosmsg show	Show message description
+	rosmsg info	Alias for rosmsg show
+	rosmsg list	List all messages
+	rosmsg md5	Display message md5sum
+	rosmsg package	List messages in a package
+	rosmsg packages	List packages that contain messages
+
+Type rosmsg &amp;lt;command&amp;gt; -h for more detailed usage
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;比如看Image的结构（不用到处找包的位置进去看，我是🤡）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/common/ros-ubuntu/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_19066_330x0_resize_box_3.png 330w,
+        /posts/2023/common/ros-ubuntu/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_19066_660x0_resize_box_3.png 660w,
+        /posts/2023/common/ros-ubuntu/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_19066_1024x0_resize_box_3.png 1024w,
+        /posts/2023/common/ros-ubuntu/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_19066_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/common/ros-ubuntu/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_19066_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;ros::spin() 和 ros::spinOnce()区别 
+    &lt;div id=&#34;rosspin-和-rosspinonce区别&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#rosspin-%e5%92%8c-rosspinonce%e5%8c%ba%e5%88%ab&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;首先明确，这两个都是**ROS消息回调处理函数。**也就是说是用于订阅者的。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;区别 
+    &lt;div id=&#34;区别&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%8c%ba%e5%88%ab&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;ros::**spin()**在调用后不会再返回，也就是你的主程序到这儿就不往下执行了，而是进行下一次回调。（ros::spin()函数一般不会出现在循环中，因为程序执行到spin()后就不调用其他语句了，也就是说该循环没有任何意义）。&lt;/p&gt;
+&lt;p&gt;而 **ros::spinOnce()**后者在调用后还可以继续执行之后的程序，但往往需要考虑调用消息的时机，调用频率，以及消息池的大小。&lt;/p&gt;
+&lt;p&gt;通常和循环以及loop_rate.sleep()一起使用。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;代码对比区别 
+    &lt;div id=&#34;代码对比区别&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%bb%a3%e7%a0%81%e5%af%b9%e6%af%94%e5%8c%ba%e5%88%ab&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;talker 
+    &lt;div id=&#34;talker&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#talker&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;#34;ros/ros.h&amp;#34;
+#include &amp;#34;std_msgs/String.h&amp;#34;
+// Why we need sstream? Because we need this to split a sentence to words.
+#include &amp;lt;sstream&amp;gt;
+
+int main(int argc, char **argv)
+{
+    // init, can not have namespace
+    ros::init(argc, argv, &amp;#34;talker&amp;#34;);
+    // start, this is a c11 initialization mode
+    ros::NodeHandle n(&amp;#34;namespace&amp;#34;);
+    // Define publisher&amp;#39;s topic name and msg type.
+    ros::Publisher chatter_pub = n.advertise&amp;lt;std_msgs::String&amp;gt;(&amp;#34;chatter&amp;#34;, 1000);
+    // set loop rate(per sec)
+    ros::Rate loop_rate(10);
+    int count = 0;
+    // ros::ok()在以下几种情况下会返回false, 按下Ctrl-C时。我们被一个同名同姓的节点从网络中踢出。ros::shutdown()被应用程序的另一部分调用。所有的ros::NodeHandles都被销毁了。
+    while (ros::ok())
+    {
+        std_msgs::String msg;
+        std::stringstream ss;
+        ss &amp;lt;&amp;lt; &amp;#34;hello world &amp;#34; &amp;lt;&amp;lt; count;
+        msg.data = ss.str();
+        ROS_INFO(&amp;#34;%s&amp;#34;, msg.data.c_str());
+        /**
+         * 向 Topic: chatter 发送消息, 发送频率为10Hz（1秒发10次）；消息池最大容量1000。
+         */
+        chatter_pub.publish(msg);
+        // 如果运行到下一次loop.sleep()后未达到设置的时间，则会开始休眠，等到后再执行下一句
+        loop_rate.sleep();
+        ++count;
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 class=&#34;relative group&#34;&gt;listener：spin() 
+    &lt;div id=&#34;listenerspin&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#listenerspin&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;#34;ros/ros.h&amp;#34;
+#include &amp;#34;std_msgs/String.h&amp;#34;
+
+// subscriber callback function
+void chatterCallback(const std_msgs::String::ConstPtr&amp;amp; msg)
+{
+    ROS_INFO(&amp;#34;I heard: [%s]&amp;#34;, msg-&amp;gt;data.c_str());
+}
+
+int main(int argc, char **argv)
+{
+    ros::init(argc, argv, &amp;#34;listener&amp;#34;);
+    ros::NodeHandle n(&amp;#34;namespace&amp;#34;);
+    ros::Subscriber sub = n.subscribe(&amp;#34;chatter&amp;#34;, 1000, chatterCallback);
+
+    /**
+     * ros::spin() 将会进入循环， 一直调用回调函数chatterCallback(),每次调用1000个数据。
+     * 当用户输入Ctrl+C或者ROS主进程关闭时退出，
+     */
+    ros::spin();
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 class=&#34;relative group&#34;&gt;listener：spinOnce() 
+    &lt;div id=&#34;listenerspinonce&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#listenerspinonce&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;#34;ros/ros.h&amp;#34;
+#include &amp;#34;std_msgs/String.h&amp;#34;
+
+// subscriber callback function
+void chatterCallback(const std_msgs::String::ConstPtr&amp;amp; msg)
+{
+    ROS_INFO(&amp;#34;I heard: [%s]&amp;#34;, msg-&amp;gt;data.c_str());
+}
+
+int main(int argc, char **argv)
+{
+    ros::init(argc, argv, &amp;#34;listener&amp;#34;);
+    ros::NodeHandle n(&amp;#34;namespace&amp;#34;);
+    ros::Subscriber sub = n.subscribe(&amp;#34;chatter&amp;#34;, 1000, chatterCallback);
+
+    ros::Rate loop_rate(5);
+    while(ros::ok()){
+        ros::spinOnce();
+        loop_rate.sleep();
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 class=&#34;relative group&#34;&gt;Ros &amp;amp; OpenCV 
+    &lt;div id=&#34;ros--opencv&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ros--opencv&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;ros to opencv 
+    &lt;div id=&#34;ros-to-opencv&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ros-to-opencv&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;要理解，核心是在opencv。ros只是一个输入的工具。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;ros/ros.h&amp;gt;
+// Using image_transport for publishing and subscribing to images in ROS allows you to subscribe to compressed image streams.
+#include &amp;lt;image_transport/image_transport.h&amp;gt;
+#include &amp;lt;cv_bridge/cv_bridge.h&amp;gt;
+// some useful constants and functions related to image encodings.
+#include &amp;lt;sensor_msgs/image_encodings.h&amp;gt;
+// OpenCV&amp;#39;s image processing and GUI modules.
+#include &amp;lt;opencv2/imgproc/imgproc.hpp&amp;gt;
+#include &amp;lt;opencv2/highgui/highgui.hpp&amp;gt;
+
+static const std::string OPENCV_WINDOW = &amp;#34;Image window&amp;#34;;
+
+class ImageConverter
+{
+    ros::NodeHandle nh_;
+    // image_transport类：图像传输类，其功能和ROS中的Publisher和Subscriber差不多，但是不同的是这个类在发布和订阅图片消息的同时还附带这摄像头的信息。
+    // 相比较之下, 在ROS中传送图片信息，使用image_transport类要高效的多。
+    image_transport::ImageTransport it_;
+    image_transport::Subscriber image_sub_;
+    image_transport::Publisher image_pub_;
+
+public:
+    ImageConverter()
+        : it_(nh_)
+    {
+        // Subscrive to input video feed and publish output video feed
+        image_sub_ = it_.subscribe(&amp;#34;/camera/image_raw&amp;#34;, 1,
+                                   &amp;amp;ImageConverter::imageCb, this);
+        image_pub_ = it_.advertise(&amp;#34;/image_converter/output_video&amp;#34;, 1);
+
+        // OpenCV HighGUI calls to create/destroy a display window on start-up/shutdown.
+        cv::namedWindow(OPENCV_WINDOW);
+    }
+
+    ~ImageConverter()
+    {
+        cv::destroyWindow(OPENCV_WINDOW);
+    }
+
+    void imageCb(const sensor_msgs::ImageConstPtr &amp;amp;msg)
+    {
+        // CvBridge defines a CvImage type containing an OpenCV image, its encoding and a ROS header.
+        // 中文说的话就是： cv_bidge::CvImage类：cv_bridge中提供的数据结构，里面包括OpenCV中的cv::Mat类型的图像信息，图像编码方式，ROS头文件等等。
+        cv_bridge::CvImagePtr cv_ptr;
+        try
+        {
+            // Note that OpenCV expects color images to use BGR channel order.
+            cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+        }
+        catch (cv_bridge::Exception &amp;amp;e)
+        {
+            ROS_ERROR(&amp;#34;cv_bridge exception: %s&amp;#34;, e.what());
+            return;
+        }
+
+        // Draw an example circle on the video stream
+        if (cv_ptr-&amp;gt;image.rows &amp;gt; 60 &amp;amp;&amp;amp; cv_ptr-&amp;gt;image.cols &amp;gt; 60)
+            cv::circle(cv_ptr-&amp;gt;image, cv::Point(50, 50), 10, CV_RGB(255, 0, 0));
+
+        // Update GUI Window
+        cv::imshow(OPENCV_WINDOW, cv_ptr-&amp;gt;image);
+        cv::waitKey(3);
+
+        // Output modified video stream
+        image_pub_.publish(cv_ptr-&amp;gt;toImageMsg());
+    }
+};
+
+int main(int argc, char **argv)
+{
+    ros::init(argc, argv, &amp;#34;image_converter&amp;#34;);
+    ImageConverter ic;
+    ros::spin();
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;对应的CMakeLists：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cmake_minimum_required(VERSION 3.0.2)
+project(opencv_study)
+
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  sensor_msgs
+  cv_bridge
+  std_msgs
+  image_transport
+)
+
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES opencv_study
+#  CATKIN_DEPENDS roscpp rospy
+#  DEPENDS system_lib
+)
+
+include_directories(
+# include
+  ${catkin_INCLUDE_DIRS}
+)
+
+add_executable(image_converter src/image_converter.cpp)
+target_link_libraries(image_converter ${catkin_LIBRARIES})
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 class=&#34;relative group&#34;&gt;&lt;strong&gt;话题名称重映射&lt;/strong&gt; 
+    &lt;div id=&#34;话题名称重映射&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%af%9d%e9%a2%98%e5%90%8d%e7%a7%b0%e9%87%8d%e6%98%a0%e5%b0%84&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;rosrun opencv_study image_converter /camera/image_raw:=/camera/color/image_raw
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这句话将原来订阅的话题&lt;code&gt;/camera/image_raw&lt;/code&gt;改名为&lt;code&gt;/camera/color/image_raw&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ros run&lt;/code&gt; 后面的参数的意义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;__ns:=&lt;/code&gt; : 更改节点的命名空间&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;__name:=&lt;/code&gt;:更改节点的名称&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;A:=B&lt;/code&gt;:话题重映射，&lt;code&gt;A → B&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;opencv to tos 
+    &lt;div id=&#34;opencv-to-tos&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#opencv-to-tos&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
+#include &amp;lt;sstream&amp;gt;
+using namespace std;
+
+// OpenCV includes
+#include &amp;lt;opencv2/video.hpp&amp;gt;
+#include &amp;lt;opencv2/opencv.hpp&amp;gt;
+#include &amp;lt;opencv2/core/core.hpp&amp;gt;
+#include &amp;lt;opencv2/imgproc/imgproc.hpp&amp;gt;
+#include &amp;lt;opencv2/calib3d/calib3d.hpp&amp;gt;
+#include &amp;lt;opencv2/highgui/highgui.hpp&amp;gt;
+#include &amp;#34;opencv2/imgcodecs/legacy/constants_c.h&amp;#34;
+
+using namespace cv;
+
+#include &amp;lt;ros/ros.h&amp;gt;
+#include &amp;lt;cv_bridge/cv_bridge.h&amp;gt;
+#include &amp;lt;image_transport/image_transport.h&amp;gt;
+#include &amp;lt;sensor_msgs/image_encodings.h&amp;gt;
+
+int main(int argc, char **argv)
+{
+	ros::init(argc, argv, &amp;#34;image_color&amp;#34;);
+	ros::NodeHandle nh;
+	image_transport::ImageTransport it(nh);
+	image_transport::Publisher pub = it.advertise(&amp;#34;/camera_sim/image_raw&amp;#34;, 1);
+	/**************ROS与Opencv图像转换***********************/
+	Mat image = imread(&amp;#34;/home/agilex/Desktop/ty/catkin_ws/src/scout_work_1/src/index.jpeg&amp;#34;, CV_LOAD_IMAGE_COLOR);
+	sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), &amp;#34;bgr8&amp;#34;, image).toImageMsg();
+	ros::Rate loop_rate(5);
+	while (nh.ok())
+	{
+		pub.publish(msg);
+		ros::spinOnce();
+		loop_rate.sleep();
+	}
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

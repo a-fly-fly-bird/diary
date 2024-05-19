@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring Security Jwt on 浮生日记</title>
+    <link>http://localhost:1313/posts/2024/spring-security-jwt/</link>
+    <description>Recent content in Spring Security Jwt on 浮生日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sat, 23 Mar 2024 22:49:10 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/2024/spring-security-jwt/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

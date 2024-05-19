@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OAuth on 浮生日记</title>
+    <link>https://shadow-diary.fun/tags/oauth/</link>
+    <description>Recent content in OAuth on 浮生日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Tue, 19 Mar 2024 21:49:41 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/oauth/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>Oauth 了解和实践</title>
+<link>https://shadow-diary.fun/posts/2024/oauth/</link>
+<pubDate>Tue, 19 Mar 2024 21:49:41 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2024/oauth/</guid>
+<description>&lt;p&gt;参考；&lt;/p&gt;
+&lt;p&gt;阮一峰老师系列课程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ruanyifeng.com/blog/2019/04/oauth_design.html&#34;   target=&#34;_blank&#34;&gt;
+    OAuth 2.0 的一个简单解释&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html&#34;   target=&#34;_blank&#34;&gt;
+    理解OAuth 2.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html&#34;   target=&#34;_blank&#34;&gt;
+    OAuth 2.0 的四种方式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;现实中的OAuth 
+    &lt;div id=&#34;现实中的oauth&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%8e%b0%e5%ae%9e%e4%b8%ad%e7%9a%84oauth&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;阮一峰老师举了快递员进小区的例子。小区就是一个服务，里面是我的数据。&lt;/p&gt;
+&lt;p&gt;我可以通过用户名和密码通过门禁进入小区。但是有时候快递小哥（第三方应用）也需要进入门禁（仅限于通过小区门禁），来收发快递。&lt;/p&gt;
+&lt;p&gt;如果我把密码告诉快递员，显然不安全（权限过高），取消权限也很麻烦（需要我改密码）。怎么让快递员在进入小区的便捷性和安全性间取得平衡。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;授权机制的设计 
+    &lt;div id=&#34;授权机制的设计&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%8e%88%e6%9d%83%e6%9c%ba%e5%88%b6%e7%9a%84%e8%ae%be%e8%ae%a1&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;门禁系统的密码输入器下面，增加一个按钮，叫做&amp;quot;获取授权&amp;quot;。快递员需要首先按这个按钮，去申请授权。&lt;/li&gt;
+&lt;li&gt;他按下按钮以后，屋主（也就是我）的手机就会跳出对话框：有人正在要求授权。系统还会显示该快递员的姓名、工号和所属的快递公司。&lt;/li&gt;
+&lt;li&gt;门禁系统得到我的确认以后，向快递员显示一个进入小区的令牌（access token）。令牌就是类似密码的一串数字，只在短期内（比如七天）有效。&lt;/li&gt;
+&lt;li&gt;快递员向门禁系统输入令牌，进入小区。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;什么是OAuth 
+    &lt;div id=&#34;什么是oauth&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%afoauth&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;有了前面的案例，就能更好的理解。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OAuth 就是一种授权机制。数据的所有者告诉系统，同意授权第三方应用进入系统，获取这些数据。系统从而产生一个短期的进入令牌（token），用来&lt;strong&gt;代替密码&lt;/strong&gt;，供第三方应用使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;OAuth 的核心就是向第三方应用颁发&lt;strong&gt;令牌&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;令牌相对密码有三点差异；&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;（1）令牌是短期的，到期会自动失效，用户自己无法修改。密码一般长期有效，用户不修改，就不会发生变化。
+（2）令牌可以被数据所有者撤销，会立即失效。以上例而言，屋主可以随时取消快递员的令牌。密码一般不允许被他人撤销。
+（3）令牌有权限范围（scope），比如只能进小区的二号门。对于网络服务来说，只读令牌就比读写令牌更安全。密码一般是完整权限。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;RFC 6749 
+    &lt;div id=&#34;rfc-6749&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#rfc-6749&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;OAuth 2.0 的标准是 RFC 6749 文件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OAuth 引入了一个授权层，用来分离两种不同的角色：客户端和资源所有者。&amp;hellip;&amp;hellip;资源所有者同意以后，资源服务器可以向客户端颁发令牌。客户端通过令牌，去请求数据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;OAuth 2.0 规定了四种获得令牌的流程。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;授权码（authorization-code）&lt;/li&gt;
+&lt;li&gt;隐藏式（implicit）&lt;/li&gt;
+&lt;li&gt;密码式（password）：&lt;/li&gt;
+&lt;li&gt;客户端凭证（client credentials）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;前提 
+    &lt;div id=&#34;前提&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%89%8d%e6%8f%90&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;不管哪一种授权方式，第三方应用申请令牌之前，都必须先到系统备案，说明自己的身份，然后会拿到两个身份识别码：&lt;strong&gt;客户端 ID（client ID）和客户端密钥（client secret）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这是为了防止令牌被滥用，没有备案过的第三方应用，是不会拿到令牌的。&lt;/p&gt;
+&lt;p&gt;也就是说，得确认你这个人是快递员才有资格请求令牌。其它冒充的通不过身份验证。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;第一种授权方式：授权码 
+    &lt;div id=&#34;第一种授权方式授权码&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%ac%ac%e4%b8%80%e7%a7%8d%e6%8e%88%e6%9d%83%e6%96%b9%e5%bc%8f%e6%8e%88%e6%9d%83%e7%a0%81&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;授权码（authorization code）方式，指的是第三方应用先申请一个授权码，然后再用该码获取令牌。（这种的安全性最高），像令牌。密钥都是存储在后端，前端（浏览器）没有这些信息，避免令牌泄露。&lt;/p&gt;
+&lt;p&gt;以下都是假设A网站要请求B网站的授权。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;第一步 请求授权码 
+    &lt;div id=&#34;第一步-请求授权码&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%ac%ac%e4%b8%80%e6%ad%a5-%e8%af%b7%e6%b1%82%e6%8e%88%e6%9d%83%e7%a0%81&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;A会向B的授权API请求，让B知道是谁在请求，要求返回授权码，返回的重定向地址。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://b.com/oauth/authorize?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  response_type=code&amp;amp;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  client_id=CLIENT_ID&amp;amp;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  redirect_uri=CALLBACK_URL&amp;amp;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  scope=read
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 class=&#34;relative group&#34;&gt;第二步 返回授权码 
+    &lt;div id=&#34;第二步-返回授权码&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%ac%ac%e4%ba%8c%e6%ad%a5-%e8%bf%94%e5%9b%9e%e6%8e%88%e6%9d%83%e7%a0%81&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;用户跳转后，B 网站会要求用户登录，然后询问是否同意给予 A 网站授权。用户表示同意，这时 B 网站就会跳回redirect_uri参数指定的网址。跳转时，会传回一个授权码。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://a.com/callback?code=AUTHORIZATION_CODE
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;第二步A拿到了B的授权码，也就是我觉得你的请求是合理的，允许你继续申请令牌。(但是为什么不就在这里直接返回令牌呢？因为这是从A前端发送的请求，我们不知道到底是是不是A的请求，因为很容易被伪造，没有能够验证身份特征的东西，就算有，在前端也是不可靠的，所以生成了一次性的验证码。那为什么不直接点击就让A的后端开始请求呢？)&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;第三步 请求令牌 
+    &lt;div id=&#34;第三步-请求令牌&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%ac%ac%e4%b8%89%e6%ad%a5-%e8%af%b7%e6%b1%82%e4%bb%a4%e7%89%8c&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;A 网站拿到授权码以后，就可以在后端，向 B 网站请求令牌。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://b.com/oauth/token?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; client_id=CLIENT_ID&amp;amp;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; client_secret=CLIENT_SECRET&amp;amp;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; grant_type=authorization_code&amp;amp;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; code=AUTHORIZATION_CODE&amp;amp;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; redirect_uri=CALLBACK_URL
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上面 URL 中，client_id参数和client_secret参数用来让 B 确认 A 的身份（client_secret参数是保密的，因此只能在后端发请求），grant_type参数的值是AUTHORIZATION_CODE，表示采用的授权方式是授权码，code参数是上一步拿到的授权码，redirect_uri参数是令牌颁发后的回调网址。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;第四步 返回令牌 
+    &lt;div id=&#34;第四步-返回令牌&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%ac%ac%e5%9b%9b%e6%ad%a5-%e8%bf%94%e5%9b%9e%e4%bb%a4%e7%89%8c&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;B 网站收到请求以后，就会颁发令牌。具体做法是向redirect_uri指定的网址，发送一段 JSON 数据。&lt;/p&gt;
+&lt;p&gt;A 网站在后端拿到 B 网站颁发的令牌。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;第二种方式：隐藏式 
+    &lt;div id=&#34;第二种方式隐藏式&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%ac%ac%e4%ba%8c%e7%a7%8d%e6%96%b9%e5%bc%8f%e9%9a%90%e8%97%8f%e5%bc%8f&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;密码登陆很重要，是把关令牌请求是否有效安全可信的关键。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;HTTP 的重定向 
+    &lt;div id=&#34;http-的重定向&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#http-%e7%9a%84%e9%87%8d%e5%ae%9a%e5%90%91&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

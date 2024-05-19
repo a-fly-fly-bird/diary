@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>折腾 on 浮生日记</title>
+    <link>https://shadow-diary.fun/categories/%E6%8A%98%E8%85%BE/</link>
+    <description>Recent content in 折腾 on 浮生日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Tue, 02 Apr 2024 21:31:35 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/categories/%E6%8A%98%E8%85%BE/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>Useful dev tools collection</title>
+<link>https://shadow-diary.fun/posts/2024/devtools/</link>
+<pubDate>Tue, 02 Apr 2024 21:31:35 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2024/devtools/</guid>
+<description>&lt;p&gt;好用的开发工具记录。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;IDE 
+    &lt;div id=&#34;ide&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ide&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com&#34;   target=&#34;_blank&#34;&gt;
+    Visual Studio Code&lt;/a&gt;：无需多言，前端开发利器，原生支持TypeScript。安装插件可以开发Java, Python, C++, Golang等等语言。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/idea/?var=1&#34;   target=&#34;_blank&#34;&gt;
+    IntelliJ IDEA Ultimate&lt;/a&gt;：专业Java开发效率神器，CE(Community Edition)稍逊一筹。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;VS Code + Vim 
+    &lt;div id=&#34;vs-code--vim&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#vs-code--vim&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;我一直对Vim编辑器有着一种独特的青睐，但苦于其学习成本和使用成本，投入了大量时间精力却没有得到什么回报。而&lt;a href=&#34;https://github.com/VSCodeVim/Vim&#34;   target=&#34;_blank&#34;&gt;
+    Vim for Visual Studio Code&lt;/a&gt;的出现，提供了一个很好的平衡。&lt;/p&gt;
+&lt;p&gt;VS Code 的 Learn VIM 插件总结的很好：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Visual Studio Code is superb. It offers an unparalleled user experience with great support for many languages and development ecosystem. It comes with great defaults and is super easy to use and get started with.&lt;/p&gt;
+&lt;p&gt;Vim is awesome. It modal nature and text editing features make it unique amongst other editors. Vim offers a complete different level of text editing proficiency, speed and accuracy from anything else out there.&lt;/p&gt;
+&lt;p&gt;The combination of both couldn&amp;rsquo;t be anything less than amazingly superbsome.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;Terminal 
+    &lt;div id=&#34;terminal&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#terminal&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;以下终端插件等都可以使用&lt;code&gt;Homebre&lt;/code&gt;安装。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://formulae.brew.sh/formula/vim&#34;   target=&#34;_blank&#34;&gt;
+    vim&lt;/a&gt;：命令行编辑器&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jeffreytse/zsh-vi-mode&#34;   target=&#34;_blank&#34;&gt;
+    zsh-vi-mode&lt;/a&gt;：zsh终端使用vim mode&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ohmyz.sh/#install&#34;   target=&#34;_blank&#34;&gt;
+    oh-my-zsh&lt;/a&gt;：提供zsh的配置和插件
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zsh-users/zsh-syntax-highlighting&#34;   target=&#34;_blank&#34;&gt;
+    zsh-syntax-highlighting&lt;/a&gt;：命令高亮&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;   target=&#34;_blank&#34;&gt;
+    zsh-autosuggestion&lt;/a&gt;：命令提示和自动补全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tldr-pages/tldr&#34;   target=&#34;_blank&#34;&gt;
+    tldr&lt;/a&gt;：modern help page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;Frontend 
+    &lt;div id=&#34;frontend&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#frontend&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nvm-sh/nvm&#34;   target=&#34;_blank&#34;&gt;
+    nvm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;VS Code 插件 
+    &lt;div id=&#34;vs-code-插件&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#vs-code-%e6%8f%92%e4%bb%b6&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree&#34;   target=&#34;_blank&#34;&gt;
+    Todo Tree&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme&#34;   target=&#34;_blank&#34;&gt;
+    Material Icon Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&#34;   target=&#34;_blank&#34;&gt;
+    ESLint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio&#34;   target=&#34;_blank&#34;&gt;
+    Draw.io Integration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker&#34;   target=&#34;_blank&#34;&gt;
+    Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag&#34;   target=&#34;_blank&#34;&gt;
+    Auto Close Tag&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag&#34;   target=&#34;_blank&#34;&gt;
+    Auto Complete Tag&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag&#34;   target=&#34;_blank&#34;&gt;
+    Auto Rename Tag&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme&#34;   target=&#34;_blank&#34;&gt;
+    GitHub Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens&#34;   target=&#34;_blank&#34;&gt;
+    GitLens — Git supercharged&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser&#34;   target=&#34;_blank&#34;&gt;
+    open in browser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+<title>Gradle Catalog</title>
+<link>https://shadow-diary.fun/posts/2024/gradle_catalog/</link>
+<pubDate>Tue, 19 Mar 2024 21:20:58 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2024/gradle_catalog/</guid>
+<description>&lt;p&gt;Reference: &lt;a href=&#34;https://medium.com/@callmeryan/gradle-version-catalog-728111fa210f&#34;   target=&#34;_blank&#34;&gt;
+    Gradle Version Catalog&lt;/a&gt; 和 &lt;a href=&#34;https://juejin.cn/post/7202122510388084793&#34;   target=&#34;_blank&#34;&gt;
+    Version Catalog(中央依赖声明，即：版本目录)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以前一直很好奇，Spring Boot Starter是怎么进行包的版本管理的，看完这个就可以获得启发。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;好处 
+    &lt;div id=&#34;好处&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%a5%bd%e5%a4%84&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;统一的模块的依赖版本管理&lt;/li&gt;
+&lt;li&gt;依赖分组&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在Gradle 8.0后的版本，默认已经支持了Gradle Catalog.&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;Feature 
+    &lt;div id=&#34;feature&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#feature&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[versions]&lt;/code&gt;用于声明可以被依赖项引用的版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[libraries]&lt;/code&gt; 用于声明依赖的别名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[bundles]&lt;/code&gt; 用于声明依赖包（依赖组）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[plugins]&lt;/code&gt; 用于声明插件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;新建&lt;code&gt;gradle/libs.versions.toml&lt;/code&gt;文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;versions&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;springdoc_version&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2.4.0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;libraries&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;springdoc&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;module&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;org.springdoc:springdoc-openapi-starter-webmvc-ui&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ref&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;springdoc_version&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;bundles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;springdoc&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;springdoc&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 class=&#34;relative group&#34;&gt;使用 
+    &lt;div id=&#34;使用&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%bd%bf%e7%94%a8&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;然后在&lt;code&gt;build.gradle&lt;/code&gt;中像正常引用其它包一样引用。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gradle&#34; data-lang=&#34;gradle&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dependencies&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;implementation&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;libs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;bundles&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;springdoc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;就这么简单。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+<title>什么是ROS(ROS和Ubuntu的区别)</title>
+<link>https://shadow-diary.fun/posts/2023/common/ros-ubuntu/</link>
+<pubDate>Sun, 17 Dec 2023 00:03:59 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/common/ros-ubuntu/</guid>
+<description>&lt;h2 class=&#34;relative group&#34;&gt;官网 
+    &lt;div id=&#34;官网&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%ae%98%e7%bd%91&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications. From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has what you need for your next robotics project. And it&amp;rsquo;s all open source.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;Wiki 
+    &lt;div id=&#34;wiki&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#wiki&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Robot_Operating_System&#34;   target=&#34;_blank&#34;&gt;
+    Robot Operating System - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Robot Operating System (ROS or ros) is an open-source robotics middleware suite. Although ROS is not an operating system (OS) but a set of software frameworks for robot software development, it provides services designed for a heterogeneous computer cluster such as hardware abstraction, low-level device control, implementation of commonly used functionality, message-passing between processes, and package management. Running sets of ROS-based processes are represented in a graph architecture where processing takes place in nodes that may receive, post, and multiplex sensor data, control, state, planning, actuator, and other messages. Despite the importance of reactivity and low latency in robot control, ROS is not a real-time operating system (RTOS). However, it is possible to integrate ROS with real-time code.The lack of support for real-time systems has been addressed in the creation of ROS 2, a major revision of the ROS API which will take advantage of modern libraries and technologies for core ROS functions and add support for real-time code and embedded system hardware.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;博客 
+    &lt;div id=&#34;博客&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%8d%9a%e5%ae%a2&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ubuntu是一个以桌面应用为主的Linux操作系统，而raspbian是针对 Raspberry Pi 专门优化、基于 Debian 的 Raspbian OS。&lt;/p&gt;
+&lt;p&gt;ROS说是叫机器人操作系统，其实并不是像Ubuntu那样完整的系统，可以理解成ROS一个中间件或者一个库，它需要跑在Ubuntu系统上，或者raspbian系统上。&lt;/p&gt;
+&lt;p&gt;树莓派是硬件，是操作系统 Ubuntu或者raspbian的载体，安装了ROS的Ubuntu系统才能使用ROS中的工具，框架等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;自定义消息 
+    &lt;div id=&#34;自定义消息&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%87%aa%e5%ae%9a%e4%b9%89%e6%b6%88%e6%81%af&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;catkin_create_pkg custom_message roscpp std_msgs geometry_msgs message_generation
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;与之前不同的是，需要在packages.xml中添加如下前两行信息（注意，不是第三行，那种写法已经消失）。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;build_depend&amp;gt;message_generation&amp;lt;/build_depend&amp;gt;
+&amp;lt;exec_depend&amp;gt;message_generation&amp;lt;/exec_depend&amp;gt;
+&amp;lt;!-- &amp;lt;exec_depend&amp;gt;message_runtime&amp;lt;/exec_depend&amp;gt; --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;CMakeLists.txt如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cmake_minimum_required(VERSION 3.0.2)
+project(custom_message)
+
+find_package(catkin REQUIRED COMPONENTS
+  geometry_msgs
+  message_generation
+  roscpp
+  std_msgs
+)
+
+# 新增
+add_message_files(
+  FILES
+  Person.msg
+)
+
+# 新增
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
+
+# 新增
+catkin_package(
+  CATKIN_DEPENDS geometry_msgs message_generation roscpp std_msgs
+)
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
+
+add_executable(talker1 src/talker1.cpp)
+target_link_libraries(talker1 ${catkin_LIBRARIES})
+
+add_executable(listener1 src/listener1.cpp)
+target_link_libraries(listener1 ${catkin_LIBRARIES})
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;talker代码（注意自定义消息头文件的引入方法是：功能包名 + 消息名，使用时都需要指出命名空间为功能包的名称）：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;sstream&amp;gt;
+#include &amp;#34;ros/ros.h&amp;#34;
+#include &amp;#34;custom_message/Person.h&amp;#34;
+int main(int argc, char **argv)
+{
+    // ROS节点初始化
+    ros::init(argc, argv, &amp;#34;talker1&amp;#34;);
+    // 创建节点句柄
+    ros::NodeHandle n(&amp;#34;hello&amp;#34;);
+    // 创建一个Publisher，发布名为chatter的topic，消息类型为custom_messages::Person
+    ros::Publisher chatter_pub = n.advertise&amp;lt;custom_message::Person&amp;gt;(&amp;#34;custom_msg&amp;#34;, 1000);
+    // 设置循环的频率
+    ros::Rate loop_rate(10);
+    int count = 0;
+    while (ros::ok())
+    {
+        // 初始化std_msgs::String类型的消息
+        custom_message::Person msg;
+        msg.name = &amp;#34;Lucas Tan&amp;#34;;
+        msg.sex = custom_message::Person::unknown;
+        // 发布消息
+        ROS_INFO(&amp;#34;%s&amp;#34;, msg.name.c_str());
+        chatter_pub.publish(msg);
+        // 循环等待回调函数
+        ros::spinOnce();
+        // 按照循环频率延时
+        loop_rate.sleep();
+        ++count;
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;listener代码：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;#34;ros/ros.h&amp;#34;
+#include &amp;#34;custom_message/Person.h&amp;#34;
+// 接收到订阅的消息后，会进入消息回调函数
+void chatterCallback(const custom_message::Person::ConstPtr&amp;amp; msg)
+{
+    // 将接收到的消息打印出来
+    ROS_INFO(&amp;#34;I heard: [%s]&amp;#34;, msg-&amp;gt;name.c_str());
+}
+int main(int argc, char **argv)
+{
+    // 初始化ROS节点
+    ros::init(argc, argv, &amp;#34;listener1&amp;#34;);
+    // 创建节点句柄
+    ros::NodeHandle n(&amp;#34;hello&amp;#34;);
+    // 创建一个Subscriber，订阅名为chatter的话题，注册回调函数chatterCallback
+    ros::Subscriber sub = n.subscribe(&amp;#34;custom_msg&amp;#34;, 1000, chatterCallback);
+    // 循环等待回调函数
+    ros::spin();
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;最终效果：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/common/ros-ubuntu/Untitled_hu539c80d9edf717c7f87a908fc5924c77_38008_330x0_resize_box_3.png 330w,
+        /posts/2023/common/ros-ubuntu/Untitled_hu539c80d9edf717c7f87a908fc5924c77_38008_660x0_resize_box_3.png 660w,
+        /posts/2023/common/ros-ubuntu/Untitled_hu539c80d9edf717c7f87a908fc5924c77_38008_1024x0_resize_box_3.png 1024w,
+        /posts/2023/common/ros-ubuntu/Untitled_hu539c80d9edf717c7f87a908fc5924c77_38008_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/common/ros-ubuntu/Untitled_hu539c80d9edf717c7f87a908fc5924c77_38008_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;std_msgs 
+    &lt;div id=&#34;std_msgs&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#std_msgs&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;通过rosmsg命令可以方便地查看有哪些msg功能包以及msg的结构。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;root@f90027cc500f:~# rosmsg -h
+rosmsg is a command-line tool for displaying information about ROS Message types.
+
+Commands:
+	rosmsg show	Show message description
+	rosmsg info	Alias for rosmsg show
+	rosmsg list	List all messages
+	rosmsg md5	Display message md5sum
+	rosmsg package	List messages in a package
+	rosmsg packages	List packages that contain messages
+
+Type rosmsg &amp;lt;command&amp;gt; -h for more detailed usage
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;比如看Image的结构（不用到处找包的位置进去看，我是🤡）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/common/ros-ubuntu/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_19066_330x0_resize_box_3.png 330w,
+        /posts/2023/common/ros-ubuntu/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_19066_660x0_resize_box_3.png 660w,
+        /posts/2023/common/ros-ubuntu/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_19066_1024x0_resize_box_3.png 1024w,
+        /posts/2023/common/ros-ubuntu/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_19066_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/common/ros-ubuntu/Untitled-2_hu539c80d9edf717c7f87a908fc5924c77_19066_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;ros::spin() 和 ros::spinOnce()区别 
+    &lt;div id=&#34;rosspin-和-rosspinonce区别&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#rosspin-%e5%92%8c-rosspinonce%e5%8c%ba%e5%88%ab&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;首先明确，这两个都是**ROS消息回调处理函数。**也就是说是用于订阅者的。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;区别 
+    &lt;div id=&#34;区别&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%8c%ba%e5%88%ab&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;ros::**spin()**在调用后不会再返回，也就是你的主程序到这儿就不往下执行了，而是进行下一次回调。（ros::spin()函数一般不会出现在循环中，因为程序执行到spin()后就不调用其他语句了，也就是说该循环没有任何意义）。&lt;/p&gt;
+&lt;p&gt;而 **ros::spinOnce()**后者在调用后还可以继续执行之后的程序，但往往需要考虑调用消息的时机，调用频率，以及消息池的大小。&lt;/p&gt;
+&lt;p&gt;通常和循环以及loop_rate.sleep()一起使用。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;代码对比区别 
+    &lt;div id=&#34;代码对比区别&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%bb%a3%e7%a0%81%e5%af%b9%e6%af%94%e5%8c%ba%e5%88%ab&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;talker 
+    &lt;div id=&#34;talker&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#talker&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;#34;ros/ros.h&amp;#34;
+#include &amp;#34;std_msgs/String.h&amp;#34;
+// Why we need sstream? Because we need this to split a sentence to words.
+#include &amp;lt;sstream&amp;gt;
+
+int main(int argc, char **argv)
+{
+    // init, can not have namespace
+    ros::init(argc, argv, &amp;#34;talker&amp;#34;);
+    // start, this is a c11 initialization mode
+    ros::NodeHandle n(&amp;#34;namespace&amp;#34;);
+    // Define publisher&amp;#39;s topic name and msg type.
+    ros::Publisher chatter_pub = n.advertise&amp;lt;std_msgs::String&amp;gt;(&amp;#34;chatter&amp;#34;, 1000);
+    // set loop rate(per sec)
+    ros::Rate loop_rate(10);
+    int count = 0;
+    // ros::ok()在以下几种情况下会返回false, 按下Ctrl-C时。我们被一个同名同姓的节点从网络中踢出。ros::shutdown()被应用程序的另一部分调用。所有的ros::NodeHandles都被销毁了。
+    while (ros::ok())
+    {
+        std_msgs::String msg;
+        std::stringstream ss;
+        ss &amp;lt;&amp;lt; &amp;#34;hello world &amp;#34; &amp;lt;&amp;lt; count;
+        msg.data = ss.str();
+        ROS_INFO(&amp;#34;%s&amp;#34;, msg.data.c_str());
+        /**
+         * 向 Topic: chatter 发送消息, 发送频率为10Hz（1秒发10次）；消息池最大容量1000。
+         */
+        chatter_pub.publish(msg);
+        // 如果运行到下一次loop.sleep()后未达到设置的时间，则会开始休眠，等到后再执行下一句
+        loop_rate.sleep();
+        ++count;
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 class=&#34;relative group&#34;&gt;listener：spin() 
+    &lt;div id=&#34;listenerspin&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#listenerspin&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;#34;ros/ros.h&amp;#34;
+#include &amp;#34;std_msgs/String.h&amp;#34;
+
+// subscriber callback function
+void chatterCallback(const std_msgs::String::ConstPtr&amp;amp; msg)
+{
+    ROS_INFO(&amp;#34;I heard: [%s]&amp;#34;, msg-&amp;gt;data.c_str());
+}
+
+int main(int argc, char **argv)
+{
+    ros::init(argc, argv, &amp;#34;listener&amp;#34;);
+    ros::NodeHandle n(&amp;#34;namespace&amp;#34;);
+    ros::Subscriber sub = n.subscribe(&amp;#34;chatter&amp;#34;, 1000, chatterCallback);
+
+    /**
+     * ros::spin() 将会进入循环， 一直调用回调函数chatterCallback(),每次调用1000个数据。
+     * 当用户输入Ctrl+C或者ROS主进程关闭时退出，
+     */
+    ros::spin();
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 class=&#34;relative group&#34;&gt;listener：spinOnce() 
+    &lt;div id=&#34;listenerspinonce&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#listenerspinonce&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;#34;ros/ros.h&amp;#34;
+#include &amp;#34;std_msgs/String.h&amp;#34;
+
+// subscriber callback function
+void chatterCallback(const std_msgs::String::ConstPtr&amp;amp; msg)
+{
+    ROS_INFO(&amp;#34;I heard: [%s]&amp;#34;, msg-&amp;gt;data.c_str());
+}
+
+int main(int argc, char **argv)
+{
+    ros::init(argc, argv, &amp;#34;listener&amp;#34;);
+    ros::NodeHandle n(&amp;#34;namespace&amp;#34;);
+    ros::Subscriber sub = n.subscribe(&amp;#34;chatter&amp;#34;, 1000, chatterCallback);
+
+    ros::Rate loop_rate(5);
+    while(ros::ok()){
+        ros::spinOnce();
+        loop_rate.sleep();
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 class=&#34;relative group&#34;&gt;Ros &amp;amp; OpenCV 
+    &lt;div id=&#34;ros--opencv&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ros--opencv&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;ros to opencv 
+    &lt;div id=&#34;ros-to-opencv&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ros-to-opencv&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;要理解，核心是在opencv。ros只是一个输入的工具。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;ros/ros.h&amp;gt;
+// Using image_transport for publishing and subscribing to images in ROS allows you to subscribe to compressed image streams.
+#include &amp;lt;image_transport/image_transport.h&amp;gt;
+#include &amp;lt;cv_bridge/cv_bridge.h&amp;gt;
+// some useful constants and functions related to image encodings.
+#include &amp;lt;sensor_msgs/image_encodings.h&amp;gt;
+// OpenCV&amp;#39;s image processing and GUI modules.
+#include &amp;lt;opencv2/imgproc/imgproc.hpp&amp;gt;
+#include &amp;lt;opencv2/highgui/highgui.hpp&amp;gt;
+
+static const std::string OPENCV_WINDOW = &amp;#34;Image window&amp;#34;;
+
+class ImageConverter
+{
+    ros::NodeHandle nh_;
+    // image_transport类：图像传输类，其功能和ROS中的Publisher和Subscriber差不多，但是不同的是这个类在发布和订阅图片消息的同时还附带这摄像头的信息。
+    // 相比较之下, 在ROS中传送图片信息，使用image_transport类要高效的多。
+    image_transport::ImageTransport it_;
+    image_transport::Subscriber image_sub_;
+    image_transport::Publisher image_pub_;
+
+public:
+    ImageConverter()
+        : it_(nh_)
+    {
+        // Subscrive to input video feed and publish output video feed
+        image_sub_ = it_.subscribe(&amp;#34;/camera/image_raw&amp;#34;, 1,
+                                   &amp;amp;ImageConverter::imageCb, this);
+        image_pub_ = it_.advertise(&amp;#34;/image_converter/output_video&amp;#34;, 1);
+
+        // OpenCV HighGUI calls to create/destroy a display window on start-up/shutdown.
+        cv::namedWindow(OPENCV_WINDOW);
+    }
+
+    ~ImageConverter()
+    {
+        cv::destroyWindow(OPENCV_WINDOW);
+    }
+
+    void imageCb(const sensor_msgs::ImageConstPtr &amp;amp;msg)
+    {
+        // CvBridge defines a CvImage type containing an OpenCV image, its encoding and a ROS header.
+        // 中文说的话就是： cv_bidge::CvImage类：cv_bridge中提供的数据结构，里面包括OpenCV中的cv::Mat类型的图像信息，图像编码方式，ROS头文件等等。
+        cv_bridge::CvImagePtr cv_ptr;
+        try
+        {
+            // Note that OpenCV expects color images to use BGR channel order.
+            cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+        }
+        catch (cv_bridge::Exception &amp;amp;e)
+        {
+            ROS_ERROR(&amp;#34;cv_bridge exception: %s&amp;#34;, e.what());
+            return;
+        }
+
+        // Draw an example circle on the video stream
+        if (cv_ptr-&amp;gt;image.rows &amp;gt; 60 &amp;amp;&amp;amp; cv_ptr-&amp;gt;image.cols &amp;gt; 60)
+            cv::circle(cv_ptr-&amp;gt;image, cv::Point(50, 50), 10, CV_RGB(255, 0, 0));
+
+        // Update GUI Window
+        cv::imshow(OPENCV_WINDOW, cv_ptr-&amp;gt;image);
+        cv::waitKey(3);
+
+        // Output modified video stream
+        image_pub_.publish(cv_ptr-&amp;gt;toImageMsg());
+    }
+};
+
+int main(int argc, char **argv)
+{
+    ros::init(argc, argv, &amp;#34;image_converter&amp;#34;);
+    ImageConverter ic;
+    ros::spin();
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;对应的CMakeLists：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cmake_minimum_required(VERSION 3.0.2)
+project(opencv_study)
+
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  sensor_msgs
+  cv_bridge
+  std_msgs
+  image_transport
+)
+
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES opencv_study
+#  CATKIN_DEPENDS roscpp rospy
+#  DEPENDS system_lib
+)
+
+include_directories(
+# include
+  ${catkin_INCLUDE_DIRS}
+)
+
+add_executable(image_converter src/image_converter.cpp)
+target_link_libraries(image_converter ${catkin_LIBRARIES})
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 class=&#34;relative group&#34;&gt;&lt;strong&gt;话题名称重映射&lt;/strong&gt; 
+    &lt;div id=&#34;话题名称重映射&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%af%9d%e9%a2%98%e5%90%8d%e7%a7%b0%e9%87%8d%e6%98%a0%e5%b0%84&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;rosrun opencv_study image_converter /camera/image_raw:=/camera/color/image_raw
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这句话将原来订阅的话题&lt;code&gt;/camera/image_raw&lt;/code&gt;改名为&lt;code&gt;/camera/color/image_raw&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ros run&lt;/code&gt; 后面的参数的意义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;__ns:=&lt;/code&gt; : 更改节点的命名空间&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;__name:=&lt;/code&gt;:更改节点的名称&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;A:=B&lt;/code&gt;:话题重映射，&lt;code&gt;A → B&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;opencv to tos 
+    &lt;div id=&#34;opencv-to-tos&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#opencv-to-tos&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
+#include &amp;lt;sstream&amp;gt;
+using namespace std;
+
+// OpenCV includes
+#include &amp;lt;opencv2/video.hpp&amp;gt;
+#include &amp;lt;opencv2/opencv.hpp&amp;gt;
+#include &amp;lt;opencv2/core/core.hpp&amp;gt;
+#include &amp;lt;opencv2/imgproc/imgproc.hpp&amp;gt;
+#include &amp;lt;opencv2/calib3d/calib3d.hpp&amp;gt;
+#include &amp;lt;opencv2/highgui/highgui.hpp&amp;gt;
+#include &amp;#34;opencv2/imgcodecs/legacy/constants_c.h&amp;#34;
+
+using namespace cv;
+
+#include &amp;lt;ros/ros.h&amp;gt;
+#include &amp;lt;cv_bridge/cv_bridge.h&amp;gt;
+#include &amp;lt;image_transport/image_transport.h&amp;gt;
+#include &amp;lt;sensor_msgs/image_encodings.h&amp;gt;
+
+int main(int argc, char **argv)
+{
+	ros::init(argc, argv, &amp;#34;image_color&amp;#34;);
+	ros::NodeHandle nh;
+	image_transport::ImageTransport it(nh);
+	image_transport::Publisher pub = it.advertise(&amp;#34;/camera_sim/image_raw&amp;#34;, 1);
+	/**************ROS与Opencv图像转换***********************/
+	Mat image = imread(&amp;#34;/home/agilex/Desktop/ty/catkin_ws/src/scout_work_1/src/index.jpeg&amp;#34;, CV_LOAD_IMAGE_COLOR);
+	sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), &amp;#34;bgr8&amp;#34;, image).toImageMsg();
+	ros::Rate loop_rate(5);
+	while (nh.ok())
+	{
+		pub.publish(msg);
+		ros::spinOnce();
+		loop_rate.sleep();
+	}
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    
+    <item>
+<title>Hugo博客部署</title>
+<link>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</link>
+<pubDate>Thu, 19 Oct 2023 21:05:31 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/blog/blog_deploy/</guid>
+<description>&lt;p&gt;仅仅是在Github Pages部署博客就有好几种方式，分别为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地打包&lt;/li&gt;
+&lt;li&gt;Github Actions打包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以及&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;部署到同一仓库&lt;/li&gt;
+&lt;li&gt;部署到不同仓库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里我主要记录一下我用的本地打包并部署到同一仓库的方法。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;本地打包 + 部署到同一仓库 
+    &lt;div id=&#34;本地打包--部署到同一仓库&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%9c%ac%e5%9c%b0%e6%89%93%e5%8c%85--%e9%83%a8%e7%bd%b2%e5%88%b0%e5%90%8c%e4%b8%80%e4%bb%93%e5%ba%93&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;为什么要本地打包 
+    &lt;div id=&#34;为什么要本地打包&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e6%9c%ac%e5%9c%b0%e6%89%93%e5%8c%85&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;说来话长，我使用的Hugo主题使用Github Actions打包总是会报错，但是本地打包又没有问题，网络上也没有搜到报错的解决方案。尝试几天解决无果后，遂退而求其次选择本地打包。&lt;/p&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;打包和部署 
+    &lt;div id=&#34;打包和部署&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%89%93%e5%8c%85%e5%92%8c%e9%83%a8%e7%bd%b2&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;首先在&lt;code&gt;config.toml&lt;/code&gt;中把添加如下一行把&lt;code&gt;build&lt;/code&gt;的分支从&lt;code&gt;/public&lt;/code&gt;改到&lt;code&gt;/docs&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;publishDir&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;docs&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后在项目根目录打开终端输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完成打包。打包完成后可以看到多了一个&lt;code&gt;/docs&lt;/code&gt;文件夹（注意不要把这个文件夹加入&lt;code&gt;.gitignore&lt;/code&gt;中）。接下来需要同时把打包后的结果push到远程分支（Github分支任意命名即可，不用遵守&lt;code&gt;xxx.github.io&lt;/code&gt;的规则）。&lt;/p&gt;
+&lt;p&gt;推送完成后进入Github对应分支的设置界面，点击&lt;code&gt;Pages&lt;/code&gt;界面，把第三点设置为图上对应格式。如果有域名的话，在第四点那个填上对应域名。（域名这块我也是看的别人的博客，感兴趣的话网上很多教程）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+  
+  
+    
+  
+  
+    &lt;figure&gt;
+      
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        srcset=&#34;
+        /posts/2023/blog/blog_deploy/github_page_setting_hu3b6de796ae67b4cc5dd85c5e76077b23_161748_330x0_resize_box_3.png 330w,
+        /posts/2023/blog/blog_deploy/github_page_setting_hu3b6de796ae67b4cc5dd85c5e76077b23_161748_660x0_resize_box_3.png 660w,
+        /posts/2023/blog/blog_deploy/github_page_setting_hu3b6de796ae67b4cc5dd85c5e76077b23_161748_1024x0_resize_box_3.png 1024w,
+        /posts/2023/blog/blog_deploy/github_page_setting_hu3b6de796ae67b4cc5dd85c5e76077b23_161748_1320x0_resize_box_3.png 2x&#34;
+        src=&#34;https://shadow-diary.fun/posts/2023/blog/blog_deploy/github_page_setting_hu3b6de796ae67b4cc5dd85c5e76077b23_161748_660x0_resize_box_3.png&#34;
+        alt=&#34;Alt text&#34;
+      /&gt;
+      
+      
+    &lt;/figure&gt;
+  
+
+&lt;/p&gt;
+&lt;p&gt;如果前面的设置都没有问题的话，接下来在&lt;code&gt;Github&lt;/code&gt;的导航栏上点击&lt;code&gt;Action&lt;/code&gt;，就能看到&lt;code&gt;All workflows&lt;/code&gt;列表下有一个正在运行的&lt;code&gt;workflows&lt;/code&gt;, 这是Github Actions自带的&lt;code&gt;pages build and deployment workflow&lt;/code&gt;，也是为什么你把静态网页推动到Github仓库后就能访问到个人网站的原因。Github Actions提供了一个完整的CI/CD流程，如果对Github Actions想有更深入的了解的话，可以去参考官网文档。但对于只想搭建个人博客的同学来说，这已经足够应对了。&lt;/p&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;访问 
+    &lt;div id=&#34;访问&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%ae%bf%e9%97%ae&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;如果你之前没有填写自定义域名，那么你的博客地址是：&lt;code&gt;&amp;lt;github user name&amp;gt;.github.io/&amp;lt;repository name&amp;gt;&lt;/code&gt;。比如如果你的Github用户名是&lt;code&gt;abc&lt;/code&gt;,你这个仓库的名字是&lt;code&gt;blog&lt;/code&gt;，那么你的访问地址就是：&lt;code&gt;abc.github.io/blog&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;如果你之前填写了自定义域名，那么访问地址就是自定义域名。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;Github Actions打包 + 部署到同一仓库 
+    &lt;div id=&#34;github-actions打包--部署到同一仓库&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#github-actions%e6%89%93%e5%8c%85--%e9%83%a8%e7%bd%b2%e5%88%b0%e5%90%8c%e4%b8%80%e4%bb%93%e5%ba%93&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;Github Actions打包 
+    &lt;div id=&#34;github-actions打包&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#github-actions%e6%89%93%e5%8c%85&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;这个方法主要区别是要写一个配置文件，但幸运的是，早已经有人写好了，我们直接复制别人写好的配置即可。配置在仓库目录 &lt;code&gt;.github/workflows&lt;/code&gt; 下，以 &lt;code&gt;.yml&lt;/code&gt; 为后缀即可，比如&lt;code&gt;.github/workflows/blog-deploy.yml&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;workflow_dispatch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;schedule&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Runs everyday at 8:00 AM&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;cron&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0 0 * * *&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;build&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Checkout&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;submodules&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;fetch-depth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Setup Hugo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;peaceiris/actions-hugo@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hugo-version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;latest&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Build Web&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;hugo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Deploy Web&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PERSONAL_TOKEN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.PERSONAL_TOKEN }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;EXTERNAL_REPOSITORY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;pseudoyu/pseudoyu.github.io&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PUBLISH_BRANCH&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PUBLISH_DIR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;./public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;commit_message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ github.event.head_commit.message }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上面的配置文件还设置了定时任务，如果不要可以删除这段：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;workflow_dispatch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;schedule&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Runs everyday at 8:00 AM&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;cron&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0 0 * * *&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果想了解细节，参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/actions/checkout&#34;   target=&#34;_blank&#34;&gt;
+    https://github.com/actions/checkout&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/peaceiris/actions-hugo&#34;   target=&#34;_blank&#34;&gt;
+    https://github.com/peaceiris/actions-hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/peaceiris/actions-gh-pages&#34;   target=&#34;_blank&#34;&gt;
+    https://github.com/peaceiris/actions-gh-pages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;部署 
+    &lt;div id=&#34;部署&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e9%83%a8%e7%bd%b2&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;部署和上面的类似，只是分支从&lt;code&gt;main&lt;/code&gt;变成了&lt;code&gt;gh-pages&lt;/code&gt;分支，所以设置那里上图第三点需要把分支设置为&lt;code&gt;gh-pages&lt;/code&gt;分支，目录设置为根目录。这样每次本地更新完内容后就直接推送到远程分支，等待Github Action完成打包和部署即可。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+<title>Hugo博客搭建</title>
+<link>https://shadow-diary.fun/posts/2023/blog/hugo_blog_build_up/</link>
+<pubDate>Sat, 14 Oct 2023 17:30:08 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/blog/hugo_blog_build_up/</guid>
+<description>&lt;h2 class=&#34;relative group&#34;&gt;前言 
+    &lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;还记得第一次搭建博客是在大二，当时一个人带着电脑到教室学习算法，但是遇到苦难习惯性地开始不务正业，去折腾一些更简单的东西来寻求心理安慰。兜兜转转几年过去了，前前后后折腾了不少东西，但是技术也没有精进多少。现在想来，没有去挑战困难是大学最后悔的一件事。另外一件遗憾的事是很少记录生活，一些当初很感动的事情，现在也越来越模糊了。&lt;/p&gt;
+&lt;p&gt;这也是我这次重新搭建博客的初衷，记录下自己的脚步，希望未来读档的时候不至于指针越界。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;静态博客主流方案 
+    &lt;div id=&#34;静态博客主流方案&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%e4%b8%bb%e6%b5%81%e6%96%b9%e6%a1%88&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具&lt;/th&gt;
+&lt;th&gt;Jekyll&lt;/th&gt;
+&lt;th&gt;Hexo ｜  Hugo&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;介绍&lt;/td&gt;
+&lt;td&gt;Jekyll 是一个静态网站生成器，基于Ruby语言。&lt;/td&gt;
+&lt;td&gt;快速、简洁且高效的博客框架。&lt;/td&gt;
+&lt;td&gt;Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;优点&lt;/td&gt;
+&lt;td&gt;GitHub 支持好，历史最长，文档完备。&lt;/td&gt;
+&lt;td&gt;国人开发，入门简单。&lt;/td&gt;
+&lt;td&gt;基于Golang，生成速度快，社区活跃。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;缺点&lt;/td&gt;
+&lt;td&gt;基于Ruby，在三种生成器中速度最慢。需要一定Ruby基础。&lt;/td&gt;
+&lt;td&gt;基于Node.js，生成速度一般。&lt;/td&gt;
+&lt;td&gt;入门简单，深入需要阅读英文文档。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;曾经在V2EX看到过一个帖子说：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个是一群搞前端的人做的，一个是一群搞后端的人做的，特色都十分鲜明。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;深度体验下来，我觉得说的很有道理。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;Hugo 安装 
+    &lt;div id=&#34;hugo-安装&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#hugo-%e5%ae%89%e8%a3%85&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Hugo官方文档地址：&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;   target=&#34;_blank&#34;&gt;
+    Quick start&lt;/a&gt;。安装照着教程来就可以了。&lt;/p&gt;
+&lt;p&gt;如果使用Homebrew安装只需要：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即可完成。&lt;/p&gt;
+&lt;p&gt;安装完成后输入:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo version 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;来确认是否安装完成。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;新建Hugo网站 
+    &lt;div id=&#34;新建hugo网站&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%96%b0%e5%bb%bahugo%e7%bd%91%e7%ab%99&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site site_name
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; site_name
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后选择使用git submodule的方式来安装主题（还可以用go module的方式，不过我更喜欢git submodule）。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;设置主题 
+    &lt;div id=&#34;设置主题&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e8%ae%be%e7%bd%ae%e4%b8%bb%e9%a2%98&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;接下来去&lt;a href=&#34;https://themes.gohugo.io&#34;   target=&#34;_blank&#34;&gt;
+    Hugo主题网站&lt;/a&gt;挑选自己喜欢的主题。个人比较喜欢简洁现代风一点的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;blowfish&lt;/li&gt;
+&lt;li&gt;mini&lt;/li&gt;
+&lt;li&gt;doIt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里我选择的是&lt;a href=&#34;https://themes.gohugo.io/themes/blowfish/&#34;   target=&#34;_blank&#34;&gt;
+    blowfish&lt;/a&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blowfish
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来就是主题相关的配置了，你可以像我一样在终端的博客根目录输入&lt;code&gt;code .&lt;/code&gt;进入VS Code进行配置。需要参考&lt;a href=&#34;https://blowfish.page/docs/welcome/&#34;   target=&#34;_blank&#34;&gt;
+    blowfish官方文档&lt;/a&gt;(英文文档，需要适应一下)。&lt;/p&gt;
+&lt;p&gt;根据文档内容，首先把现在根目录的&lt;code&gt;config.toml&lt;/code&gt;文件删除，然后拷贝&lt;code&gt;themes/blowfish/config/_default/&lt;/code&gt;目录下的所有&lt;code&gt;toml&lt;/code&gt;后缀的文件到博客根目录下的&lt;code&gt;config/_default/&lt;/code&gt;目录中。&lt;/p&gt;
+&lt;p&gt;然后你就能启动项目看见主题的效果了：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过 &lt;a href=&#34;http://localhost:1313&#34;   target=&#34;_blank&#34;&gt;
+    http://localhost:1313&lt;/a&gt; 访问。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;添加文章 
+    &lt;div id=&#34;添加文章&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%b7%bb%e5%8a%a0%e6%96%87%e7%ab%a0&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;首先先不考虑目录结构和文章分类等问题，跟着敲一遍下列命令新建第一篇文章：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new content posts/my-first-post.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hugo会在&lt;code&gt;content/posts&lt;/code&gt;目录下新建&lt;code&gt;my-first-post.md&lt;/code&gt;文件，你可以随便写入些内容，符合markdown格式即可。比如:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+++
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title = &amp;#39;需要写点什么东西&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date = 2023-10-14T11:56:21+08:00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;draft = true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+++
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;不仅需要输入，更需要输出。做一个生产者。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后在终端输入:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -D 意味着生成的内容包括草稿,如上所示，元数据里我加了一行draft = true，表明这个文件是一个草稿，如果不加-D参数的话不会被生成。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;命令重新生成并启动自带的服务器。通过 &lt;a href=&#34;http://localhost:1313&#34;   target=&#34;_blank&#34;&gt;
+    http://localhost:1313&lt;/a&gt; 访问查看效果。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;打包 
+    &lt;div id=&#34;打包&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%89%93%e5%8c%85&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;命令很简单：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打包的资源放在&lt;code&gt;/public&lt;/code&gt;目录下。&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;接下来 
+    &lt;div id=&#34;接下来&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%8e%a5%e4%b8%8b%e6%9d%a5&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;好了，这就是Hugo搭建博客的主要过程，但是如果要想写的得心应手，其实还需要阅读一下Hugo关于内容管理和模板等部分的文档。&lt;/p&gt;
+&lt;p&gt;如果想要发布到网络上，还需要自己购买服务器，申请备案等等。不过GitHub Pages给我们提供了另一种选择，你可以不需要服务器，不需要购买域名，甚至不需要多少额外的配置就可以把博客发布到互联网上。&lt;/p&gt;
+&lt;p&gt;欢迎阅读这个系列的下一章节。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins on 浮生日记</title>
+    <link>https://shadow-diary.fun/tags/jenkins/</link>
+    <description>Recent content in Jenkins on 浮生日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sat, 18 Nov 2023 13:26:37 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/jenkins/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>Jenkins 进阶学习笔记</title>
+<link>https://shadow-diary.fun/posts/2023/ci-cd/jenkins-ci/</link>
+<pubDate>Sat, 18 Nov 2023 13:26:37 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/ci-cd/jenkins-ci/</guid>
+<description>&lt;p&gt;入职之后，一直对公司的CI/CD流程实现细节一知半解，最近正好需要打包部署一个应用，借此机会一口气把所有黑盒给打开。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;CI 
+    &lt;div id=&#34;ci&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ci&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;``&lt;/p&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;Jenkinsfile 
+    &lt;div id=&#34;jenkinsfile&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#jenkinsfile&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Jenkinsfile语法规则是基于Groovy语言的DSL。&lt;/p&gt;
+&lt;p&gt;官方教程：&lt;a href=&#34;https://www.jenkins.io/zh/doc/pipeline/tour/getting-started/&#34;   target=&#34;_blank&#34;&gt;
+    Jenkins 入门指南&lt;/a&gt;&lt;/p&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;扩展共享库 
+    &lt;div id=&#34;扩展共享库&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e6%89%a9%e5%b1%95%e5%85%b1%e4%ba%ab%e5%ba%93&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;项目Jenkinsfile中的第一行基本都是:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Library&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;my-shared-library&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一直很好奇这句话的意思，没想到背后的东西挺多，一直回顾到Groovy语言。但其实只要看官方教程地址：&lt;a href=&#34;https://www.jenkins.io/zh/doc/book/pipeline/shared-libraries/&#34;   target=&#34;_blank&#34;&gt;
+    扩展共享库&lt;/a&gt;就能很快地了解这是什么。（我之前一直不知道怎么搜索这个语法的原理）&lt;/p&gt;
+&lt;p&gt;在 Jenkinsfile 中使用 &lt;code&gt;@Library(&#39;my-shared-library&#39;) _&lt;/code&gt; 这种语法是 Jenkins 的一种特殊功能，允许你加载共享库以便在流水线中使用库中的步骤、变量和类。这里的共享库是指在 Jenkins 实例中配置的、可以被多个 Jenkins 项目复用的代码库。&lt;/p&gt;
+&lt;p&gt;解释一下这个语法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@Library(&#39;my-shared-library&#39;)&lt;/code&gt; 是一个指示器（directive），用于告诉 Jenkins 要加载命名为 &lt;code&gt;my-shared-library&lt;/code&gt; 的共享库。这个名称对应于 Jenkins 配置中的共享库名称。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_&lt;/code&gt; 是一个特殊的记号，用于加载库中定义的全局变量。当你使用这个记号时，它会自动加载共享库中名为 &lt;code&gt;vars&lt;/code&gt; 目录下的所有 Groovy 脚本作为全局变量。这意味着这些脚本中定义的方法可以在 Jenkinsfile 中直接调用，而不需要任何 &lt;code&gt;import&lt;/code&gt; 语句。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个语法允许在 Jenkinsfile 中使用共享库提供的资源，而无需额外的导入步骤。实际上，这是一种 DSL（领域特定语言）层面的集成，它是 Jenkins 流水线插件提供的功能，不同于标准的 Groovy 语法。&lt;/p&gt;
+&lt;p&gt;在共享库中，你可以定义步骤、全局变量或类。步骤通常定义在 &lt;code&gt;vars&lt;/code&gt; 目录下，全局变量则可以在 &lt;code&gt;vars&lt;/code&gt; 下直接定义，或者通过类定义在 &lt;code&gt;src&lt;/code&gt; 目录下的包中。如果你想在 Jenkinsfile 中使用 &lt;code&gt;src&lt;/code&gt; 目录下的类，你可能需要使用 &lt;code&gt;import&lt;/code&gt; 语句，除非你使用了全局变量来包装这些类的功能。&lt;/p&gt;
+&lt;p&gt;简而言之，&lt;code&gt;@Library(&#39;my-shared-library&#39;) _&lt;/code&gt; 这种写法是 Jenkins 流水线语法的一部分，它允许开发者以一种简洁的方式在 Jenkinsfile 中加载和使用共享库资源。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

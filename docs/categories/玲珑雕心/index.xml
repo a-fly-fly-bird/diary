@@ -2,68 +2,68 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>玲珑雕心 on 浮生日记</title>
-    <link>https://shadow-diary.fun/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/</link>
+    <link>http://localhost:1313/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/</link>
     <description>Recent content in 玲珑雕心 on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Sun, 21 Apr 2024 21:52:30 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Apr 2024 21:52:30 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>读好书，开卷有益</title>
-      <link>https://shadow-diary.fun/diary/2024/2024-04-21-read_a_good_book/</link>
+      <link>http://localhost:1313/diary/2024/2024-04-21-read_a_good_book/</link>
       <pubDate>Sun, 21 Apr 2024 21:52:30 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/diary/2024/2024-04-21-read_a_good_book/</guid>
+      <guid>http://localhost:1313/diary/2024/2024-04-21-read_a_good_book/</guid>
       <description>好书读到深处，情不自禁会欣然大笑。</description>
       
     </item>
     
     <item>
       <title>练习编程</title>
-      <link>https://shadow-diary.fun/diary/2024/2024-04-03-almost_there/</link>
+      <link>http://localhost:1313/diary/2024/2024-04-03-almost_there/</link>
       <pubDate>Wed, 03 Apr 2024 22:08:09 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/diary/2024/2024-04-03-almost_there/</guid>
+      <guid>http://localhost:1313/diary/2024/2024-04-03-almost_there/</guid>
       <description>准备往~/.zshrc里添加source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.</description>
       
     </item>
     
     <item>
       <title>内酚酞的甜</title>
-      <link>https://shadow-diary.fun/diary/2024/2024-03-23-keep-going/</link>
+      <link>http://localhost:1313/diary/2024/2024-03-23-keep-going/</link>
       <pubDate>Mon, 25 Mar 2024 22:49:18 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/diary/2024/2024-03-23-keep-going/</guid>
+      <guid>http://localhost:1313/diary/2024/2024-03-23-keep-going/</guid>
       <description>傍晚天空突然下起中雨，于是取消了羽毛球预约。于是在家学习Spring Securoty，花了很多都没有打通，心情就会变得焦躁，觉得自己花了特别多的沉没成本。</description>
       
     </item>
     
     <item>
       <title>学习有感</title>
-      <link>https://shadow-diary.fun/diary/2024/2024-03-23-read-docs-notes/</link>
+      <link>http://localhost:1313/diary/2024/2024-03-23-read-docs-notes/</link>
       <pubDate>Sat, 23 Mar 2024 16:11:55 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/diary/2024/2024-03-23-read-docs-notes/</guid>
+      <guid>http://localhost:1313/diary/2024/2024-03-23-read-docs-notes/</guid>
       <description>现在经常看技术性的文档和概念，如果是比较常见的，都会首先在搜索框里加上阮一峰这个关键词。</description>
       
     </item>
     
     <item>
       <title>午后旷野</title>
-      <link>https://shadow-diary.fun/diary/2023/2023-11-1-friends/</link>
+      <link>http://localhost:1313/diary/2023/2023-11-1-friends/</link>
       <pubDate>Mon, 06 Nov 2023 23:43:44 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/diary/2023/2023-11-1-friends/</guid>
+      <guid>http://localhost:1313/diary/2023/2023-11-1-friends/</guid>
       <description>人生列车缓慢地行驶在阳光明媚的午后旷野。若有人向我招手，我便邀请他们坐上一段，听他们分享关于面包，远方和在夜晚流浪的一切，最后微笑着告别。</description>
       
     </item>
     
     <item>
       <title>需要写点什么东西的冲动</title>
-      <link>https://shadow-diary.fun/diary/2023/2023-10-14-first-diary/</link>
+      <link>http://localhost:1313/diary/2023/2023-10-14-first-diary/</link>
       <pubDate>Sat, 14 Oct 2023 11:56:21 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/diary/2023/2023-10-14-first-diary/</guid>
+      <guid>http://localhost:1313/diary/2023/2023-10-14-first-diary/</guid>
       <description>羡慕那些能表达出文字的力量的人，寥寥数语，就能让我感受到内心的宁静，或者唤醒沉睡的另一个自己。</description>
       
     </item>

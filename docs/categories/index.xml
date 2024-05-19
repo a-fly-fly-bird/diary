@@ -2,78 +2,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 浮生日记</title>
-    <link>https://shadow-diary.fun/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on 浮生日记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Sun, 21 Apr 2024 21:52:30 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Apr 2024 21:52:30 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>玲珑雕心</title>
-      <link>https://shadow-diary.fun/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/</link>
+      <link>http://localhost:1313/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/</link>
       <pubDate>Sun, 21 Apr 2024 21:52:30 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/</guid>
+      <guid>http://localhost:1313/categories/%E7%8E%B2%E7%8F%91%E9%9B%95%E5%BF%83/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>折腾</title>
-      <link>https://shadow-diary.fun/categories/%E6%8A%98%E8%85%BE/</link>
+      <link>http://localhost:1313/categories/%E6%8A%98%E8%85%BE/</link>
       <pubDate>Tue, 02 Apr 2024 21:31:35 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/categories/%E6%8A%98%E8%85%BE/</guid>
+      <guid>http://localhost:1313/categories/%E6%8A%98%E8%85%BE/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>后端</title>
-      <link>https://shadow-diary.fun/categories/%E5%90%8E%E7%AB%AF/</link>
+      <link>http://localhost:1313/categories/%E5%90%8E%E7%AB%AF/</link>
       <pubDate>Sat, 23 Mar 2024 22:49:10 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/categories/%E5%90%8E%E7%AB%AF/</guid>
+      <guid>http://localhost:1313/categories/%E5%90%8E%E7%AB%AF/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>常识</title>
-      <link>https://shadow-diary.fun/categories/%E5%B8%B8%E8%AF%86/</link>
+      <link>http://localhost:1313/categories/%E5%B8%B8%E8%AF%86/</link>
       <pubDate>Sun, 17 Dec 2023 00:11:00 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/categories/%E5%B8%B8%E8%AF%86/</guid>
+      <guid>http://localhost:1313/categories/%E5%B8%B8%E8%AF%86/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>前端</title>
-      <link>https://shadow-diary.fun/categories/%E5%89%8D%E7%AB%AF/</link>
+      <link>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/</link>
       <pubDate>Sun, 17 Dec 2023 00:09:12 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/categories/%E5%89%8D%E7%AB%AF/</guid>
+      <guid>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>ML/DL</title>
-      <link>https://shadow-diary.fun/categories/ml/dl/</link>
+      <link>http://localhost:1313/categories/ml/dl/</link>
       <pubDate>Sun, 17 Dec 2023 00:05:50 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/categories/ml/dl/</guid>
+      <guid>http://localhost:1313/categories/ml/dl/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>CI/CD</title>
-      <link>https://shadow-diary.fun/categories/ci/cd/</link>
+      <link>http://localhost:1313/categories/ci/cd/</link>
       <pubDate>Sat, 18 Nov 2023 13:34:55 +0800</pubDate>
       
-      <guid>https://shadow-diary.fun/categories/ci/cd/</guid>
+      <guid>http://localhost:1313/categories/ci/cd/</guid>
       <description></description>
       
     </item>

@@ -4,7 +4,7 @@
 
 theme = "blowfish"
 baseURL = "https://shadow-diary.fun/"
-defaultContentLanguage= "en"
+defaultContentLanguage = "en"
 
 pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
@@ -19,48 +19,66 @@ publishDir = "docs"
 googleAnalytics = "G-DKJ6RVGV19"
 
 [imaging]
-  anchor = 'Center'
+anchor = 'Center'
 
 [taxonomies]
-  tag = "tags"
-  category = "categories"
-  author = "authors"
-  series = "series"
+tag = "tags"
+category = "categories"
+author = "authors"
+series = "series"
 
 [sitemap]
-  changefreq = 'daily'
-  filename = 'sitemap.xml'
-  priority = 0.5
+changefreq = 'daily'
+filename = 'sitemap.xml'
+priority = 0.5
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+taxonomyTerm = ["HTML", "RSS"]
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss+xml"
+baseName = "feed"
 
 [related]
-  threshold = 0
-  toLower = false
+threshold = 0
+toLower = false
 
-    [[related.indices]]
-        name = "tags"
-        weight = 100
+[[related.indices]]
+name = "tags"
+weight = 100
 
-    [[related.indices]]
-        name = "categories"
-        weight = 100
+[[related.indices]]
+name = "categories"
+weight = 100
 
-    [[related.indices]]
-        name = "series"
-        weight = 50
+[[related.indices]]
+name = "series"
+weight = 50
 
-    [[related.indices]]
-        name = "authors"
-        weight = 20
+[[related.indices]]
+name = "authors"
+weight = 20
 
-    [[related.indices]]
-        name = "date"
-        weight = 10
+[[related.indices]]
+name = "date"
+weight = 10
 
-    [[related.indices]]
-      applyFilter = false
-      name = 'fragmentrefs'
-      type = 'fragments'
-      weight = 10
+[[related.indices]]
+applyFilter = false
+name = 'fragmentrefs'
+type = 'fragments'
+weight = 10
+
+[services]
+[services.rss]
+limit = 42
+
+copyright = '© 2023 ABC Widgets, Inc.'
+[params]
+[params.author]
+email = 'fuling19.me@gmail.com'
+name = 'Terry Tan'

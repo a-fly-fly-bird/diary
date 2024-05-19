@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenShift on 浮生日记</title>
+    <link>https://shadow-diary.fun/tags/openshift/</link>
+    <description>Recent content in OpenShift on 浮生日记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sat, 18 Nov 2023 13:34:55 +0800</lastBuildDate><atom:link href="https://shadow-diary.fun/tags/openshift/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+<title>K8s与CD</title>
+<link>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</link>
+<pubDate>Sat, 18 Nov 2023 13:34:55 +0800</pubDate>
+      
+      <guid>https://shadow-diary.fun/posts/2023/ci-cd/k8s-cd/</guid>
+<description>&lt;p&gt;公司使用的OpenShift管理集群。入职以来，这部分一直被我当成一个黑盒，不清楚是怎么自定义的部署规则。记录一下我的学习笔记。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;Docker 
+    &lt;div id=&#34;docker&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#docker&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;这部分比较熟悉了，跳过。如果熟悉docker-compose的话，想学习k8s会相对更轻松一点。&lt;/p&gt;
+&lt;h1 class=&#34;relative group&#34;&gt;k8s 
+    &lt;div id=&#34;k8s&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#k8s&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;这是我觉得最好的实践教程了，配合官网教程食用体验极佳：&lt;a href=&#34;https://github.com/guangzhengli/k8s-tutorials&#34;   target=&#34;_blank&#34;&gt;
+    k8s-tutorials&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
